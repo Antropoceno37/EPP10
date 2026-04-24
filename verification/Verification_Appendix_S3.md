@@ -324,3 +324,19 @@ orthogonal methodological angles.
 Citations in the manuscript should use:
 - **In the main text and methods**: Zenodo concept DOI `10.5281/zenodo.19743544` — resolves to the current version and remains stable across post-submission updates.
 - **In the verification appendix manifest**: Zenodo version DOI `10.5281/zenodo.19743545` for v1.0 exact snapshot.
+
+---
+
+## OSF pre-registration status (2026-04-24)
+
+- **OSF project URL**: https://osf.io/tr469 (public)
+- **Registration type**: OSF Preregistration (public immediately)
+- **Status at commit time**: archiving in progress (DOI pending assignment)
+- **Attached files**: preregistration_cohort_map.yaml, cohort_normalization_map.csv
+- **Registration author**: Héctor Manuel Virgen Ayala
+- **Date registered**: 2026-04-24
+
+The OSF registration DOI will be injected into CITATION.cff and this appendix
+once the archiving email confirmation arrives (typically within 1 hour).
+A subsequent GitHub release (v1.1) will trigger the Zenodo update with the
+completed OSF DOI cross-reference.
