@@ -1,0 +1,48 @@
+source_cohort,cohort_v10_primary,cohort_v10_sensitivity,surgery_status,weeks_post_surgery,weight_loss_modality,had_t2dm_pre_surgery
+No obesity-No T2DM Cohort,no_obese_without_T2DM,no_obese_without_T2DM,not_applicable,NA,none,TRUE
+Obesity Cohort,Obesity,Obesity,not_applicable,NA,none,unknown
+Obesity before Weight loss by calóric restriction Cohort,Obesity,Obesity,pre_surgery,NA,none,unknown
+Obesity grade  I Cohort,Obesity,Obesity,not_applicable,NA,none,unknown
+Obesity  grade II Cohort,Obesity,Obesity,not_applicable,NA,none,unknown
+Obesity grade III Cohort,Obesity,Obesity,not_applicable,NA,none,unknown
+Obesity before RYGBP  Cohort,Obesity,Obesity,pre_surgery,NA,none,unknown
+Obesity before SG Cohort,Obesity,Obesity,pre_surgery,NA,none,unknown
+Obesity with T2DM before RYGB Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Obesity Healthy Middle aged Cohort Cohort,Obesity,Obesity,not_applicable,NA,none,unknown
+Obesity Healthy Middle aged Cohort,Obesity,Obesity,not_applicable,NA,none,unknown
+Obesity plus Type 2 Diabetes Mellitus middle aged Cohort,Obesity_T2DM,Obesity_T2DM,not_applicable,NA,none,TRUE
+Obesity middle age before RYGBP Cohort,Obesity,Obesity,pre_surgery,NA,none,unknown
+Obesity  middle aged before Sleeve Gastrectomy Cohort,Obesity,Obesity,pre_surgery,NA,none,unknown
+Obesity plus Type 2 Diabetes Mellitus Cohort,Obesity_T2DM,Obesity_T2DM,not_applicable,NA,none,TRUE
+Type 2 Diabetes Mellitus  Cohort,T2DM,T2DM,not_applicable,NA,none,TRUE
+Obesity plus Type 2 Diabetes Mellitus before Caloric restricción Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Type 2 Diabetes Mellitus Cohort,T2DM,T2DM,not_applicable,NA,none,TRUE
+Obesity with Type 2 Diabetes Mellitus after weight loss by caloric restricción Cohort,Obesity,caloric_restriction_post,post_surgery,NA,caloric_restriction,TRUE
+Obesity after Weight loss  by caloric restriction Cohort,Obesity,caloric_restriction_post,post_surgery,NA,caloric_restriction,unknown
+Overweight After Weight loss by Caloric Restriction at  Week 13 Cohort,Obesity,caloric_restriction_post,post_surgery,12w,caloric_restriction,unknown
+Overweight After Weight loss by Caloric Restriction at 1-year Cohort,Obesity,caloric_restriction_post,post_surgery,1y,caloric_restriction,unknown
+Obesity After Caloric Restriction Cohort,Obesity,caloric_restriction_post,post_surgery,NA,caloric_restriction,unknown
+Obesity after Weight loss by sleeve gastrectomy Cohort,SG,SG,post_surgery,NA,SG,unknown
+Obesity after Weight loss at 1 year by sleeve gastrectomy Cohort,SG,SG,post_surgery,1y,SG,unknown
+Obesity after Weight loss at 6 weeks by sleeve gastrectomy Cohort,SG,SG,post_surgery,6w,SG,unknown
+Obesity after Weight loss at 12 weeks by sleeve gastrectomy Cohort,SG,SG,post_surgery,12w,SG,unknown
+Obesity after Weight loss at 1 year by  Roux -en- Y Gastric ByPass Cohort,RYGBP,RYGBP,post_surgery,1y,RYGB,unknown
+Obesity after Weight loss by Roux -en- Y Gastric ByPass Cohort,RYGBP,RYGBP,post_surgery,NA,RYGB,unknown
+Obesity with Type 2 Diabetes Mellitus after Weight loss by Roux -en- Y Gastric ByPass Cohort,RYGBP,RYGBP,post_surgery,NA,RYGB,TRUE
+Obesity after Weight loss  by Roux -en- Y Gastric ByPass Cohort,RYGBP,RYGBP,post_surgery,NA,RYGB,unknown
+Obesity after Weight loss 6 weeks by Roux -en- Y Gastric ByPass Cohort,RYGBP,RYGBP,post_surgery,6w,RYGB,unknown
+Obesity after Weight loss 12 weeks by Roux -en- Y Gastric ByPass Cohort,RYGBP,RYGBP,post_surgery,12w,RYGB,unknown
+Obesity Plus Type 2 Diabetes Mellitus  Before Roux -en- Y Gastric ByPass Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Obesity Plus Type 2 Diabetes Mellitus  1 year after Roux -en- Y Gastric ByPass Cohort,RYGBP,RYGBP,post_surgery,1y,RYGB,TRUE
+Obesity Plus Type 2 Diabetes Mellitus  Before Sleeve Gastrectomy Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Obesity Plus Type 2 Diabetes Mellitus  1 year after Sleeve Gastrectomy Cohort,SG,SG,post_surgery,1y,SG,TRUE
+Obesity plus Type 2 Diabetes Mellitus  before Caloric Restriction Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Obesity plus Type 2 Diabetes Mellitus  After Weight loss by Caloric Restriction Cohort,Obesity,caloric_restriction_post,post_surgery,NA,caloric_restriction,TRUE
+Obesity plus Type 2 Diabetes Mellitus before Roux-en-Y Gastric Bypass Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Obesity plus Type 2 Diabetes Mellitus After Roux-en-Y Gastric Bypass  Cohort,RYGBP,RYGBP,post_surgery,NA,RYGB,TRUE
+Obesity after Weight loss after 1 year by sleeve gastrectomy Cohort,SG,SG,post_surgery,1y,SG,unknown
+Obesity after Weight loss at 1 year by Rox-en-Y Gastric Bypass Cohort,RYGBP,RYGBP,post_surgery,1y,RYGB,unknown
+Obesity plus Type 2 Diabetes Mellitus Before Roux-en-Y Gastric Bypass Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Obesity plus Type 2 Diabetes Mellitus Before Sleeve Gastrectomy Cohort,Obesity_T2DM,Obesity_T2DM,pre_surgery,NA,none,TRUE
+Obesity plus Type 2 Diabetes Mellitus after Roux-en-Y Gastric Bypass at 1 year Cohort,RYGBP,RYGBP,post_surgery,1y,RYGB,TRUE
+Obesity plus Type 2 Diabetes Mellitus after Sleeve Gastrectomy at 1 year Cohort,SG,SG,post_surgery,1y,SG,TRUE

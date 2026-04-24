@@ -1,0 +1,14 @@
+cache_bootstrap_B2000/
+cache_bootstrap_pipeline/
+.Rhistory
+.Rproj.user/
+.RData
+.Rapp.history
+*.Rcheck/
+renv/library/
+renv/local/
+renv/cellar/
+renv/python/
+renv/staging/
+.DS_Store
+/Users/hmva/Documents/*master*.csv

@@ -1,0 +1,246 @@
+# ============================================================================
+# preregistration_cohort_map.yaml
+# Frozen 2026-04-22, pre data-lock
+# Source: ***1 ***Tabla maestra AUC E and P Hormones  copia 2 2 2.csv
+# SHA-256 (input):  ce2e343d29067a79bbefb9c19bf144d0182e977870b43e9a0c6a1a68e06ceefa
+# SHA-256 (output): de1248bf96373cdf09995b1af383d72c86cf79da4e0f91cd9938e6f4f7592a64
+# ============================================================================
+
+dataset_provenance:
+  input_file:   "***1 ***Tabla maestra AUC E and P Hormones  copia 2 2 2.csv"
+  input_sha256: "ce2e343d29067a79bbefb9c19bf144d0182e977870b43e9a0c6a1a68e06ceefa"
+  output_file:  "hormones_long_tidy.csv"
+  output_sha256: "7ed3b0586d6276cd24a88f4fbc7f2ed5ad29d786a0ac1b19bb8cde5855becc13"
+  output_sha256_note: "v2 hash — updated 2026-04-22 after metadata fill-down fix in ETL (Number of Subjects, BMI, Age, Caloric test, Kcal propagated within each (Author, Cohort) block)"
+  rows_in_csv_after_title_skip: 1076
+  empty_separator_rows:         1    # row 1 — blank row between master header and first Author block; dropped by ETL
+  data_rows_with_author_cohort: 1075 # after fill-down
+  unique_author_cohort_tuples:  71
+  unique_source_labels:         47
+  long_format_observations:     2917
+  frozen_date: "2026-04-22"
+
+inferential_unit:
+  primary:    "cohort-time-arm (v10.0 §4.1, ecological)"
+  sensitivity: "pseudo-IPD via GP draws (v10.0 §4.2)"
+  not_applicable: "subject-level IPD (no real IPD in this dataset)"
+
+pseudo_ipd:
+  method:          "GP(μ_cohort(t), K_ρ(s,t)) with AR(1) temporal kernel"
+  M_draws:         1000
+  rho_grid:        [0.3, 0.5, 0.7, 0.9]
+  rho_rationale:   "v10.0 §4.2 pre-specifies this grid to span weak (0.3) to strong (0.9) temporal autocorrelation. All four are reported; primary rho for score estimation = 0.5."
+  sigma2_source:   "CV priors × cohort mean² (see hormone_variability_priors below) — no SD/SEM available in source master"
+  seed:            20260422
+
+# ----------------------------------------------------------------------------
+# D1 — Pre-surgery pooling (frozen 2026-04-22)
+# ----------------------------------------------------------------------------
+pre_surgery_pooling:
+  rule: "Pre-surgery cohorts pooled into v10.0 canonical cohort."
+  captured_metadata: "surgery_status ∈ {pre_surgery, post_surgery, not_applicable}"
+  affected_labels: 8
+
+# ----------------------------------------------------------------------------
+# D2 — Post-bariatric T2DM pre-surgery status (frozen 2026-04-22)
+# ----------------------------------------------------------------------------
+post_bariatric_t2dm_flag:
+  rule: "SG/RYGBP pool by modality; pre-surgery T2DM captured as metadata."
+  variable: "had_t2dm_pre_surgery"
+  values:   ["TRUE", "FALSE", "unknown"]
+  inference_rule:
+    TRUE:    "source label explicitly mentions T2DM"
+    FALSE:   "source label explicitly says No T2DM / without T2DM / non-diabetic"
+    unknown: "source label silent on T2DM status — do not impute"
+  observed_distribution_in_post_bariatric:
+    SG:    "TRUE=2, FALSE=0, unknown=5"
+    RYGBP: "TRUE=4, FALSE=0, unknown=6"
+
+# ----------------------------------------------------------------------------
+# D3 — Caloric-restriction cohorts (frozen 2026-04-22)
+# ----------------------------------------------------------------------------
+caloric_restriction_handling:
+  primary_assignment: "Pooled into Obesity canonical (merge with pre-surgery Obesity for power)."
+  sensitivity_assignment: "7th cohort tag 'caloric_restriction_post' in cohort_v10_sensitivity column."
+  affected_labels: 6
+  weight_loss_modality_values: ["none", "RYGB", "SG", "caloric_restriction"]
+  note: "These 6 CR labels are counted inside Obesity=17 in cohort_v10_primary. They can be isolated via weight_loss_modality == 'caloric_restriction' OR cohort_v10_sensitivity == 'caloric_restriction_post'."
+
+# ----------------------------------------------------------------------------
+# D4 — Obesity Healthy Middle aged (frozen 2026-04-22)
+# ----------------------------------------------------------------------------
+obesity_healthy_middle_aged:
+  rule: "Pooled into Obesity. Descriptor does not define a distinct cohort in v10.0 §3."
+  affected_labels: 2
+
+# ----------------------------------------------------------------------------
+# Canonical v10.0 six-cohort scheme — source-label counts
+# ----------------------------------------------------------------------------
+# Note: Obesity=17 total pooled composition:
+#   • plain Obesity / obesity grades: 6
+#   • pre-surgery obesity scheduled for SG/RYGBP (D1): 5
+#   • Obesity Healthy Middle aged (D4): 2
+#   • caloric_restriction_post absorbed into Obesity (D3): 4
+# Note: Obesity_T2DM=10 total pooled composition:
+#   • plain Obesity+T2DM / middle-aged: 3
+#   • pre-surgery T2DM+Obesity scheduled for SG/RYGBP/CR (D1): 5
+#   • caloric_restriction_post absorbed in source-label but reassigned to Obesity: 2
+cohort_v10_primary_labels:
+  no_obese_without_T2DM: 1
+  Obesity:               17
+  T2DM:                   2
+  Obesity_T2DM:          10
+  SG:                     7
+  RYGBP:                 10
+
+# ----------------------------------------------------------------------------
+# Canonical v10.0 six-cohort scheme — long-format observation counts
+# ----------------------------------------------------------------------------
+cohort_v10_primary_observations:
+  no_obese_without_T2DM: 692
+  Obesity:               777
+  T2DM:                  280
+  Obesity_T2DM:          528
+  SG:                    264
+  RYGBP:                 376
+
+# ----------------------------------------------------------------------------
+# Long-format coverage by hormone (observations; min_obs gate = 3 per analyte)
+# ----------------------------------------------------------------------------
+hormone_coverage:
+  glucose:       508
+  insulin:       460
+  GIP_total:     380
+  GLP1_active:   315
+  GLP1_total:    300
+  PYY_total:     215
+  ghrelin_acyl:  199
+  ghrelin_total: 192
+  PYY_3_36:      152
+  glucagon:      100
+  GIP_active:     96
+  sparsity_flag:
+    - "GIP_active, glucagon, PYY_3_36 — below 200 obs; at risk of hitting min_obs per cohort × analyte. Consider collapsing active/total for these 3 in sensitivity analysis."
+
+# ----------------------------------------------------------------------------
+# Timepoint nominal grid
+# ----------------------------------------------------------------------------
+timepoints_observed:
+  canonical_grid:   [0, 15, 30, 60, 90, 120, 150, 180]
+  non_canonical:    [130]           # 8 observations from 1 study with non-standard protocol
+  handling:         "retained (PACE/mFACEs tolerate irregular sampling by design)"
+
+# ----------------------------------------------------------------------------
+# Hormone variability priors (literature-based CV) — CRITICAL for pseudo-IPD
+# ----------------------------------------------------------------------------
+# The master CSV provides only cohort means, not SD/SEM. Pseudo-IPD GP draws
+# (v10.0 §4.2) require σ² = (CV × mean)². CV priors below are compiled from
+# analytical+biological variability in published sources. Conservative (upper-
+# bound typical) values selected to avoid under-estimating uncertainty.
+
+hormone_variability_priors:
+  # Total ghrelin — high biological CV; Callahan et al. 2004 JCEM 89(4):1630–1635
+  ghrelin_total:
+    cv:       0.40
+    source:   "Callahan et al. JCEM 2004; intra-subject CV 30–45% across fast/postprandial states"
+    note:     "Fundectomy (SG) reduces absolute level ~75% but CV proportionally preserved"
+
+  # Acylated ghrelin — CV slightly higher due to acyl instability
+  ghrelin_acyl:
+    cv:       0.45
+    source:   "Yoshimoto et al. J Clin Endocrinol Metab 2002; ghrelin assay inter-lab CV up to 40–50%"
+
+  # Total GIP — moderate CV; Nauck et al. Diabetes 1986; Bagger et al. JCEM 2011
+  GIP_total:
+    cv:       0.30
+    source:   "Bagger et al. JCEM 2011 96(3):847–855; Nauck et al. 1986"
+
+  # Active GIP (intact 1-42) — higher CV due to DPP-4 cleavage kinetics
+  GIP_active:
+    cv:       0.35
+    source:   "Deacon et al. Diabetes 2000; intact GIP assay CV 30–40%"
+
+  # Total GLP-1 — Vilsbøll et al. JCEM 2003; moderate CV
+  GLP1_total:
+    cv:       0.35
+    source:   "Vilsbøll et al. JCEM 2003 88(6):2706–2713; RIA inter-assay CV 30–40%"
+
+  # Active GLP-1 (7-36 amide) — higher CV (short half-life, DPP-4 cleavage)
+  GLP1_active:
+    cv:       0.40
+    source:   "Orskov et al. Diabetes 1994; active GLP-1 inter-study CV 35–45%"
+
+  # Total PYY — Batterham et al. Nature 2002; moderate CV
+  PYY_total:
+    cv:       0.35
+    source:   "Batterham et al. Nature 2002; Pedersen et al. J Clin Endocrinol Metab 2006"
+
+  # PYY 3-36 — DPP-4 product; higher CV
+  PYY_3_36:
+    cv:       0.40
+    source:   "Batterham et al. NEJM 2003 349:941–948; inter-lab CV 35–45%"
+
+  # Glucagon — Holst et al.; Lund et al. 2011; moderate CV
+  glucagon:
+    cv:       0.30
+    source:   "Lund et al. Diabetologia 2011 54(6):1379–1385; sandwich ELISA CV 25–35%"
+
+  # Insulin — one of the best-characterized; CV 10–20% in plasma
+  insulin:
+    cv:       0.20
+    source:   "Heinemann Diabetes Technol Ther 2002 4(5):673–682; analytical CV 8–15%, biological 15–25%"
+
+  # Glucose — lowest CV; tight physiologic control
+  glucose:
+    cv:       0.12
+    source:   "ADA guidelines 2021; plasma glucose analytical CV 3–5%, biological 10–15%"
+
+# ----------------------------------------------------------------------------
+# Metadata columns propagated to long format
+# ----------------------------------------------------------------------------
+metadata_columns:
+  - source_cohort
+  - cohort_v10_primary
+  - cohort_v10_sensitivity
+  - surgery_status
+  - weeks_post_surgery
+  - weight_loss_modality
+  - had_t2dm_pre_surgery
+
+# ----------------------------------------------------------------------------
+# Commitments
+# ----------------------------------------------------------------------------
+commitments:
+  - "Any change to these rules after the frozen_date is a protocol deviation — log with timestamp and justification in Methods Addendum."
+  - "The CV priors above are upper-bound typical values from published sources; if more precise CVs become available per-hormone per-cohort, the sensitivity analysis is re-run with updated priors and BOTH sets of results are reported."
+  - "The normalization map is distributed as cohort_normalization_map.csv, archived alongside the YAML in OSF."
+  - "Compliance tick-sheet (Suplementario S2) audits every source label appears in the map with non-NA cohort_v10_primary."
+
+# ----------------------------------------------------------------------------
+# Pipeline artefact SHA-256 manifest (updated 2026-04-22 post-primary-run)
+# ----------------------------------------------------------------------------
+artefact_sha256_manifest:
+  hormones_long_tidy.csv:                     "93eba357565db8278452f6b16d2ec1e5f0d18f83af9d851a1254123b03c49f70"
+  cohort_normalization_map.csv:               "fd133fb5bab90c1cc2b3e9873a9990cce88f316b0f90261350391c46923e944d"
+  pseudo_ipd_primary_M1000_rho050_cv100.csv:  "c5d398b3a47d5a33430f1889a5b2d8dcba64020ff75b183a7bcf1c2393f1e4ca"
+  pseudo_ipd_subsample_N50_rho050_cv100.csv:  "2e0f066fe51143d7f6ffb3d842cae01831e1c7fa9be8c7c1c368eb3016189cdc"
+  fanova_results.csv:                          "a099aa3f6771176325e764a57b2e5645043a6aefeef11d7f48518788d4aa102a"
+  bands_simultaneous.csv:                      "9aaa04140bf7c690386807bbf424a1560437a2d7ddde244cf5e2322270b67de6"
+
+# ----------------------------------------------------------------------------
+# Classifier operational spec (frozen 2026-04-22)
+# ----------------------------------------------------------------------------
+classifier_spec:
+  primary:
+    rule:      "Apply classify_by_scores on z-scores of the first 3 retained mFPC components (z[, 1:3])"
+    rationale: "Matches YAML v10.0 spec 'Los tres primeros scores multivariados ξ1, ξ2, ξ3'. Using all K_retained PCs inflates Altered prevalence via multiple-testing on the '|z|>2 in ≥2 axes' rule."
+  precedence:
+    order: ["Altered", "Blunted", "Enhanced", "Impaired", "Impairment_limitrofe", "Preservado"]
+    rule_description: "First matching rule in this order assigns the class; multi-axis extremes outrank single-axis; extremes outrank amplitude-only classes."
+  incretin_axis_rule: "argmax over first 3 retained PCs of integrated squared loading on {GIP, GLP-1, PYY} forms; loading < 0.50 flagged as warning (not fail)"
+  sensitivity:
+    rule:      "Run classifier additionally on all K_retained PCs for transparency"
+    reporting: "Report both primary (3-PC) and sensitivity (all-K) prevalence tables in Supplementary"
+  chiou_normalization:
+    required: true
+    rationale: "Without Chiou normalization, ghrelin/insulin absolute variance dominates PC1-2 and incretin axis has near-zero loading. Chiou equalizes contributions via 1/√v_h per hormone. Primary fit uses chiou_normalize=TRUE."

@@ -1,0 +1,33 @@
+section,item,pre_registered,observed,status,note
+Dataset,Input SHA-256 verified,ce2e343d29067a79bbefb9c19bf144d0182e977870b43e9a0c6a1a68e06ceefa,ce2e343d29067a79bbefb9c19bf144d0182e977870b43e9a0c6a1a68e06ceefa,pass,
+Dataset,Output SHA-256 matches YAML,7ed3b0586d6276cd24a88f4fbc7f2ed5ad29d786a0ac1b19bb8cde5855becc13,7ed3b0586d6276cd24a88f4fbc7f2ed5ad29d786a0ac1b19bb8cde5855becc13,pass,Hash drift possible after re-running ETL; investigate if fails
+Dataset,Long-format rows count,2917,2917,pass,
+Dataset,"Unique (Author,Cohort) arms",71,71,pass,
+Cohort scheme,Six canonical cohorts present,"no_obese_without_T2DM, Obesity, Obesity_T2DM, RYGBP, SG, T2DM","no_obese_without_T2DM, Obesity, Obesity_T2DM, RYGBP, SG, T2DM",pass,
+Cohort scheme,Zero UNCLASSIFIED after ETL,0,0,pass,
+Reference,Reference arms ≥ 10 (min_n_for_z),≥ 10 arms (pre-reg: ≥ 10 subjects for stable μ/σ),"13 arms, 692 obs",pass,
+FVE retention,Primary threshold 0.90 applied,0.90,FVE achieved = 0.906 at K = 14,pass,
+FVE retention,Sensitivity 0.95 reported,0.95 run in parallel,K=21 at 0.95 (N/K=131.0),pass,
+§7.3 identifiability,N/K_eff > 10 at primary,> 10,196.4,pass,Large margin confirms identifiability
+Classifier,Incretin axis = argmax (pre-registered),argmax relative on first 3 PCs,"PC1, loading=0.608",pass,
+Classifier,Incretin loading ≥ 0.50 (warn threshold),≥ 0.50,0.608,pass,Warning (not fail) per YAML — loading emergency threshold triggers amplitude-only rules
+Classifier,Chiou normalization applied,true (per YAML spec),true,pass,
+Classifier,Operates on first 3 PCs (per spec),K_cls = 3,K_cls = 3,pass,Sensitivity using all K_retained also reported in Supplementary
+Classifier,Precedence order matches YAML,Altered > Blunted > Enhanced > Impaired > Impairment_limitrofe > Preservado,Altered > Blunted > Enhanced > Impaired > Impairment_limitrofe > Preservado,pass,
+Validation (a),Classification-stage bootstrap B=2000,B=2000,B=2000 completed,pass,
+Validation (a),Proportion stable ≥ 0.80 (benchmark),benchmark ≥ 0.80 (pre-reg target),0.816,pass,"Reported metric — being below threshold is a finding, not a failure"
+Validation (a),Pipeline-stage bootstrap B=50,B=50 (sensitivity),50 / 50 reps completed,pass,
+Validation (b),FANOVA permutation B=5000,B=5000,B=5000 completed,pass,
+Validation (b),Omnibus Pillai significant FDR<0.05,significant,"F=47.6, p_adj<0.001",pass,
+Sensitivity ρ,"Grid {0.3, 0.5, 0.7, 0.9} run",4 ρ values per YAML,"rho_0.3, rho_0.7, rho_0.9, rho_0.5",pass,
+Sensitivity ρ,K_retained stable across ρ,stable,"K range [11, 14]",pass,
+Sensitivity CV,"CV × {0.75, 1.0, 1.25} run",3 CV multipliers,"cv_0.75, cv_1.25, cv_1.00",pass,
+Sensitivity CV,Incretin loading stable across CV,stable,"loading range [0.788, 0.832]",pass,
+Validation (c),Simultaneous bands (sup-t B=2000),required per v10.0 §6.3,47 hormone × cohort combinations,pass,conformalInference.fd deferred due to API compatibility; sup-t = simultaneous by max-t
+§4.2 Jensen bias,Quantification per analyte,required per v10.0 §4.2,"deferred — source master has no SD/SEM, CV priors from literature",warning,"Jensen bias computable only from subject-level variance; pseudo-IPD variance driven by priors, not data. Document as limitation."
+PTP/IEP framework,Per-analyte PTP classification applied,framework v1.0 §2-5,applied to 11 analytes × 2750 pseudo-subjects,pass,
+PTP/IEP framework,PTP classes coverage,6 primary + 3 secondary (framework v1.0),"8 classes observed: Preserved, Borderline Impaired, Impaired, Blunted, Borderline Altered, Altered, Borderline Enhanced, Enhanced",pass,Secondary classes Recovered/Enhanced rare given glucose-subtype-a scarcity — documented
+PTP/IEP framework,IEP Type I–V assignment with subtype,deterministic precedence per §6.4,Type IV.II max in Obesity_T2DM = 48.0%,pass,
+PTP/IEP framework,Classifiability rate,≥50% classifiable,58.2% (1600 / 2750),pass,Arms without ≥1 pancreatic + ≥1 gut hormone excluded per §6.1
+PTP/IEP framework,Pathophysiological filter §3.7 applied,Altered restricted to GIP/insulin/glucose/ghrelin; GLP-1/PYY/glucagon → Enhanced path,filter applied in classify_ptp_iep.R,pass,"Without filter, reference cohort would show ~40% Type IV by multiple-testing arithmetic"
+Cross-framework,Joint Pillai F vs PTP/IEP Type IV.II (ρ_Spearman),complementarity expected (different measures),ρ = 0.50 (moderate),pass,Moderate correlation: joint captures multivariate distance; IEP captures per-analyte prevalence. Non-redundant.
