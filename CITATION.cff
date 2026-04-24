@@ -2,8 +2,8 @@ cff-version: 1.2.0
 title: "Sparse mFACEs + PTP/IEP classification of enteropancreatic periprandial trajectories"
 message: "If you use this code, please cite the associated medRxiv preprint and this Zenodo deposit"
 authors:
-  - family-names: "[TBD_APELLIDO]"
-    given-names: "[TBD_NOMBRE]"
+  - family-names: "Virgen Ayala"
+    given-names: "Héctor Manuel"
 version: "1.0"
 date-released: "2026-04-24"
 license: "CC-BY-4.0"
@@ -25,6 +25,18 @@ keywords:
   - bariatric surgery
   - ecological meta-analysis
   - PTP/IEP classification
+  - Periprandial Transition Profile
+  - Integrated Enteropancreatic Pattern
+  - ghrelin
+  - GIP
+  - GLP-1
+  - PYY
+  - insulin
+  - glucose
+  - Roux-en-Y gastric bypass
+  - sleeve gastrectomy
+  - type 2 diabetes
+  - obesity
 abstract: >
   R pipeline for sparse mFACEs joint analysis with Chiou normalization and
   per-analyte PTP/IEP Type I-V classification applied to ecological
