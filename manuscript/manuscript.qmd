@@ -44,7 +44,7 @@ Sparse functional data analysis and functional principal component analysis — 
 
 ## Aim
 
-Here we apply both frameworks in integrated form to an aggregated master table of 71 cohort-time-arm tuples from 25 published studies covering 11 analyte-forms. The operational objective is to establish and statistically validate six cohort-specific multi-hormone signatures — reference `no_obese_without_T2DM`, `Obesity` without T2DM, `T2DM` without obesity, co-occurring `Obesity_T2DM`, post-`SG`, post-`RYGBP` — under a fully pre-registered protocol (OSF DOI [10.17605/OSF.IO/3CZRE](https://osf.io/3czre)), with companion analysis code archived at Zenodo (concept DOI [10.5281/zenodo.19743544](https://zenodo.org/doi/10.5281/zenodo.19743544); version v1.0 [10.5281/zenodo.19743545](https://zenodo.org/records/19743545)). Per the user-specified scope of this study, the IEP Type taxonomy is presented in two parallel tracks — without and with glycemic subclassification — to deepen the analysis and to highlight the added value of glycemic subphenotyping. Glycemic subclassification (a/b/c) is restricted to Types III, IV, and V; Patterns I and II by definition imply preserved or recovered glycemic regulation (subtype a) and admit no other glycemic subtype. The study is reported in accordance with the STROBE cohort checklist (von Elm et al. 2007); TRIPOD+AI (Collins et al. 2024) is not applicable because the analysis is descriptive-inferential rather than predictive at the individual level.
+Here we apply both frameworks in integrated form to an aggregated master table of 71 cohort-time-arm tuples from 25 published studies covering 11 analyte-forms. The operational objective is to establish and statistically validate six cohort-specific multi-hormone signatures — reference `no_obese_without_T2DM`, `Obesity` without T2DM, `T2DM` without obesity, co-occurring `Obesity_T2DM`, post-`SG`, post-`RYGBP` — under a fully pre-registered protocol (OSF DOI [10.17605/OSF.IO/3CZRE](https://osf.io/3czre)), with companion analysis code archived at Zenodo (concept DOI [10.5281/zenodo.19743544](https://zenodo.org/doi/10.5281/zenodo.19743544); current version v1.2 [10.5281/zenodo.19750294](https://zenodo.org/records/19750294)). Per the user-specified scope of this study, the IEP Type taxonomy is presented in two parallel tracks — without and with glycemic subclassification — to deepen the analysis and to highlight the added value of glycemic subphenotyping. Glycemic subclassification (a/b/c) is restricted to Types III, IV, and V; Patterns I and II by definition imply preserved or recovered glycemic regulation (subtype a) and admit no other glycemic subtype. The study is reported in accordance with the STROBE cohort checklist (von Elm et al. 2007); TRIPOD+AI (Collins et al. 2024) is not applicable because the analysis is descriptive-inferential rather than predictive at the individual level.
 
 # Methods
 
@@ -179,8 +179,9 @@ Classification-stage bootstrap (B = 2000) yielded **81.6 %** of pseudo-subjects 
 Analysis code under CC-BY 4.0 at:
 
 - Zenodo concept DOI: [10.5281/zenodo.19743544](https://zenodo.org/doi/10.5281/zenodo.19743544) (resolves to latest version)
-- Zenodo v1.0 DOI: [10.5281/zenodo.19743545](https://zenodo.org/records/19743545)
-- GitHub repository: [sv8wmxnbp8-hash/EPP10 v1.0](https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.0)
+- Zenodo v1.2 DOI (current — manuscript conceptual revision): [10.5281/zenodo.19750294](https://zenodo.org/records/19750294)
+- Zenodo v1.0 DOI (historical — initial code snapshot): [10.5281/zenodo.19743545](https://zenodo.org/records/19743545)
+- GitHub repository (current): [sv8wmxnbp8-hash/EPP10 v1.2](https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.2)
 
 Pre-registration with frozen analysis plan (2026-04-22) at:
 

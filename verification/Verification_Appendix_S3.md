@@ -311,19 +311,21 @@ orthogonal methodological angles.
 
 ---
 
-## Post-release DOI assignments (updated 2026-04-24)
+## Post-release DOI assignments (updated 2026-04-24; v1.2 amendment appended)
 
 | Resource | DOI | URL |
 |---|---|---|
-| Zenodo code archive (v1.0) | `10.5281/zenodo.19743545` | https://zenodo.org/records/19743545 |
 | Zenodo concept DOI (all versions) | `10.5281/zenodo.19743544` | https://zenodo.org/doi/10.5281/zenodo.19743544 |
-| GitHub source | `github.com/sv8wmxnbp8-hash/EPP10` tag `v1.0` | https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.0 |
-| OSF pre-registration | pending | — |
+| Zenodo code archive (v1.2 — manuscript revision, current) | `10.5281/zenodo.19750294` | https://zenodo.org/records/19750294 |
+| Zenodo code archive (v1.0 — initial snapshot, historical) | `10.5281/zenodo.19743545` | https://zenodo.org/records/19743545 |
+| GitHub source (current) | `github.com/sv8wmxnbp8-hash/EPP10` tag `v1.2` | https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.2 |
+| GitHub source (historical) | `github.com/sv8wmxnbp8-hash/EPP10` tag `v1.0` | https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.0 |
+| OSF pre-registration | `10.17605/OSF.IO/3CZRE` | https://osf.io/3czre |
 | medRxiv preprint | pending (~2-4 business days post-submit) | — |
 
 Citations in the manuscript should use:
 - **In the main text and methods**: Zenodo concept DOI `10.5281/zenodo.19743544` — resolves to the current version and remains stable across post-submission updates.
-- **In the verification appendix manifest**: Zenodo version DOI `10.5281/zenodo.19743545` for v1.0 exact snapshot.
+- **In the verification appendix manifest**: Zenodo version DOI `10.5281/zenodo.19750294` for the current v1.2 manuscript-revision snapshot; version DOI `10.5281/zenodo.19743545` for the historical v1.0 initial snapshot.
 
 ---
 
@@ -342,9 +344,11 @@ Citations in the manuscript should use:
 | Resource | DOI | URL |
 |---|---|---|
 | Zenodo concept (latest version) | `10.5281/zenodo.19743544` | https://zenodo.org/doi/10.5281/zenodo.19743544 |
-| Zenodo v1.0 (code snapshot) | `10.5281/zenodo.19743545` | https://zenodo.org/records/19743545 |
+| Zenodo v1.2 (manuscript conceptual revision, current) | `10.5281/zenodo.19750294` | https://zenodo.org/records/19750294 |
+| Zenodo v1.0 (initial code snapshot, historical) | `10.5281/zenodo.19743545` | https://zenodo.org/records/19743545 |
 | **OSF pre-registration** | **`10.17605/OSF.IO/3CZRE`** | **https://osf.io/3czre** |
-| GitHub source (v1.0 tag) | `sv8wmxnbp8-hash/EPP10@v1.0` | https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.0 |
+| GitHub source (v1.2 tag, current) | `sv8wmxnbp8-hash/EPP10@v1.2` | https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.2 |
+| GitHub source (v1.0 tag, historical) | `sv8wmxnbp8-hash/EPP10@v1.0` | https://github.com/sv8wmxnbp8-hash/EPP10/releases/tag/v1.0 |
 | medRxiv preprint | pending (~2-4 business days post-submit) | — |
 
 The triad Zenodo ↔ OSF ↔ GitHub provides three independent archives with

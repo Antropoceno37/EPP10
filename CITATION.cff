@@ -4,7 +4,7 @@ message: "If you use this code or pre-registration, please cite the associated m
 authors:
   - family-names: "Virgen Ayala"
     given-names: "Héctor Manuel"
-version: "1.0"
+version: "1.2"
 date-released: "2026-04-24"
 license: "CC-BY-4.0"
 type: software
@@ -14,11 +14,14 @@ identifiers:
     value: "10.5281/zenodo.19743544"
     description: "Zenodo concept DOI (resolves to latest code version)"
   - type: doi
+    value: "10.5281/zenodo.19750294"
+    description: "Zenodo version DOI v1.2 (manuscript conceptual revision — physiologic periprandial responsiveness + dual-track IEP)"
+  - type: doi
     value: "10.5281/zenodo.19743545"
-    description: "Zenodo version DOI v1.0 (code snapshot)"
+    description: "Zenodo version DOI v1.0 (initial code snapshot, superseded by v1.2 for manuscript content)"
   - type: doi
     value: "10.17605/OSF.IO/3CZRE"
-    description: "OSF pre-registration DOI (frozen analysis plan 2026-04-24)"
+    description: "OSF pre-registration DOI (frozen analysis plan 2026-04-22)"
   - type: url
     value: "https://osf.io/tr469"
     description: "OSF project landing page"
@@ -26,7 +29,7 @@ identifiers:
     value: "https://osf.io/3czre"
     description: "OSF registration landing page"
 repository-code: "https://github.com/sv8wmxnbp8-hash/EPP10"
-url: "https://zenodo.org/records/19743545"
+url: "https://zenodo.org/records/19750294"
 keywords:
   - functional data analysis
   - mFACEs

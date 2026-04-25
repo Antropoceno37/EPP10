@@ -22,7 +22,9 @@ dataset_provenance:
   osf_registration_doi: "10.17605/OSF.IO/3CZRE"
   osf_registration_url: "https://osf.io/3czre"
   zenodo_concept_doi: "10.5281/zenodo.19743544"
-  zenodo_version_doi: "10.5281/zenodo.19743545"
+  zenodo_version_doi_v1_0: "10.5281/zenodo.19743545"   # initial code snapshot
+  zenodo_version_doi_v1_2: "10.5281/zenodo.19750294"   # manuscript conceptual revision (current)
+  zenodo_version_doi: "10.5281/zenodo.19750294"         # alias to latest
 
 inferential_unit:
   primary:    "cohort-time-arm (v10.0 §4.1, ecological)"
