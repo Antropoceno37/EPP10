@@ -12,3 +12,5 @@ renv/python/
 renv/staging/
 .DS_Store
 /Users/hmva/Documents/*master*.csv
+pseudo_ipd_primary_M1000_rho050_cv100.csv
+pseudo_ipd_subsample_N50_rho050_cv100.csv
