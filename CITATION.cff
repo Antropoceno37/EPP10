@@ -1,10 +1,11 @@
+
 cff-version: 1.2.0
 title: "Sparse mFACEs + PTP/IEP classification of enteropancreatic periprandial trajectories"
 message: "If you use this code or pre-registration, please cite the associated medRxiv preprint and both DOIs below"
 authors:
   - family-names: "Virgen Ayala"
     given-names: "Héctor Manuel"
-version: "1.3"
+version: "1.4"
 date-released: "2026-04-25"
 license: "CC-BY-4.0"
 type: software
@@ -15,6 +16,9 @@ identifiers:
     description: "Zenodo concept DOI (resolves to latest code version)"
   - type: doi
     value: "10.5281/zenodo.19758429"
+  - type: doi
+    description: "Zenodo version DOI v1.4 (pseudo-IPD datasets)"
+    value: "10.5281/zenodo.19853747"
     description: "Zenodo version DOI v1.3 (current — pre-journal-submission polish: 71 refs, full critical-review pass, inferential framing)"
   - type: doi
     value: "10.5281/zenodo.19750294"
