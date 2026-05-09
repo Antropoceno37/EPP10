@@ -1,0 +1,250 @@
+---
+title: "Multivariate functional principal component eigenfunctions of the entero-pancreatic system: conceptual and physiological foundations of the FDEP-TP framework for periprandial phenotype characterisation"
+subtitle: "Lancet Diabetes & Endocrinology — Article (Original Research)"
+author:
+  - name: "Héctor M. Virgen-Ayala"
+    email: hectorvirgenmd@gmail.com
+    orcid: 0009-0006-2081-2286
+    affiliations:
+      - "Department of Surgical Clinics, Universidad de Guadalajara, Guadalajara, Mexico"
+      - "Department of General Surgery, Hospital General de Zona No. 14, Instituto Mexicano del Seguro Social, Guadalajara, Mexico"
+date: "2026-05-09"
+format:
+  docx:
+    toc: false
+    number-sections: false
+  pdf:
+    documentclass: article
+    geometry: margin=2.2cm
+    fontsize: 11pt
+    mainfont: "Georgia"
+    monofont: "Menlo"
+    linkcolor: blue
+    citecolor: blue
+keep-tex: false
+bibliography: refs_A1.bib
+csl: ../lancet.csl
+---
+
+<!--
+Article A1 — conceptual / physiological layer (L1) of the FDEP-TP trilogy.
+This file is a SKELETON committed at the start of the A1 branch (Day 8 per
+meta-prompt §10·2).  Companion paper A2 (covariance operators, BLUP, Golovkine)
+is on branch `lancet-A2-mathematical` (tag `A2-submitted-2026-05-09`).
+Companion paper A3 (PTP/IEP procedural-translational) is on branch
+`lancet-A3-methodological`.
+
+Each TODO marks prose to be drafted on Days 8–14.
+-->
+
+# Summary
+
+<!-- TODO Day 9 — 300-word structured Summary in Lancet style:
+Background / Methods / Findings / Interpretation / Funding.
+Anchor figures from numerical_ledger_A1.md (✶ shared across A1/A2/A3):
+N_studies=23 · N_arms=55 · N_pseudo=2,750 · K=12 · FVE 92% · N/K 29.2 ·
+PC1 incretin loading 0·211 · PYY total dominance 0·762.
+Emphasis: physiological interpretation of the four leading mFPC eigenfunctions
+of the joint enteropancreatic operator. -->
+
+# Research in context
+
+**Evidence before this study.** <!-- TODO Day 10 — search terms covering
+incretin physiology, GLP-1 / GIP / PYY / ghrelin postprandial dynamics,
+enteropancreatic axis review (Drucker 2018, Holst 2007, Steinert 2017),
+ghrelin suppression and Y-receptor satiety physiology (le Roux 2006,
+Madsbad 2014), Lancet D&E precedent on mechanism reviews. -->
+
+**Added value of this study.** <!-- TODO Day 10 — first physiological
+interpretation of the four leading mFPC eigenfunctions of the joint operator,
+mapped to: incretin–satiety contrast (PC1 PYY-dominant with secondary GLP-1),
+proximal-vs-distal entero-endocrine sequencing (PC2), biphasic glucose–insulin
+coupling (PC3), and ghrelin tone (PC4). -->
+
+**Implications of all the available evidence.** <!-- TODO Day 12 — clinical
+implications restricted to physiological interpretation; defer therapeutic
+decision tree to companion paper A3. -->
+
+# Introduction
+
+<!-- TODO Day 8 — open with the physiological gap, NOT epidemiology (anti-F8):
+the entero-pancreatic axis is a coupled secretion↔inhibition oscillator on
+the periprandial transition; existing taxonomies decompose static variables
+and lose this coupled geometry; the four conceptual moves of the FDEP-TP
+framework are stated as the operational construct of this article:
+(i) periprandial transition as the unit of analysis;
+(ii) physiologic periprandial responsiveness (replacing "secretory capacity");
+(iii) weight as a contextual modifier (Laferrère 2008; Rubino 2025);
+(iv) non-obese without T2D as the unique reference distribution. -->
+
+# Methods
+
+## Study design and data sources
+
+<!-- TODO Day 8 — short paragraph: ecological proof-of-concept at the
+cohort-time-arm level; 23 studies, 71 tuples, 55 arms, 2,750 pseudo-subjects;
+master_table.csv SHA-256 2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117;
+OSF DOI 10.17605/OSF.IO/3CZRE.  REUSE the boilerplate from A2 §Methods §Study
+design with prose envelope rewritten (iThenticate-prevention). -->
+
+## Periprandial sampling and analyte panel
+
+<!-- TODO Day 8 — same source as A2 with envelope rewritten; emphasis on the
+physiological coverage rather than the design-analysis quantities. -->
+
+## Conceptual framework
+
+<!-- TODO Day 9 — narrative version of the four conceptual moves:
+periprandial transition unit; physiologic periprandial responsiveness;
+weight as modifier; non-obese reference distribution.  Each move framed
+in physiological terms with classical citations (Drucker, Holst, Steinert,
+Le Roux, Madsbad, Nauck). -->
+
+## Statistical estimation (referenced to A2)
+
+> The covariance operator construction, BLUP estimation, Golovkine 2025
+> component selection, and bootstrap stability machinery are the subject of
+> companion paper A2 (Lancet Diabetes & Endocrinology, branch
+> `lancet-A2-mathematical`, tag `A2-submitted-2026-05-09`).  Briefly: nine
+> analyte forms entered the joint Happ–Greven operator with Chiou weights;
+> K=12 components were retained at the multivariate-FVE ≥ 0·90 threshold;
+> n=350 was the smallest joint block; bootstrap stability was ≥ 80 %.
+
+## Software, reproducibility, and reporting
+
+<!-- TODO Day 13 — boilerplate identical structure to A2 with prose envelope
+rewritten; emphasise that the same canonical run feeds A1, A2, A3. -->
+
+## Role of the funding source
+
+There was no funding for this study. The author had full access to all data and final responsibility for the decision to submit for publication.
+
+# Findings
+
+## Cohort and panel composition
+
+<!-- TODO Day 9 — Table 1 cohort composition; same anti-F8 figures as A2. -->
+
+## Four leading mFPC eigenfunctions: physiological interpretation
+
+### Eigenfunction 1 — distal L-cell dominance
+
+<!-- TODO Day 9 — interpret PC1 in terms of PYY total dominance (‖ψ̂_1^{(PYY tot)}‖² = 0·762)
+and the integrated incretin loading (0·211); link to distal L-cell
+density gradient and post-bariatric anatomical exposure. -->
+
+### Eigenfunction 2 — proximal-vs-distal sequencing
+
+<!-- TODO Day 10 — interpret PC2 as early GIP / late GLP-1, PYY contrast;
+proximal K-cell vs distal L-cell sequencing along the small bowel. -->
+
+### Eigenfunction 3 — biphasic glucose–insulin coupling
+
+<!-- TODO Day 11 — interpret PC3 as biphasic insulin response coupled to
+glucose absorption kinetics; reference Polonsky 1988 incretin classics and
+the modern reinterpretation in Drucker 2018. -->
+
+### Eigenfunction 4 — ghrelin tone
+
+<!-- TODO Day 11 — interpret PC4 as fasting ghrelin tone vs postprandial
+suppression; link to fundic resection signature in SG (le Roux 2006, Svane 2019). -->
+
+## Cohort-level signatures (qualitative)
+
+<!-- TODO Day 12 — qualitative cohort-level signatures of the four
+eigenfunctions across the 7 cohorts; defer quantitative IEP Type prevalences
+to A3. -->
+
+# Discussion
+
+## Principal physiological findings
+
+<!-- TODO Day 12 — recap of the four-eigenfunction interpretation; integrative
+narrative: secretion↔inhibition oscillator visible at the joint-operator level. -->
+
+## Comparison with existing physiological taxonomies
+
+<!-- TODO Day 13 — Ahlqvist 2018, Udler 2018, Tübingen, German Diabetes Study;
+glucose-curve FDA precedents (Frøslie 2013, Hulman 2018); Glucotypes (Hall 2018);
+PREDICT (Berry 2020). -->
+
+## Mechanistic interpretation
+
+<!-- TODO Day 13 — bariatric L-cell exposure mechanism; ghrelin suppression by
+fundic resection; caloric restriction physiology; pharmacological extension to
+dual / triple receptor agonists (Frías 2021, Heise 2022, Rosenstock 2023). -->
+
+## Strengths and limitations
+
+<!-- TODO Day 13 — physiological strengths; six declared limitations as in
+companion papers; defer methodological strengths to A2 and clinical
+limitations to A3. -->
+
+## Implications for research and practice
+
+<!-- TODO Day 13 — physiological implications; defer therapeutic algorithm to
+companion paper A3. -->
+
+## Conclusion
+
+<!-- TODO Day 14 — three-sentence physiological synthesis. -->
+
+# Contributors
+
+HMVA conceived the conceptual framework, derived the physiological interpretation of the four leading mFPC eigenfunctions, performed the empirical evaluation, drafted the manuscript, and approved the final version.
+
+# Declaration of interests
+
+The author declares no competing interests, no industry support, and no funding for this work.
+
+# Data sharing
+
+All digitised periprandial trajectories, the harmonised cohort corpus (`master_table.csv`, SHA-256 `2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117`), the 16-script analytic pipeline, the article-specific outputs, and the reproducibility scripts are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544; article-specific version DOIs cited in each manuscript) and GitHub (`sv8wmxnbp8-hash/EPP10` v1·3 and subsequent branches) under CC-BY 4·0. The repository permits full reproduction of every numerical claim and follows FAIR data principles. Pre-registration is at the Open Science Framework (DOI 10.17605/OSF.IO/3CZRE; project at https://osf.io/tr469, frozen 2026-04-22).
+
+# AI/LLM disclosure
+
+Analytic pipeline design, R code implementation, and manuscript drafting were supported by Claude (Anthropic, Opus 4.7 / Sonnet 4.6, May 2026). All statistical outputs, pre-registration decisions, and scientific claims were validated by the author against the v10·0 master analysis plan (OSF DOI 10.17605/OSF.IO/3CZRE) and the FDEP-TP framework v2·0 reference document.
+
+# Acknowledgments
+
+<!-- TODO Day 14 — physiological acknowledgments; classical incretin literature
+authors. -->
+
+---
+
+# References
+
+::: {#refs}
+:::
+
+---
+
+# Display item captions
+
+**DI1 — Architecture of the Hilbert product space H = ∏_j L²(T_j) with Chiou weights.** <!-- TODO Day 10 caption. -->
+
+**DI2 — Four leading mFPC eigenfunctions with physiological annotation.** <!-- TODO Day 10 caption. -->
+
+**DI3 — Cohort-level mean trajectories with simultaneous bootstrap bands.** <!-- TODO Day 11 caption. -->
+
+**DI4 — Heatmap of PTP per-analyte labels by cohort.** <!-- TODO Day 11 caption. -->
+
+---
+
+# Tables
+
+## Table 1 — Cohort, panel, and reference adequacy
+
+<!-- TODO Day 9 — same anti-F8 cohort composition table as A2 Table 1. -->
+
+## Table 2 — Eigenfunction loadings by analyte and component
+
+<!-- TODO Day 10 — A1-specific table (not in A2): integrated squared L²-norm
+‖ψ̂_m^{(j)}‖² for m=1..4, j=1..9 hormone forms.  Highlights PC1 PYY 0.762,
+incretin loading 0.211, etc. -->
+
+## Table 3 — Reference physiological signatures (literature-anchored)
+
+<!-- TODO Day 11 — A1-specific table cross-referencing each eigenfunction
+to landmark physiological references (Drucker, Holst, Steinert, Madsbad,
+Nauck). -->
