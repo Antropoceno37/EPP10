@@ -3,11 +3,11 @@
 % Multivariate functional principal component eigenfunctions of the entero-pancreatic system
 % Lancet Diabetes & Endocrinology — Article (Original Research)
 % Author: Héctor M. Virgen-Ayala · 2026-05-09
-% Subset of master refs.bib + classical entero-pancreatic physiology
-% TODO Days 8–14: complete additional citations during prose drafting
+% Expanded bibliography: methodology core + classical entero-pancreatic
+% physiology + clinical taxonomies + pharmacology + reporting standards
 % =============================================================================
 
-% ---- Methodological skeleton (referenced from A2) --------------------------
+% ---- Methodological skeleton (companion paper A2 supplies the full layer) ----
 
 @article{Yao2005,
   author       = {Yao, Fang and M\"uller, Hans-Georg and Wang, Jane-Ling},
@@ -31,6 +31,16 @@
   doi          = {10.1080/01621459.2016.1273115}
 }
 
+@article{ChiouChenYang2014,
+  author       = {Chiou, Jeng-Min and Chen, Yu-Ting and Yang, Ya-Fang},
+  title        = {Multivariate functional principal component analysis: a normalisation approach},
+  journal      = {Statistica Sinica},
+  volume       = {24},
+  pages        = {1571--1596},
+  year         = {2014},
+  doi          = {10.5705/ss.2013.305}
+}
+
 @article{Golovkine2025,
   author       = {Golovkine, Steven and Gunning, Edward and Simpkin, Andrew J. and Bargary, Norma},
   title        = {Estimation of the number of components in multivariate functional principal component analysis},
@@ -39,8 +49,41 @@
   doi          = {10.1080/03610918.2025.2459862}
 }
 
+@book{Ramsay2005,
+  author       = {Ramsay, James O. and Silverman, Bernard W.},
+  title        = {Functional Data Analysis},
+  edition      = {2},
+  publisher    = {Springer},
+  year         = {2005}
+}
+
+@article{TuckerWu2014,
+  author       = {Tucker, J. Derek and Wu, Wei and Srivastava, Anuj},
+  title        = {Generative models for functional data using phase and amplitude separation},
+  journal      = {Computational Statistics \& Data Analysis},
+  volume       = {61},
+  pages        = {50--66},
+  year         = {2014},
+  doi          = {10.1016/j.csda.2012.12.001}
+}
+
+@article{Papadimitropoulou2020,
+  author       = {Papadimitropoulou, Katerina and others},
+  title        = {Meta-analysis using pseudo individual participant data from aggregate data},
+  journal      = {Research Synthesis Methods},
+  volume       = {11},
+  pages        = {780--794},
+  year         = {2020}
+}
+
+@misc{Rohatgi2022WPD,
+  author       = {Rohatgi, Ankit},
+  title        = {{WebPlotDigitizer} version 4.6},
+  year         = {2022},
+  howpublished = {\url{https://automeris.io/WebPlotDigitizer}}
+}
+
 % ---- Classical entero-pancreatic physiology --------------------------------
-% TODO Day 9: complete with verified DOIs for the following landmark citations
 
 @article{Drucker2018,
   author       = {Drucker, Daniel J.},
@@ -121,6 +164,15 @@
   doi          = {10.1210/jc.2013-2686}
 }
 
+@article{Camilleri2024,
+  author       = {Camilleri, Michael},
+  title        = {Incretin impact on gastric function in obesity},
+  journal      = {Journal of Physiology},
+  volume       = {603},
+  pages        = {7713--7729},
+  year         = {2024}
+}
+
 @article{Laferrere2008,
   author       = {Laferr\`ere, Blandine and others},
   title        = {Effect of weight loss by gastric bypass surgery versus hypocaloric diet on glucose and incretin levels in patients with type 2 diabetes},
@@ -141,7 +193,39 @@
   doi          = {10.1016/S2213-8587(24)00316-4}
 }
 
-% ---- Glucose-curve FDA precedents -------------------------------------------
+% ---- Data-driven taxonomies of metabolic disease ---------------------------
+
+@article{Ahlqvist2018,
+  author       = {Ahlqvist, Emma and Storm, Petter and K\"a\"r\"aj\"am\"aki, Annemari and others},
+  title        = {Novel subgroups of adult-onset diabetes and their association with outcomes: a data-driven cluster analysis of six variables},
+  journal      = {Lancet Diabetes \& Endocrinology},
+  volume       = {6},
+  pages        = {361--369},
+  year         = {2018},
+  doi          = {10.1016/S2213-8587(18)30051-2}
+}
+
+@article{Udler2018,
+  author       = {Udler, Miriam S. and others},
+  title        = {Type 2 diabetes genetic loci informed by multi-trait associations point to disease mechanisms and subtypes: a soft clustering analysis},
+  journal      = {PLoS Medicine},
+  volume       = {15},
+  pages        = {e1002654},
+  year         = {2018},
+  doi          = {10.1371/journal.pmed.1002654}
+}
+
+@article{Wagner2021,
+  author       = {Wagner, Robert and Heni, Martin and Tabak, Adam G. and others},
+  title        = {Pathophysiology-based subphenotyping of individuals at elevated risk for type 2 diabetes},
+  journal      = {Nature Medicine},
+  volume       = {27},
+  pages        = {49--57},
+  year         = {2021},
+  doi          = {10.1038/s41591-020-1116-9}
+}
+
+% ---- Glucose-curve and continuous-glucose-monitoring functional precedents -
 
 @article{Froslie2013,
   author       = {Fr{\o}slie, Kathrine F. and others},
@@ -152,6 +236,105 @@
   year         = {2013}
 }
 
-% TODO Days 8–14: add Hall2018 Glucotypes; Berry2020 PREDICT; Hulman2018; Polonsky1988;
-% Ahlqvist2018; Udler2018; Tübingen prediabetes; Frías2021 SURPASS-2; Heise2022;
-% Rosenstock2023 retatrutide; Robinson1950; Ramsay2005 STROBE FDA supplement.
+@article{Hulman2018,
+  author       = {Hulman, Adam and others},
+  title        = {Glucose patterns during the {OGTT} and risk of future diabetes in an initially non-diabetic population: a longitudinal study},
+  journal      = {Diabetes Research and Clinical Practice},
+  volume       = {141},
+  pages        = {201--208},
+  year         = {2018},
+  doi          = {10.1016/j.diabres.2018.05.014}
+}
+
+@article{Hall2018,
+  author       = {Hall, Heather and Perelman, Dalia and Breschi, Alessandra and others},
+  title        = {Glucotypes reveal new patterns of glucose dysregulation},
+  journal      = {PLoS Biology},
+  volume       = {16},
+  pages        = {e2005143},
+  year         = {2018},
+  doi          = {10.1371/journal.pbio.2005143}
+}
+
+@article{Berry2020,
+  author       = {Berry, Sarah E. and Valdes, Ana M. and Drew, David A. and others},
+  title        = {Human postprandial responses to food and potential for precision nutrition},
+  journal      = {Nature Medicine},
+  volume       = {26},
+  pages        = {964--973},
+  year         = {2020},
+  doi          = {10.1038/s41591-020-0934-0}
+}
+
+% ---- Pharmacology -----------------------------------------------------------
+
+@article{Frias2021SURPASS2,
+  author       = {Fr\'ias, Juan P. and Davies, Melanie J. and Rosenstock, Julio and others},
+  title        = {Tirzepatide versus semaglutide once weekly in patients with type 2 diabetes (SURPASS-2)},
+  journal      = {New England Journal of Medicine},
+  volume       = {385},
+  pages        = {503--515},
+  year         = {2021},
+  doi          = {10.1056/NEJMoa2107519}
+}
+
+@article{Heise2022,
+  author       = {Heise, Tim and Mari, Andrea and DeVries, J. Hans and others},
+  title        = {Effects of subcutaneous tirzepatide versus placebo or semaglutide on pancreatic islet function and insulin sensitivity in adults with type 2 diabetes},
+  journal      = {Lancet Diabetes \& Endocrinology},
+  volume       = {10},
+  pages        = {418--429},
+  year         = {2022},
+  doi          = {10.1016/S2213-8587(22)00085-7}
+}
+
+@article{Rosenstock2023Retatrutide,
+  author       = {Rosenstock, Julio and Frias, Juan P. and J\'astreboff, Ania M. and others},
+  title        = {Retatrutide, a triple agonist of {GLP-1}, {GIP}, and glucagon receptors, in obesity},
+  journal      = {New England Journal of Medicine},
+  volume       = {389},
+  pages        = {514--526},
+  year         = {2023},
+  doi          = {10.1056/NEJMoa2301972}
+}
+
+% ---- Reporting / TRIPOD / ecological inference -----------------------------
+
+@article{Collins2024TRIPOD,
+  author       = {Collins, Gary S. and others},
+  title        = {{TRIPOD+AI} statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods},
+  journal      = {BMJ},
+  volume       = {385},
+  pages        = {e078378},
+  year         = {2024}
+}
+
+@article{Robinson1950,
+  author       = {Robinson, William S.},
+  title        = {Ecological correlations and the behavior of individuals},
+  journal      = {American Sociological Review},
+  volume       = {15},
+  pages        = {351--357},
+  year         = {1950}
+}
+
+% ---- Bootstrap simultaneous bands (referenced from A2) ---------------------
+
+@article{Goldsmith2013,
+  author       = {Goldsmith, Jeff and Greven, Sonja and Crainiceanu, Ciprian},
+  title        = {Corrected confidence bands for functional data using principal components},
+  journal      = {Biometrics},
+  volume       = {69},
+  pages        = {41--51},
+  year         = {2013},
+  doi          = {10.1111/j.1541-0420.2012.01808.x}
+}
+
+@article{Degras2011,
+  author       = {Degras, David A.},
+  title        = {Simultaneous confidence bands for nonparametric regression with functional data},
+  journal      = {Statistica Sinica},
+  volume       = {21},
+  pages        = {1735--1765},
+  year         = {2011}
+}
