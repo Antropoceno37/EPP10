@@ -1,0 +1,320 @@
+---
+title: "Methodological and translational foundations of the FDEP-TP framework: PACE-mFPCA pipeline, PTP/IEP classification, and clinical implications across obesity, type 2 diabetes, and metabolic surgery"
+subtitle: "Lancet Diabetes & Endocrinology — Article (Original Research)"
+author:
+  - name: "Héctor M. Virgen-Ayala"
+    email: hectorvirgenmd@gmail.com
+    orcid: 0009-0006-2081-2286
+    affiliations:
+      - "Department of Surgical Clinics, Universidad de Guadalajara, Guadalajara, Mexico"
+      - "Department of General Surgery, Hospital General de Zona No. 14, Instituto Mexicano del Seguro Social, Guadalajara, Mexico"
+date: "2026-05-09"
+format:
+  docx:
+    toc: false
+    number-sections: false
+  pdf:
+    documentclass: article
+    geometry: margin=2.2cm
+    fontsize: 11pt
+    mainfont: "Georgia"
+    monofont: "Menlo"
+    linkcolor: blue
+    citecolor: blue
+keep-tex: false
+bibliography: refs_A3.bib
+csl: ../lancet.csl
+---
+
+<!--
+Article A3 — procedural / translational layer (L3) of the FDEP-TP trilogy.
+This file is a SKELETON committed at the start of the A3 branch (Day 15 per
+meta-prompt §10·2).
+
+Companions:
+- A1 (conceptual / physiological): branch `lancet-A1-conceptual`
+- A2 (mathematical / statistical): branch `lancet-A2-mathematical`
+  (tag `A2-submitted-2026-05-09`)
+
+A3 contains the complete PTP / IEP classification machinery and the clinical
+implications.  It is the most translational and clinically actionable of the
+three articles.
+
+Each TODO marks prose to be drafted on Days 15–21.
+-->
+
+# Summary
+
+<!-- TODO Day 16 — 300-word structured Summary in Lancet style:
+Background / Methods / Findings / Interpretation / Funding.
+A3-specific anchor figures (in addition to anti-F8 shared block):
+- Type V (enhanced–mixed with residual dysglycaemia) = 43·3 % RYGBP, 30·7 % SG (Bonferroni q=0·035)
+- Type III (infra-physiological) = 40·0 % obesity+T2DM, 36·8 % Post-CR, 29·5 % T2DM
+- Type I·I = 32·2 % non-obese without T2D + 23·1 % not-classifiable (single-analyte arms)
+Emphasis: pipeline + decision algorithm + clinical implications. -->
+
+# Research in context
+
+**Evidence before this study.** <!-- TODO Day 17 — search terms covering
+data-driven phenotyping (Ahlqvist 2018, Udler 2018, German Diabetes Study,
+Tübingen prediabetes), bariatric mechanism reviews (Madsbad 2014, Lobato 2025
+metabolic-surgery commission, Rubino 2025 clinical-obesity definition),
+incretin-based pharmacotherapy (Frías 2021, Heise 2022, Rosenstock 2023). -->
+
+**Added value of this study.** <!-- TODO Day 17 — first PTP/IEP classification
+framework with explicit eight-rule precedence, three-suffix glycaemic context,
+and a reproducible 16-script pipeline; bariatric-dominant Type V signature
+applies to both RYGBP and SG (not RYGBP-exclusive); Type III dominance in
+caloric restriction reframes "remission" as persistent infra-physiological
+signalling. -->
+
+**Implications of all the available evidence.** <!-- TODO Day 19 — clinical
+algorithm: PTP/IEP-informed decision tree for selecting agonists (single,
+dual, triple receptor) and indication for metabolic surgery; cautions:
+ecological proof-of-concept, percentile thresholds awaiting prospective
+individual-participant validation. -->
+
+# Introduction
+
+<!-- TODO Day 15 — open with the clinical translational gap (anti-F8):
+heterogeneity of postprandial enteropancreatic responses across health,
+obesity, T2DM, caloric restriction, and metabolic surgery is well documented
+but operationally unclassified; existing taxonomies decompose static variables
+and do not generate clinically actionable algorithms keyed to multi-hormonal
+periprandial dynamics.  The present article closes this gap by formalising
+the PTP/IEP classification hierarchy (Types I–V with .i/.ii subtypes and a/b/c
+glycaemic suffixes) and operationalising it with a reproducible pipeline. -->
+
+# Methods
+
+## Study design and data sources
+
+<!-- TODO Day 15 — short paragraph (anti-F8 shared with A1 and A2 with prose
+envelope rewritten); cite OSF DOI 10.17605/OSF.IO/3CZRE; SHA-256 of master
+table; pre-registration v10·0 frozen 2026-04-22. -->
+
+## Periprandial sampling and analyte panel
+
+<!-- TODO Day 15 — Methods §Periprandial sampling shared with A1/A2 with
+envelope rewritten.  Emphasise that **eleven analyte forms** enter the
+per-analyte PTP layer; **nine** enter the joint Happ–Greven operator; glucose
+and insulin are PTP inputs but NOT joint-operator components. -->
+
+## Analytic pipeline (16 R scripts)
+
+<!-- TODO Day 16 — A3-PRINCIPAL section: detailed walk-through of the five-layer,
+sixteen-script pipeline (DI2 of A3 will visualise this).
+Layer 1 — ingest and harmonisation: 00_inventory.R, parse_master_table.R, 01_harmonize.R
+Layer 2 — pseudo-IPD generation (within 01_harmonize.R)
+Layer 3 — estimation: 02_fpca_pace.R, 03_mfpca_happgreven.R, 04b_srsf_registration.R
+Layer 4 — classification: 05_classify_ptp.R, 05b_iep_perm.R
+Layer 5 — inference, bootstrap, sensitivity, figures: 06_inference.R,
+06_lme4_scores.R, 06b_mahalanobis.R, 07_bootstrap.R, 08_figures.R,
+08b_lancet_figs.R, 09_sensitivity.R; A3-specific 10_A3_methodological_figs.R
+on Day 16. -->
+
+## PTP and IEP classification
+
+### PTP per-analyte vocabulary (nine labels)
+
+<!-- TODO Day 17 — full enunciation of the nine-label PTP vocabulary:
+Preserved · Borderline Impaired · Impaired · Blunted · Borderline Altered ·
+Altered · Recovered · Borderline Enhanced · Enhanced.  Discordant_High and
+Discordant_Low flags blocking Type I/II assignment.  Glucose suffixes a/b/c. -->
+
+### Eight-rule precedence hierarchy for Integrated Enteropancreatic Pattern Types
+
+<!-- TODO Day 17 — full enunciation of rules R1–R7 plus the eight-rule
+precedence hierarchy (1) any non-glucose Altered → Type IV·II; (2) Borderline
+Altered → Type IV·I; (3a/3b) Enhanced with glucose=a/no-L → Type II·II,
+otherwise → Type V·II; (4a/4b) Borderline Enhanced → Type II·I or V·I;
+(5) Impaired/Blunted → Type III·II; (6) Borderline Impaired → Type III·I;
+(7) all Preserved → Type I·I; (8) ≥1 Recovered remainder Preserved/Recovered →
+Type I·II.  Glycaemic suffixes a/b/c only on Types III, IV, V. -->
+
+### Reference-distribution standardisation (referenced to A2 Theorems S1.7–S1.8)
+
+<!-- TODO Day 17 — short remit-back paragraph. -->
+
+## Statistical inference (referenced to A2)
+
+> Multivariate inference, Pillai trace and FANOVA permutation, Mahalanobis
+> distances, simultaneous bootstrap bands, and the four pre-specified
+> sensitivities (±0·5 SD threshold; leave-one-axis-out; ρ-AR(1); challenge-class
+> pooling) are described in detail in companion paper A2 (Lancet Diabetes &
+> Endocrinology, branch `lancet-A2-mathematical`, tag
+> `A2-submitted-2026-05-09`).  F values are reported as cohort-separation
+> magnitudes per Procedure L3·9 of A2.
+
+## Software, reproducibility, and reporting
+
+<!-- TODO Day 19 — boilerplate identical structure to A2 with prose envelope
+rewritten.  STROBE checklist; TRIPOD+AI declared **pending** (extension of the
+framework to clinical individual-participant prediction will be TRIPOD+AI when
+the prospective validation is undertaken — A3 opens the line, does not close
+it). -->
+
+## Role of the funding source
+
+There was no funding for this study. The author had full access to all data and final responsibility for the decision to submit for publication.
+
+# Findings
+
+## Cohort and panel composition
+
+<!-- TODO Day 16 — Table 1 (anti-F8 shared with A1, A2). -->
+
+## PTP per-analyte distribution
+
+<!-- TODO Day 17 — across the 8,050 analyte–subject pairings:
+Preserved 67·1%, Borderline Impaired 8·6%, Discordant_Basal 6·3%,
+Borderline Altered 5·8%, Discordant_High 4·8%, Altered 3·7%, Impaired 2·2%,
+Discordant_Low 1·5%, zero Blunted in this run.  Cohort patterns. -->
+
+## Integrated Enteropancreatic Pattern Types I–V — three signatures
+
+### Bariatric signature: Type V is bariatric-dominant, not RYGBP-exclusive
+
+<!-- TODO Day 18 — Type V = 43·3% RYGBP and 30·7% SG (Bonferroni q=0·035).
+Both retain markedly elevated PYY total amplitude (z_{ξ1} > 2 SD); RYGBP
+shows GLP-1 active enhancement; SG shows ghrelin-total Blunted-equivalent
+depression consistent with fundic resection. -->
+
+### Disease signature: Type III dominates obesity+T2DM and caloric restriction
+
+<!-- TODO Day 18 — Type III = 40·0% obesity+T2DM, 36·8% Post-CR, 29·5% T2DM.
+Type III·c (with glucose dysglycaemia) is modal in obesity+T2DM. -->
+
+### Reference signature: Type I·I dominant in non-obese without T2D
+
+<!-- TODO Day 18 — Type I·I = 32·2% non-obese without T2D + 32·2% obesity.
+The reference cohort also shows 23·1% not-classifiable — structural
+consequence of single-analyte source arms (150 pseudo-subjects from arms
+that measured only one hormone), not a failure of reference standardisation. -->
+
+## Cross-cohort separability and bootstrap stability (referenced to A2)
+
+<!-- TODO Day 19 — short qualitative paragraph; quantitative detail in A2. -->
+
+# Discussion
+
+## Principal clinical findings
+
+<!-- TODO Day 19 — three-sentence reframing of bariatric-dominant Type V,
+T2DM Type III dominance, and caloric-restriction Type III dominance. -->
+
+## Comparison with existing taxonomies
+
+<!-- TODO Day 19 — Ahlqvist 2018, Udler 2018, German Diabetes Study, Tübingen,
+PREDICT (Berry 2020), Glucotypes (Hall 2018).  Static cross-sectional vs
+multivariate-functional joint dynamics. -->
+
+## Clinical implications: agonist selection and metabolic surgery indication
+
+<!-- TODO Day 19 — A3-PRINCIPAL section: clinical-decision algorithm keyed
+on PTP/IEP Types — single-receptor agonists (semaglutide), dual receptor
+(tirzepatide), triple receptor (retatrutide, the "Tipo VI" extension); link to
+2025 Lancet D&E commission on metabolic surgery (Lobato 2025; Rubino 2025).
+DI4 will visualise the decision tree. -->
+
+## Mechanistic interpretation (referenced to A1)
+
+> The mechanistic interpretation of the four leading mFPC eigenfunctions —
+> distal L-cell dominance (PC1), proximal-vs-distal sequencing (PC2), biphasic
+> glucose–insulin coupling (PC3), and ghrelin tone (PC4) — is the subject of
+> companion paper A1 (Lancet Diabetes & Endocrinology, branch
+> `lancet-A1-conceptual`).
+
+## Strengths and limitations
+
+<!-- TODO Day 20 — clinical strengths; six declared limitations identical to
+A1/A2 with envelope rewritten:
+(i) ecological cohort-time-arm; (ii) MFPCA panel n=350; (iii) percentile
+thresholds awaiting prospective validation; (iv) protocol heterogeneity;
+(v) agnostic to circadian phase / CGM context; (vi) single-analyte source
+arms drive 23·1 % not-classifiable in the reference cohort. -->
+
+## Implications for research and practice
+
+<!-- TODO Day 20 — open the line for prospective TRIPOD+AI validation;
+Tipo VI extension for triple-receptor agonists; CGM-augmented framework. -->
+
+## Conclusion
+
+<!-- TODO Day 21 — 3-4 sentence clinical synthesis. -->
+
+# Contributors
+
+HMVA conceived the PTP/IEP classification framework, derived the eight-rule precedence hierarchy, implemented the analytic pipeline, performed the empirical evaluation, designed the clinical-decision algorithm, drafted the manuscript, and approved the final version.
+
+# Declaration of interests
+
+The author declares no competing interests, no industry support, and no funding for this work.
+
+# Data sharing
+
+All digitised periprandial trajectories, the harmonised cohort corpus (`master_table.csv`, SHA-256 `2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117`), the 16-script analytic pipeline, the article-specific outputs, and the reproducibility scripts are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544; article-specific version DOIs cited in each manuscript) and GitHub (`sv8wmxnbp8-hash/EPP10` v1·3 and subsequent branches) under CC-BY 4·0. The repository permits full reproduction of every numerical claim and follows FAIR data principles. Pre-registration is at the Open Science Framework (DOI 10.17605/OSF.IO/3CZRE; project at https://osf.io/tr469, frozen 2026-04-22).
+
+# AI/LLM disclosure
+
+Analytic pipeline design, R code implementation, and manuscript drafting were supported by Claude (Anthropic, Opus 4.7 / Sonnet 4.6, May 2026). All statistical outputs, pre-registration decisions, and scientific claims were validated by the author against the v10·0 master analysis plan (OSF DOI 10.17605/OSF.IO/3CZRE) and the FDEP-TP framework v2·0 reference document.
+
+# Acknowledgments
+
+<!-- TODO Day 21 — clinical acknowledgments. -->
+
+---
+
+# References
+
+::: {#refs}
+:::
+
+---
+
+# Display item captions
+
+**DI1 — Periprandial trajectory acquisition protocol.** <!-- TODO Day 16 caption. -->
+
+**DI2 — Computational pipeline (16 R scripts in 5 layers).** <!-- TODO Day 16 caption. -->
+
+**DI3 — Integrated Enteropancreatic Pattern Types I–V prevalence by cohort.** <!-- TODO Day 17 caption. -->
+
+**DI4 — Clinical-decision tree: PTP/IEP-informed agonist selection and metabolic-surgery indication.** <!-- TODO Day 17 caption. -->
+
+---
+
+# Tables
+
+## Table 1 — Cohort, panel, and reference adequacy
+
+<!-- TODO Day 16 — anti-F8 shared with A1 and A2. -->
+
+## Table 2 — IEP Type I–V prevalence by cohort with permutation q-values
+
+<!-- TODO Day 17 — A3-specific table.  Source: 03_outputs/lancet_run_2026-05-08/tables/iep_prevalence_perm.csv. -->
+
+## Table 3 — PTP per-analyte distribution
+
+<!-- TODO Day 18 — 8,050 analyte–subject classifications by label and analyte. -->
+
+## Table 4 — PTP/IEP-informed clinical algorithm
+
+<!-- TODO Day 19 — agonist selection and metabolic-surgery indication keyed on
+Type and glycaemic suffix.  Pre-specified caveat: hypothesis-generating, not
+prediction. -->
+
+# Supplementary material
+
+## Supplementary S1 — Intensional definitions of Patterns I·I–V·II
+
+<!-- TODO Day 18 — full Supplementary S1 with intensional definitions of every
+sub-type from the eight-rule precedence and the three-suffix glycaemic
+context. -->
+
+## Supplementary S2 — Operational protocol (PRIMARY appendix)
+
+<!-- TODO Day 19 — full acquisition protocol: meal composition, sampling
+density, analyte preservation, immunoassay specifications, harmonisation rules.
+This appendix is A3-DISTINCTIVE and supports the translational use of the
+framework. -->
