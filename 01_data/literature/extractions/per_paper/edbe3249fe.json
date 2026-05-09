@@ -1,0 +1,34 @@
+{
+  "paper_id": "edbe3249fe",
+  "filename": "4.-_Appetite_the_enteroendocrine_system_gastrointestinal_disease_and_obesity.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1017/S0029665120006965",
+    "pmid": null,
+    "year": 2021,
+    "title": "© The Authors 2020 Firstpublished online 4May2020"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "SG",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "GLP1_active",
+    "PYY_3_36",
+    "ghrelin_acyl",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

@@ -1,0 +1,538 @@
+{
+  "paper_id": "ae668dfdf7",
+  "filename": "_37_37_Enteroendocrine_Patterns_in_Obesity_and_Type_2_Diabetes-_Meta-Analysis_Using_Modified_Secreti_3.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2025,
+    "title": "* 37*37*Enteroendocrine Patterns in Obesity and Type 2 Diabetes- Meta-"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Post-CR",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "GLP1_active",
+    "GLP1_total",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": 847,
+  "tables": [
+    {
+      "page": 9,
+      "n_rows": 6
+    },
+    {
+      "page": 11,
+      "n_rows": 6
+    },
+    {
+      "page": 11,
+      "n_rows": 6
+    },
+    {
+      "page": 12,
+      "n_rows": 6
+    },
+    {
+      "page": 15,
+      "n_rows": 5
+    },
+    {
+      "page": 17,
+      "n_rows": 5
+    },
+    {
+      "page": 17,
+      "n_rows": 5
+    },
+    {
+      "page": 18,
+      "n_rows": 6
+    },
+    {
+      "page": 19,
+      "n_rows": 4
+    },
+    {
+      "page": 20,
+      "n_rows": 4
+    },
+    {
+      "page": 21,
+      "n_rows": 6
+    },
+    {
+      "page": 21,
+      "n_rows": 6
+    },
+    {
+      "page": 22,
+      "n_rows": 5
+    },
+    {
+      "page": 22,
+      "n_rows": 5
+    },
+    {
+      "page": 22,
+      "n_rows": 5
+    },
+    {
+      "page": 23,
+      "n_rows": 7
+    },
+    {
+      "page": 23,
+      "n_rows": 5
+    },
+    {
+      "page": 24,
+      "n_rows": 5
+    },
+    {
+      "page": 24,
+      "n_rows": 5
+    },
+    {
+      "page": 24,
+      "n_rows": 3
+    },
+    {
+      "page": 25,
+      "n_rows": 4
+    },
+    {
+      "page": 25,
+      "n_rows": 6
+    },
+    {
+      "page": 25,
+      "n_rows": 4
+    },
+    {
+      "page": 25,
+      "n_rows": 3
+    },
+    {
+      "page": 26,
+      "n_rows": 3
+    },
+    {
+      "page": 26,
+      "n_rows": 5
+    },
+    {
+      "page": 26,
+      "n_rows": 7
+    },
+    {
+      "page": 31,
+      "n_rows": 6
+    },
+    {
+      "page": 35,
+      "n_rows": 9
+    },
+    {
+      "page": 36,
+      "n_rows": 18
+    },
+    {
+      "page": 37,
+      "n_rows": 3
+    },
+    {
+      "page": 37,
+      "n_rows": 8
+    },
+    {
+      "page": 38,
+      "n_rows": 5
+    },
+    {
+      "page": 38,
+      "n_rows": 9
+    },
+    {
+      "page": 39,
+      "n_rows": 8
+    },
+    {
+      "page": 39,
+      "n_rows": 7
+    },
+    {
+      "page": 39,
+      "n_rows": 7
+    }
+  ],
+  "trajectory_rows_extracted": 59,
+  "extraction_quality": "auto",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "trajectory_rows_raw": [
+    {
+      "time_min": 120.0,
+      "value": 122548.0,
+      "raw_col": "15/25\n(60%)",
+      "page": 36
+    },
+    {
+      "time_min": 120.0,
+      "value": 380.0,
+      "raw_col": "542",
+      "page": 36
+    },
+    {
+      "time_min": 120.0,
+      "value": 0.796,
+      "raw_col": "0.910",
+      "page": 36
+    },
+    {
+      "time_min": 120.0,
+      "value": 78.0,
+      "raw_col": "89%",
+      "page": 36
+    },
+    {
+      "time_min": 120.0,
+      "value": 75.0,
+      "raw_col": "86%",
+      "page": 36
+    },
+    {
+      "time_min": 120.0,
+      "value": 0.114,
+      "raw_col": "Reference",
+      "page": 36
+    },
+    {
+      "time_min": 45.0,
+      "value": -100.0,
+      "raw_col": "AUC/(basal×150)",
+      "page": 36
+    },
+    {
+      "time_min": 45.0,
+      "value": 52520.0,
+      "raw_col": "15/25\n(60%)",
+      "page": 36
+    },
+    {
+      "time_min": 45.0,
+      "value": 152.0,
+      "raw_col": "542",
+      "page": 36
+    },
+    {
+      "time_min": 45.0,
+      "value": 0.798,
+      "raw_col": "0.910",
+      "page": 36
+    },
+    {
+      "time_min": 45.0,
+      "value": 75.0,
+      "raw_col": "89%",
+      "page": 36
+    },
+    {
+      "time_min": 45.0,
+      "value": 74.0,
+      "raw_col": "86%",
+      "page": 36
+    },
+    {
+      "time_min": 45.0,
+      "value": 0.056,
+      "raw_col": "Reference",
+      "page": 36
+    },
+    {
+      "time_min": 150.0,
+      "value": -100.0,
+      "raw_col": "AUC/(basal×60)",
+      "page": 37
+    },
+    {
+      "time_min": 150.0,
+      "value": 2258.0,
+      "raw_col": "2/25 (8%)",
+      "page": 37
+    },
+    {
+      "time_min": 150.0,
+      "value": 48.0,
+      "raw_col": "48",
+      "page": 37
+    },
+    {
+      "time_min": 150.0,
+      "value": 0.721,
+      "raw_col": "0.754",
+      "page": 37
+    },
+    {
+      "time_min": 150.0,
+      "value": 68.0,
+      "raw_col": "72%",
+      "page": 37
+    },
+    {
+      "time_min": 150.0,
+      "value": 68.0,
+      "raw_col": "70%",
+      "page": 37
+    },
+    {
+      "time_min": 150.0,
+      "value": 0.068,
+      "raw_col": "−0.035",
+      "page": 37
+    },
+    {
+      "time_min": 2.0,
+      "value": 1834.0,
+      "raw_col": "8/34",
+      "page": 38
+    },
+    {
+      "time_min": 2.0,
+      "value": 2.047,
+      "raw_col": "−2.062 (ghrelin)",
+      "page": 38
+    },
+    {
+      "time_min": 2.0,
+      "value": 0.001,
+      "raw_col": "<0.001",
+      "page": 38
+    },
+    {
+      "time_min": 2.0,
+      "value": 0.8,
+      "raw_col": "Effect robust",
+      "page": 38
+    },
+    {
+      "time_min": 4.0,
+      "value": 434.0,
+      "raw_col": "8/34",
+      "page": 38
+    },
+    {
+      "time_min": 4.0,
+      "value": 0.001,
+      "raw_col": "<0.001",
+      "page": 38
+    },
+    {
+      "time_min": 5.0,
+      "value": 1534.0,
+      "raw_col": "8/34",
+      "page": 38
+    },
+    {
+      "time_min": 5.0,
+      "value": 0.18,
+      "raw_col": "−2.062 (ghrelin)",
+      "page": 38
+    },
+    {
+      "time_min": 5.0,
+      "value": 0.81,
+      "raw_col": "<0.001",
+      "page": 38
+    },
+    {
+      "time_min": 30.0,
+      "value": 45.2,
+      "raw_col": "12.5",
+      "page": 39
+    },
+    {
+      "time_min": 30.0,
+      "value": 128.5,
+      "raw_col": "42.3",
+      "page": 39
+    },
+    {
+      "time_min": 60.0,
+      "value": 78.5,
+      "raw_col": "12.5",
+      "page": 39
+    },
+    {
+      "time_min": 60.0,
+      "value": 165.2,
+      "raw_col": "42.3",
+      "page": 39
+    },
+    {
+      "time_min": 120.0,
+      "value": 92.8,
+      "raw_col": "12.5",
+      "page": 39
+    },
+    {
+      "time_min": 120.0,
+      "value": 145.3,
+      "raw_col": "42.3",
+      "page": 39
+    },
+    {
+      "time_min": 180.0,
+      "value": 52.3,
+      "raw_col": "12.5",
+      "page": 39
+    },
+    {
+      "time_min": 180.0,
+      "value": 68.5,
+      "raw_col": "42.3",
+      "page": 39
+    },
+    {
+      "time_min": 150.0,
+      "value": 1875.0,
+      "raw_col": "12.5",
+      "page": 39
+    },
+    {
+      "time_min": 150.0,
+      "value": 6345.0,
+      "raw_col": "42.3",
+      "page": 39
+    },
+    {
+      "time_min": 30.0,
+      "value": 18.5,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 30.0,
+      "value": 59.0,
+      "raw_col": "−34% baseline",
+      "page": 39
+    },
+    {
+      "time_min": 60.0,
+      "value": 32.1,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 60.0,
+      "value": 59.0,
+      "raw_col": "−34% baseline",
+      "page": 39
+    },
+    {
+      "time_min": 120.0,
+      "value": 38.5,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 120.0,
+      "value": 59.0,
+      "raw_col": "−34% baseline",
+      "page": 39
+    },
+    {
+      "time_min": 180.0,
+      "value": 28.2,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 180.0,
+      "value": 46.0,
+      "raw_col": "−34% baseline",
+      "page": 39
+    },
+    {
+      "time_min": 30.0,
+      "value": 18.5,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 30.0,
+      "value": 125.3,
+      "raw_col": "9.5",
+      "page": 39
+    },
+    {
+      "time_min": 30.0,
+      "value": 578.0,
+      "raw_col": "+16% (baseline preserved)",
+      "page": 39
+    },
+    {
+      "time_min": 60.0,
+      "value": 32.1,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 60.0,
+      "value": 185.2,
+      "raw_col": "9.5",
+      "page": 39
+    },
+    {
+      "time_min": 60.0,
+      "value": 477.0,
+      "raw_col": "+16% (baseline preserved)",
+      "page": 39
+    },
+    {
+      "time_min": 120.0,
+      "value": 38.5,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 120.0,
+      "value": 218.5,
+      "raw_col": "9.5",
+      "page": 39
+    },
+    {
+      "time_min": 120.0,
+      "value": 467.0,
+      "raw_col": "+16% (baseline preserved)",
+      "page": 39
+    },
+    {
+      "time_min": 180.0,
+      "value": 28.2,
+      "raw_col": "8.2",
+      "page": 39
+    },
+    {
+      "time_min": 180.0,
+      "value": 158.2,
+      "raw_col": "9.5",
+      "page": 39
+    },
+    {
+      "time_min": 180.0,
+      "value": 461.0,
+      "raw_col": "+16% (baseline preserved)",
+      "page": 39
+    }
+  ]
+}

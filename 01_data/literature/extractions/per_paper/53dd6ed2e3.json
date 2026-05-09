@@ -1,0 +1,27 @@
+{
+  "paper_id": "53dd6ed2e3",
+  "filename": "A_mass_spectrometric_assay_for_the_quantification_of_neuropeptide_PYY_in_plasma.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1039/c2ay05536h",
+    "pmid": null,
+    "year": 2012,
+    "title": "Dynamic Article Links <"
+  },
+  "cohorts_detected": [
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_total",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

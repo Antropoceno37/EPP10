@@ -1,0 +1,37 @@
+{
+  "paper_id": "9094de421b",
+  "filename": "Differences_in_gastrointestinal_hormones_and_appetite_ratings_among_obesity_classes.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2022,
+    "title": "Appetite171(2022)105940"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "GLP1_active",
+    "PYY_3_36",
+    "PYY_total",
+    "ghrelin_acyl",
+    "ghrelin_total",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "LMMT",
+  "n_subjects": 45,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

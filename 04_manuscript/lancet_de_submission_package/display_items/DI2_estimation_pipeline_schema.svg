@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .ttl   { font-size: 14px; font-weight: 700; }
+    .lbl   { font-size: 11px; font-weight: 700; }
+    .math  { font-style: italic; font-size: 13px; }
+    .cap   { font-size: 9px; fill: #555; }
+    .axiom { font-size: 9px; fill: #2a5fb8; font-weight: 700; }
+    .box   { fill: #f3f7fb; stroke: #1f4f8b; stroke-width: 1.2; rx: 6; ry: 6; }
+    .boxin { fill: #fff8e7; stroke: #b07a18; stroke-width: 1.2; rx: 6; ry: 6; }
+    .boxout{ fill: #e9f5ec; stroke: #1f7a3c; stroke-width: 1.2; rx: 6; ry: 6; }
+    .arrow { stroke: #333; stroke-width: 1.4; fill: none; marker-end: url(#tri); }
+  </style>
+  <defs>
+    <marker id="tri" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="22" class="ttl">Figure 2. Estimation pipeline from periprandial observations to IEP type</text>
+
+  <!-- Box 1: Raw observations -->
+  <rect x="20"  y="60" width="110" height="60" class="boxin"/>
+  <text x="75"  y="82" class="lbl"  text-anchor="middle">Sparse</text>
+  <text x="75"  y="98" class="lbl"  text-anchor="middle">observations</text>
+  <text x="75"  y="114" class="math" text-anchor="middle">Y_ij = X(T_ij) + ε</text>
+  <text x="75"  y="132" class="cap"  text-anchor="middle">balanced sparse, MCAR</text>
+
+  <!-- Box 2: μ̂, Ĉ -->
+  <rect x="160" y="60" width="120" height="60" class="box"/>
+  <text x="220" y="82"  class="lbl"  text-anchor="middle">Mean &amp; covariance</text>
+  <text x="220" y="100" class="math" text-anchor="middle">μ̂(t),  Ĉ(s,t)</text>
+  <text x="220" y="118" class="cap"  text-anchor="middle">FACEs (Xiao 2018)</text>
+  <text x="220" y="138" class="axiom" text-anchor="middle">L3.3 · L2.4</text>
+
+  <!-- Box 3: Mercer / λ̂_k, φ̂_k -->
+  <rect x="310" y="60" width="120" height="60" class="box"/>
+  <text x="370" y="82"  class="lbl"  text-anchor="middle">Spectral decomp.</text>
+  <text x="370" y="100" class="math" text-anchor="middle">λ̂_k, φ̂_k</text>
+  <text x="370" y="118" class="cap"  text-anchor="middle">Mercer–Karhunen–Loève</text>
+  <text x="370" y="138" class="axiom" text-anchor="middle">L2.1</text>
+
+  <!-- Box 4: BLUP scores -->
+  <rect x="460" y="60" width="120" height="60" class="box"/>
+  <text x="520" y="82"  class="lbl"  text-anchor="middle">BLUP scores</text>
+  <text x="520" y="100" class="math" text-anchor="middle">ξ̂_ik = λ_k φ_ik' Σ⁻¹ (Y_i − μ_i)</text>
+  <text x="520" y="118" class="cap"  text-anchor="middle">Yao–Müller–Wang 2005</text>
+  <text x="520" y="138" class="axiom" text-anchor="middle">L2.2 · L2.3</text>
+
+  <!-- Box 5: Multivariate (Happ–Greven) -->
+  <rect x="610" y="60" width="130" height="60" class="box"/>
+  <text x="675" y="82"  class="lbl"  text-anchor="middle">mFPCA (joint)</text>
+  <text x="675" y="100" class="math" text-anchor="middle">ν̂_m, ψ̂_m, ρ̂_im</text>
+  <text x="675" y="118" class="cap"  text-anchor="middle">Happ–Greven 2018 + Chiou</text>
+  <text x="675" y="138" class="axiom" text-anchor="middle">L2.4 · L2.5</text>
+
+  <!-- Arrows row 1 -->
+  <path class="arrow" d="M130,90 L160,90"/>
+  <path class="arrow" d="M280,90 L310,90"/>
+  <path class="arrow" d="M430,90 L460,90"/>
+  <path class="arrow" d="M580,90 L610,90"/>
+
+  <!-- Box 6: Standardization to Lean-Healthy -->
+  <rect x="160" y="190" width="160" height="60" class="box"/>
+  <text x="240" y="212" class="lbl"  text-anchor="middle">Lean-Healthy z-score</text>
+  <text x="240" y="230" class="math" text-anchor="middle">Z_ih = [B, ξ₁, ξ₂, ξ₃]</text>
+  <text x="240" y="248" class="cap"  text-anchor="middle">5/10/25/75/95 percentile thresholds</text>
+  <text x="240" y="265" class="axiom" text-anchor="middle">L2.7</text>
+
+  <!-- Box 7: PTP labels -->
+  <rect x="350" y="190" width="160" height="60" class="box"/>
+  <text x="430" y="212" class="lbl"  text-anchor="middle">PTP labels (9)</text>
+  <text x="430" y="230" class="cap"  text-anchor="middle">P · BI · I · B · BA · A</text>
+  <text x="430" y="244" class="cap"  text-anchor="middle">+ R · BE · E (post-Rx)</text>
+  <text x="430" y="265" class="axiom" text-anchor="middle">L3.7 · D1 §6.4</text>
+
+  <!-- Box 8: IEP type via 8-rule precedence -->
+  <rect x="540" y="190" width="200" height="60" class="boxout"/>
+  <text x="640" y="212" class="lbl"  text-anchor="middle">IEP type · 8-rule precedence</text>
+  <text x="640" y="230" class="cap"  text-anchor="middle">I.I, I.II, II.I, II.II, III.I, III.II,</text>
+  <text x="640" y="244" class="cap"  text-anchor="middle">IV.I, IV.II, V.I, V.II + a/b/c</text>
+  <text x="640" y="265" class="axiom" text-anchor="middle">L3.7</text>
+
+  <!-- Arrows row 2 -->
+  <path class="arrow" d="M675,120 C 675,160 240,160 240,190"/>
+  <path class="arrow" d="M320,220 L350,220"/>
+  <path class="arrow" d="M510,220 L540,220"/>
+
+  <!-- Bottom band: inference -->
+  <rect x="20" y="290" width="720" height="50" fill="#fafafa" stroke="#999" stroke-width="0.6"/>
+  <text x="40" y="310" class="lbl">Inference</text>
+  <text x="40" y="328" class="cap">Subject-level bootstrap (B = 1000) · BCa eigenvalues · Degras 2011 simultaneous bands · Zhang–Chen functional F · Pillai · Mahalanobis · permutation B = 1000 with Bonferroni</text>
+</svg>

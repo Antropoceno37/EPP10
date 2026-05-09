@@ -1,0 +1,29 @@
+{
+  "paper_id": "873f722126",
+  "filename": "Effect_of_Human_Body_Weight_Changes_on_Circulating_Levels_of_Peptide_YY_and_Peptide_YY3_36.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1210/jc.2006-1425",
+    "pmid": null,
+    "year": 2006,
+    "title": "0021-972X/07/$15.00/0 TheJournalofClinicalEndocrinology&Metabolism92(2):583–588"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_3_36",
+    "PYY_total",
+    "glucose"
+  ],
+  "challenge": null,
+  "n_subjects": 36,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "sin pancreatic effector ni gut hormone",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

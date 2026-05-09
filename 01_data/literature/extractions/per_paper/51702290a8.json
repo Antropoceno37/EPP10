@@ -1,0 +1,52 @@
+{
+  "paper_id": "51702290a8",
+  "filename": "_2_Variacion_Biologica_Enterohormonas_ANALISIS_COMPLETO.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2025,
+    "title": "VARIACIÓN BIOLÓGICA DE ENTEROHORMONAS"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "SG",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": 40,
+  "tables": [
+    {
+      "page": 10,
+      "n_rows": 6
+    },
+    {
+      "page": 12,
+      "n_rows": 6
+    },
+    {
+      "page": 14,
+      "n_rows": 6
+    },
+    {
+      "page": 16,
+      "n_rows": 6
+    },
+    {
+      "page": 18,
+      "n_rows": 6
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "challenge=None no en ['SMMT', 'LMMT', 'OGTT']",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

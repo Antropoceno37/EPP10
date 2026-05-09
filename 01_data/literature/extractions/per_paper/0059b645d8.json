@@ -1,0 +1,41 @@
+{
+  "paper_id": "0059b645d8",
+  "filename": "_COVER_LETTER_-_SUBMISIO_N_A_REVISTA_CIENTI_FICA.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2025,
+    "title": "**** COVER LETTER - SUBMISIÓN A REVISTA CIENTÍFICA"
+  },
+  "cohorts_detected": [
+    "Obesity"
+  ],
+  "hormones_detected": [],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 5,
+      "n_rows": 16
+    },
+    {
+      "page": 6,
+      "n_rows": 9
+    },
+    {
+      "page": 6,
+      "n_rows": 5
+    },
+    {
+      "page": 7,
+      "n_rows": 7
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

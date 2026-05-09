@@ -1,0 +1,45 @@
+{
+  "paper_id": "7774beba9d",
+  "filename": "Aplicar_esta_estadistica_al_articulo.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": null,
+    "title": "Hybrid Methodological Framework"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Post-CR",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 2,
+      "n_rows": 6
+    },
+    {
+      "page": 3,
+      "n_rows": 6
+    },
+    {
+      "page": 4,
+      "n_rows": 6
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

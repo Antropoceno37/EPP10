@@ -1,0 +1,32 @@
+{
+  "paper_id": "6ba3a4cec5",
+  "filename": "_COMPILACIO_N_COMPLETA-_10_VERSIONES_ALTERNATIVAS.pdf_.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2025,
+    "title": "**** COMPILACIÓN COMPLETA- 10 VERSIONES ALTERNATIVAS"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "SG",
+    "T2DM"
+  ],
+  "hormones_detected": [],
+  "challenge": "OGTT",
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 9,
+      "n_rows": 11
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

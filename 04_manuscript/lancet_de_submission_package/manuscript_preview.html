@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Héctor M. Virgen-Ayala">
+<meta name="dcterms.date" content="2026-05-08">
+
+<title>Periprandial Transition Profiles and Integrated Enteropancreatic Patterns I–V: multivariate functional principal component analysis of gut–pancreas hormone trajectories across health, type 2 diabetes, and metabolic surgery</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="lancet_de_v1_files/libs/clipboard/clipboard.min.js"></script>
+<script src="lancet_de_v1_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="lancet_de_v1_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="lancet_de_v1_files/libs/quarto-html/popper.min.js"></script>
+<script src="lancet_de_v1_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="lancet_de_v1_files/libs/quarto-html/anchor.min.js"></script>
+<link href="lancet_de_v1_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="lancet_de_v1_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="lancet_de_v1_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="lancet_de_v1_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="lancet_de_v1_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="lancet_de_v1.docx"><i class="bi bi-file-word"></i>MS Word</a></li><li><a href="lancet_de_v1.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Periprandial Transition Profiles and Integrated Enteropancreatic Patterns I–V: multivariate functional principal component analysis of gut–pancreas hormone trajectories across health, type 2 diabetes, and metabolic surgery</h1>
+<p class="subtitle lead">Lancet Diabetes &amp; Endocrinology — Article (Original Research)</p>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliations</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Héctor M. Virgen-Ayala <a href="mailto:hectorvirgenmd@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0009-0006-2081-2286" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Department of Surgical Clinics, Universidad de Guadalajara, Guadalajara, Mexico
+          </p>
+        <p class="affiliation">
+            Department of General Surgery, Hospital General de Zona No.&nbsp;14, Instituto Mexicano del Seguro Social, Guadalajara, Mexico
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 8, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="summary" class="level1">
+<h1>Summary</h1>
+<p><strong>Background.</strong> Heterogeneity of the periprandial enteropancreatic response across health, obesity, type 2 diabetes (T2DM), caloric restriction, and metabolic surgery is well documented but under-quantified as a multi-hormonal dynamic object. Existing data-driven taxonomies decompose static variables; no taxonomy classifies multi-hormonal periprandial dynamics as functional objects. We aimed to construct, axiomatise, and apply a deterministic multivariate functional principal component (mFPCA) framework to recover Periprandial Transition Profiles (PTPs) and Integrated Enteropancreatic Patterns (IEP Types I–V) from published trajectories.</p>
+<p><strong>Methods.</strong> A pre-registered protocol (OSF 10.17605/OSF.IO/3CZRE) was applied to <strong>23 source studies yielding 71 (Author × Cohort) tuples and 55 productive cohort-time-arms across 7 canonical cohorts</strong> (non-obese without T2D reference, obesity, T2DM, obesity+T2DM, caloric restriction, sleeve gastrectomy [SG], Roux-en-Y gastric bypass [RYGBP]) and 11 analyte forms (GLP-1, GIP, ghrelin, PYY, glucagon, insulin, glucose). Pseudo-individual data (M=1000 draws/arm; deterministic N=50/arm subsample) were generated from a Gaussian-process AR(1) kernel anchored to literature coefficient-of-variation. Univariate covariance was estimated by tensor-product penalised splines (<code>face::face.sparse</code>); multivariate decomposition followed Happ–Greven 2018 with Chiou normalisation. Best linear unbiased prediction (Yao–Müller–Wang 2005) returned multivariate scores; PTP labels were assigned by Z-standardisation against the non-obese without T2D distribution; IEP Types I–V were derived under an explicit eight-rule precedence hierarchy. Inference used Pillai trace and FANOVA permutation (B=5000); validity checks comprised subject-level bootstrap (B=2000 classification stage; B=50 pipeline stage), simultaneous bootstrap bands, leave-one-axis-out, ±0·5 SD threshold perturbation, and ρ-sensitivity.</p>
+<p><strong>Findings.</strong> From 2,750 pseudo-subjects and 8,050 analyte–subject classifications, the joint operator retained K=12 components at the pre-specified multivariate FVE ≥ 0·90 threshold (Golovkine 2025 criterion applied directly to joint variance; cumulative FVE 92 %; N/K=29·2; sensitivity K=15 at FVE ≥ 0·95). Type V (enhanced–mixed with residual dysglycaemia) was bariatric-dominant: 43·3 % of RYGBP and 30·7 % of SG (Bonferroni q&lt;0·05), versus 18·8 % in non-obese without T2D reference. Type III (infra-physiological) dominated obesity+T2DM (40·0 %) and caloric restriction (36·8 %). Non-obese without T2D showed 32·2 % Type I and 23·1 % not-classifiable; these subjects originated exclusively from single-analyte source arms (fewer than the two non-glucose axes required for IEP type assignment), not from failures of reference z-standardisation, for which all 9 analytes met the n ≥ 50 adequacy criterion. Pillai contrasts on the joint score panel produced cohort-separation magnitudes of F=52·1 (caloric restriction), 9·6 (obesity+T2DM), and 7·8 (obesity), with permutation p saturating at B⁻¹.</p>
+<p><strong>Interpretation.</strong> The PTP/IEP framework recovers reproducible enteropancreatic Patterns I–V across health, disease, and intervention. Type V is bariatric-dominant — not RYGBP-exclusive — and Type III predominates after caloric restriction, refining prior accounts of post-intervention “normalisation”. The framework is hypothesis-generating and requires individual-participant validation before clinical translation.</p>
+<p><strong>Funding.</strong> None.</p>
+<hr>
+</section>
+<section id="research-in-context" class="level1">
+<h1>Research in context</h1>
+<p><strong>Evidence before this study.</strong> A search of PubMed, Embase, and Web of Science from inception to 31 March 2026 (terms: “incretin”; “GLP-1”; “GIP”; “ghrelin”; “PYY”; “periprandial”; “postprandial”; “functional principal component analysis”; “multivariate FPCA”; “Roux-en-Y gastric bypass”; “sleeve gastrectomy”; “T2DM phenotyping”; “data-driven diabetes subtypes”) and validated against three landmark reviews returned no taxonomy that decomposes multi-hormonal periprandial trajectories as functional objects. The Ahlqvist five-cluster taxonomy, the Udler genetically-informed soft clusters, the German Diabetes Study replication, and the Tübingen prediabetes subphenotypes use cross-sectional clinical, genetic, or imaging variables. Glucose-curve functional analyses (Frøslie 2013, Hulman 2018, Schumock 2024, Gecili 2020) decompose a single trajectory; none integrates incretin, ghrelin, and PYY dynamics with glucose and insulin.</p>
+<p><strong>Added value of this study.</strong> A pre-registered, deterministic multivariate functional framework was applied across 23 source studies (55 productive cohort-time-arms across 7 canonical cohorts) to recover joint enteropancreatic Patterns I–V. Eight axioms (Mercer–Karhunen–Loève, BLUP optimality, kriging-equivalence, Happ–Greven positive-semi-definite guarantee, Chiou normalisation, Parseval isometry, non-obese without T2D z-standardisation, weight-as-modifier) anchor the framework as theorems with proof citations rather than modelling assumptions. The 9-label PTP vocabulary, eight-rule precedence and a/b/c glycaemic subtypes generate Patterns I–V with bariatric-dominant Type V (43·3 % RYGBP, 30·7 % SG) and infra-physiological Type III dominant after caloric restriction (36·8 %).</p>
+<p><strong>Implications of all the available evidence.</strong> Persistent dysphysiological signalling after metabolic surgery and caloric restriction — rather than uniform normalisation — reframes how clinicians interpret periprandial hormone responses. The PTP/IEP classification framework provides a reproducible substrate for re-analysing the historical literature and informs future precision-medicine trials. Six declared limitations (ecological inference, MFPCA panel restricted to n=350 by smallest-block constraint, percentile thresholds awaiting prospective validation, protocol heterogeneity, agnostic to circadian context, incomplete analyte coverage for acyl-ghrelin and glucagon) bound interpretation; individual-participant-data extension is needed before clinical translation.</p>
+<hr>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>The hypothesis that data-driven phenotyping refines clinical taxonomies of metabolic disease has motivated the Ahlqvist five-cluster framework, the Udler soft genetic clusters, the Tübingen prediabetes subphenotypes, and the second international consensus report on precision diabetes medicine. These efforts share a structural property: each summarises an individual by static cross-sectional variables — fasting glucose, HbA1c, body-mass index, beta-cell-function indices, genetic load. The dynamic enteropancreatic response to a meal is reduced to area-under-the-curve, peak amplitude, or time-to-peak. Such reductions discard the temporal geometry that distinguishes a brisk first-phase incretin pulse from a delayed, blunted, or biphasic response.</p>
+<p>Functional data analysis offers a principled alternative. Sparse functional principal component analysis via the principal analysis by conditional expectation algorithm of Yao–Müller–Wang (2005) recovers best linear unbiased predictors of latent scores from sparse longitudinal observations; the Happ–Greven (2018) extension diagonalises the joint operator on a Hilbert product space and intrinsically lives in the positive-semi-definite cone of multivariate covariances. Despite a mature methodological literature and applications to single-trajectory glucose curves, no published taxonomy applies multivariate functional principal component analysis to a complete enteropancreatic panel — GLP-1, GIP, ghrelin, PYY, glucagon, insulin, and glucose — across health, type 2 diabetes, caloric restriction, and metabolic surgery.</p>
+<p>We addressed this gap by constructing the Periprandial Transition Profile (PTP) and Integrated Enteropancreatic Pattern (IEP Types I–V) framework. It rests on four conceptual moves. First, the unit of analysis is the <strong>periprandial transition</strong> — fasting plus 0–180 min postprandial, a continuous secretion–inhibition oscillator coupled to the circadian cycle — rather than the postprandial response in isolation. Second, the operational construct is <strong>physiologic periprandial responsiveness</strong>: dynamic and stimulus-coupled, valid for secretion-dominant analytes (GIP, GLP-1, PYY, insulin), suppression-dominant signals (ghrelin), and the glycaemic-regulation signal (glucose). Third, weight loss is treated as a <strong>contextual modifier</strong>, not a hard gate, in line with Laferrère’s classical demonstration that incretin restoration after gastric bypass is independent of body-weight reduction and with the 2025 Lancet Diabetes &amp; Endocrinology Commission on metabolic surgery. Fourth, the non-obese without T2D cohort defines the unique reference distribution against which all coordinates are standardised. The framework was pre-registered on the Open Science Framework (DOI 10.17605/OSF.IO/3CZRE).</p>
+<p>Our objectives were: (i) to construct a deterministic Hilbert-product-space framework with eight axioms and explicit estimation procedures; (ii) to apply it to 23 published cohort-time-arms reporting periprandial trajectories of incretins, ghrelin, PYY, glucagon, insulin, and glucose; (iii) to derive PTP and IEP labels and characterise their distribution across cohorts; and (iv) to test stability and separability via subject-level bootstrap, permutation magnitudes, and pre-specified sensitivity analyses.</p>
+<hr>
+</section>
+<section id="methods" class="level1">
+<h1>Methods</h1>
+<section id="study-design-and-data-sources" class="level2">
+<h2 class="anchored" data-anchor-id="study-design-and-data-sources">Study design and data sources</h2>
+<p>This is a pre-registered ecological proof-of-concept analysis at the cohort-time-arm level (OSF 10.17605/OSF.IO/3CZRE; v10·0 protocol frozen 2026-04-22). No new individual data were generated. Eligible studies (1989–2025) reported mean and dispersion of glucose, insulin, total or active GLP-1, total or active GIP, total or 3-36 PYY, glucagon, and total or acyl ghrelin over 0–180 min following a standardised oral nutrient stimulus (mixed-meal tolerance test, liquid mixed-meal test, or 75 g oral glucose tolerance test). After PRISMA-screened systematic search and extraction by WebPlotDigitizer, 23 source studies yielded 71 (Author × Cohort) tuples and 55 productive cohort-time-arms across seven canonical cohorts: non-obese without T2D (reference), obesity, T2DM, obesity with T2DM, caloric restriction (Post-CR), sleeve gastrectomy (SG), Roux-en-Y gastric bypass (RYGBP). The harmonised input file <code>master_table.csv</code> was registered with SHA-256 <code>2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117</code>. Pseudo-individual-participant data were generated via a Gaussian-process kernel of order one (kernel <code>K_ρ(s,t) = ρ^{|s-t|/30 min}</code>, ρ=0·5 primary). The <strong>marginal mean of the GP is the digitised arm mean trajectory</strong> µ_h(t) — including the rapid incretin peak morphology (GLP-1 peak at t≈15–30 min; PYY plateau at t≈90–120 min) as extracted from each source study. The AR(1) kernel governs only within-subject deviations around this mean: marginal variance σ²_h(t) = (CV_h × µ_h(t))² with hormone-specific CV from the literature (ghrelin 0·40, GLP-1 0·35, GIP 0·30, insulin 0·20, glucose 0·12, glucagon 0·30). Rapid peaks are therefore preserved in the marginal mean regardless of ρ; ρ determines the smoothness of deviations around the mean, not the mean trajectory itself. M=1000 draws/arm with deterministic N=50/arm subsample yielded 2,750 pseudo-subjects.</p>
+</section>
+<section id="periprandial-sampling-and-analyte-panel" class="level2">
+<h2 class="anchored" data-anchor-id="periprandial-sampling-and-analyte-panel">Periprandial sampling and analyte panel</h2>
+<p>Time grid {0, 15, 30, 60, 90, 120, 130, 150, 180} min, owing to mixed protocols. The design was declared <strong>balanced sparse with missing-completely-at-random missingness</strong>. The Li–Hsing (2010) phase-transition threshold m ≍ (n/log n)^{1/4} placed the design on the sparse side: for n≈50 per arm and m=8–9, (50/log 50)^{1/4} ≈ 2·5, so non-parametric rates are not achievable for eigenfunctions while eigenvalues retain semi-parametric n^{−1/2} rates (Hall–Müller–Wang 2006).</p>
+</section>
+<section id="mathematical-framework" class="level2">
+<h2 class="anchored" data-anchor-id="mathematical-framework">Mathematical framework</h2>
+<p>The framework is anchored by eight axioms, stated as theorems with proof citations rather than modelling assumptions.</p>
+<p><strong>Theorem L2·1 (Mercer–Karhunen–Loève).</strong> A second-order stochastic process X(t) on a compact T with continuous positive-semi-definite covariance kernel C(s,t) admits the Mercer decomposition C(s,t) = Σ_k λ_k φ_k(s) φ_k(t) and the Karhunen–Loève expansion X(t) = μ(t) + Σ_k ξ_k φ_k(t) with E[ξ_k]=0, Var[ξ_k]=λ_k, Cov[ξ_j, ξ_k]=0 for j≠k. <em>Proof:</em> Mercer 1909; Hsing &amp; Eubank 2015 chs.&nbsp;4 and 7; foundational FDA treatment in Ramsay &amp; Silverman 2005.</p>
+<p><strong>Theorem L2·2 (BLUP optimality, Yao–Müller–Wang 2005).</strong> For Y_{ij} = μ(T_{ij}) + Σ_k ξ_{ik} φ_k(T_{ij}) + ε_{ij} with ξ ⊥ ε, the unique linear predictor minimising E[(ξ_{ik} − ξ̂_{ik})²] is ξ̂<em>{ik} = λ_k φ</em>{ik}^⊤ Σ_{Y_i}^{−1} (Y_i − μ_i). Under joint Gaussianity it equals the conditional expectation; without Gaussianity it is best linear unbiased in the standard linear-prediction sense. <em>Proof:</em> Yao–Müller–Wang 2005, eq. 4.</p>
+<p><strong>Theorem L2·3 (kriging equivalence).</strong> PACE is structurally simple kriging on the latent scalar variable ξ_{ik}, with cross-covariance vector c₀ = λ_k φ_{ik}, kernel matrix Σ_Y, and nugget σ². <em>Proof:</em> Hsing &amp; Eubank 2015 §7.4 (BLUP–kriging correspondence).</p>
+<p><strong>Theorem L2·4 (Happ–Greven positive-semi-definite guarantee).</strong> The empirical Gram matrix Ẑ = (N−1)^{−1} Ξ^⊤ Ξ formed from stacked univariate scores is positive-semi-definite by construction; the estimated joint operator Γ̂ = Σ_m ν̂_m Ψ̂_m ⊗ Ψ̂_m therefore lies intrinsically in the PSD cone — no post-hoc projection. <em>Proof:</em> Happ &amp; Greven 2018.</p>
+<p><strong>Theorem L2·5 (Chiou normalisation).</strong> On the weighted product space H = ∏_j L²(T_j) with inner product ⟨f, g⟩_w = Σ_j w_j ∫ f^{(j)} g^{(j)}, the weights w_j = 1/√tr(C^{(jj)}) make each rescaled component contribute unit integrated variance. <em>Proof:</em> Happ &amp; Greven 2018 §5; Chiou–Chen–Yang 2014.</p>
+<p><strong>Theorem L2·6 (Parseval isometry).</strong> Geodesic distance on H reduces to Euclidean distance on multivariate scores: d_H²(x_i, x_{i’}) = Σ_m (ρ_{im} − ρ_{i’m})². <em>Proof:</em> Hsing &amp; Eubank 2015.</p>
+<p><strong>Theorem L2·7 (non-obese without T2D z-standardisation).</strong> Coordinates Z_{ih} = [z(B_{ih}), z(ξ_{ih,1}), z(ξ_{ih,2}), z(ξ_{ih,3})] are component-wise standardised against the empirical mean and SD of the non-obese without T2D reference distribution, defining the percentile bands (5th, 10th, 25th, 75th, 95th) used for the 9-label PTP vocabulary.</p>
+<p><strong>Theorem L2·8 (weight as contextual modifier).</strong> Post-intervention classification depends on (a) post-intervention position relative to the non-obese without T2D reference and (b) direction of change relative to pre-intervention state; weight loss is reported as a modifier only. <em>Proof:</em> Laferrère 2008; Rubino 2025.</p>
+</section>
+<section id="estimation-procedures" class="level2">
+<h2 class="anchored" data-anchor-id="estimation-procedures">Estimation procedures</h2>
+<p><strong>Procedure L3·1.</strong> Aggregated cohort means digitised by WebPlotDigitizer (Rohatgi 2022). Pseudo-individual-participant data via Gaussian-process AR(1) <strong>for visualisation and pipeline-stability bootstrap only, not for frequentist inference</strong>, owing to saturation of permutation p-values at B⁻¹ when N=2,750.</p>
+<p><strong>Procedure L3·2.</strong> Hormones with marginal asymmetry &gt; 1 were log-transformed (D3 anti-pattern 8): GLP-1, PYY, insulin, GIP, acyl-ghrelin.</p>
+<p><strong>Procedure L3·3.</strong> Univariate covariance via FACEs (Xiao–Li–Checkley–Crainiceanu 2018, <code>face::face.sparse</code>) as primary estimator; PACE (Yao–Müller–Wang 2005, <code>fdapace::FPCA</code>) as sensitivity. FACEs uses tensor-product penalised splines with leave-one-subject-out cross-validation, joint REML estimation of σ², and PSD-by-construction sandwich smoother — properties suited to the balanced-sparse n≈50, m=8–9 regime per Section 2 above. Three-way CANDECOMP/PARAFAC (CP) tensor factorisation has been applied to postprandial metabolomic arrays (Shi 2024) and preserves the explicit subject × variable × time interaction in a single trilinear decomposition. Three structural characteristics of the present design make mFPCA preferable. First, the CP model constrains variables within a component to share a single temporal profile modulated only in amplitude (separability restriction); this is reasonable when variables share biochemically related kinetics, but is physiologically inconsistent here — GLP-1 peaks at t≈20 min, PYY plateaus at t≈90–120 min, and acyl-ghrelin reaches its nadir at t≈60 min, producing qualitatively distinct curves that cannot share a common temporal factor without introducing structural bias into the subject-mode loadings used for phenotypic stratification. Second, with p=7–9 hormones in the variable mode (tensor ℝ^{50×9×9}), the Kruskal rank of the variable mode is too low to guarantee CP uniqueness under sampling perturbation, producing instability in the subject loadings. Third, the CP model requires a complete tensor or pre-imputation, whereas mFPCA via BLUP (Axiom L2·2; Yao 2005) handles MCAR missingness without imputation. These arguments do not invalidate CP for high-dimensional metabolomic panels (p≫50) where separability is plausible; they justify that, for a small heterogeneous hormone panel with sparse irregular data, mFPCA provides greater physiological coherence and formal inferential guarantees.</p>
+<p><strong>Procedure L3·4.</strong> Bandwidth <code>'GMeanAndGCV'</code>. σ² estimated jointly by REML in FACEs; for PACE sensitivity, σ² by diagonal extrapolation over the interior 50 % of T.</p>
+<p><strong>Procedure L3·5.</strong> Univariate components retained at FVE ≥ 0·999 to over-parametrise the multivariate decomposition per Golovkine–Gunning–Simpkin–Bargary (2025): selection of M_j by univariate FVE threshold does not guarantee multivariate FVE; the threshold is therefore applied directly to the multivariate FVE Σ_{m≤M} ν_m / Σ_m ν_m at primary 0·90 and sensitivity 0·95.</p>
+<p><strong>Procedure L3·6.</strong> Phase variability assessed via SD(t_peak) by hormone. Every analyte showed SD(t_peak) &gt; 15 min; the square-root-velocity-function registration of the <code>fdasrvf</code> package was performed on the pre-MFPCA dynamic component and reported alongside the unregistered baseline as sensitivity. SRSF registration operates on the registered mean trajectory (independent of the AR(1) kernel choice), providing an additional safeguard that separates <strong>amplitude variation</strong> (ξ₁, the primary PTP coordinate) from <strong>phase variation</strong> (peak-time displacement) — a distinction that is robust to kernel smoothing because it is applied to the estimated mean function, not to pseudo-IPD draws.</p>
+<p><strong>Procedure L3·7.</strong> Multivariate decomposition via Happ–Greven 2018 with Chiou weights (<code>MFPCA::MFPCA(type='given')</code>). Joint operator Γ̂ recovered as Σ_m ν̂_m Ψ̂_m ⊗ Ψ̂_m. Multivariate eigenfunctions ψ̂_m^{(j)} = Σ_n [c̃_m]^{(j)}_n φ̂<em>n^{(j)} reconstructed from univariate bases; multivariate scores ρ̂</em>{im} = ⟨X_i − μ̂, Ψ̂_m⟩_w.</p>
+<p><strong>Procedure L3·8.</strong> Subject-level bootstrap B=2000 at the classification stage (target ≥ 80 % stability); B=50 at the pipeline stage (eigenfunction envelopes). Simultaneous 95 % bootstrap bands by Goldsmith (2013) and Degras (2011) sup-t method.</p>
+<p><strong>Procedure L3·9.</strong> Multivariate inference by Pillai trace and FANOVA permutation (B=5000) with Benjamini–Hochberg FDR α=0·05. Because pseudo-N=2,750 saturates permutation p at B⁻¹ ≈ 2·10⁻⁴, <strong>F values are reported as cohort-separation magnitudes, not as small-sample frequentist test statistics</strong>.</p>
+<p><strong>Procedure L3·10.</strong> Four pre-specified sensitivities: ±0·5 SD threshold displacement; leave-one-axis-out integrated typing; ρ ∈ {0·3, 0·5, 0·7, 0·9} (Gaussian-process AR(1) kernel hyperparameter sensitivity — ρ=0·3 specifically probes the concern of <strong>excessive smoothing of rapid incretin dynamics</strong>: at this value, the inter-timepoint correlation at 15 min lag is 0·3^{0·5}≈0·55, allowing substantially more local variation than ρ=0·5; K was preserved within ±2 components and the rank order of cohort-separation magnitudes was preserved across all ρ values; full tabulation at Zenodo concept DOI 10.5281/zenodo.19743544, <code>sensitivity_summary.csv</code>); challenge-class pooling SMMT vs LMMT vs OGTT.</p>
+</section>
+<section id="classification-ptp-and-iep" class="level2">
+<h2 class="anchored" data-anchor-id="classification-ptp-and-iep">Classification (PTP and IEP)</h2>
+<p>The PTP/IEP classification vocabulary and the five-type hierarchy (I–V with .i/.ii subtypes and glycaemic suffixes a/b/c) were designed <strong>a priori</strong> from physiological and pathophysiological premises governing the enteropancreatic axis — independently of the mFPCA K selection, which is a statistical estimation criterion. The vocabulary defines what patterns are physiologically possible; the mFPCA recovers which patterns are empirically dominant. The operational vocabulary comprises <strong>nine PTP labels</strong>, applied flat without primary/secondary stratification. (An internal taxonomy that factorises six cross-sectional labels and three post-intervention modifiers into 6+9 strata is documented separately and is not used in the present analysis; the nine-label flat vocabulary is the canonical implementation reported throughout this manuscript.) For each analyte–subject pairing (i, h), the standardised vector Z_{ih} = [z(B_{ih}), z(ξ_{ih,1}), z(ξ_{ih,2}), z(ξ_{ih,3})] was mapped to one of nine labels: <strong>Preserved</strong> (|z| ≤ 1 throughout, within non-obese without T2D band), <strong>Borderline Impaired</strong> (−1·5 ≤ z_{ξ1} &lt; −1·0), <strong>Impaired</strong> (z_{ξ1} &lt; −1·5), <strong>Blunted</strong> (z_{ξ1} &lt; −1·5 with |z_basal| ≤ 1·0 in secretion-dominant analytes), <strong>Borderline Altered</strong> (1·0 &lt; z_{ξ1} ≤ 1·5 with pathophysiological significance), <strong>Altered</strong> (z_{ξ1} &gt; 1·5 with pathophysiological significance), <strong>Recovered</strong> (post-intervention return to band with prior abnormal state), <strong>Borderline Enhanced</strong> (1·0 &lt; z_{ξ1} ≤ 1·5 with glucose=Preserved/Recovered), <strong>Enhanced</strong> (z_{ξ1} &gt; 1·5 with glucose=Preserved/Recovered). Discordant_High and Discordant_Low flags blocked Type I/II assignment. Glucose was classified into a (Preserved/Recovered), b (impaired/blunted), or c (altered/dysglycaemic). Glucagon and insulin entered as PTP per-analyte inputs to the eight-rule precedence but <strong>not</strong> as components of the joint Happ–Greven operator: the joint operator is restricted to the gut-hormone panel (GIP active/total, GLP-1 active/total, PYY total, PYY 3-36, ghrelin total, ghrelin acyl, glucagon).</p>
+<p>Non-glucose states were grouped: R={Preserved, Recovered}; L1={Borderline Impaired}; L2={Impaired, Blunted}; U1={Borderline Enhanced}; U2={Enhanced}; D1={Borderline Altered}; D2={Altered}. Classifiability for IEP Type assignment required <strong>glucose plus ≥ 2 non-glucose analytes</strong> including ≥ 1 pancreatic effector (insulin) and ≥ 1 gut hormone (ghrelin, GIP, or GLP-1). Per-analyte PTP labels can be assigned independently of glucose; only the integrated Type assignment requires glucose (rule R1 below).</p>
+<p><strong>Operational rules R1–R7.</strong> R1: glucose is <strong>obligatory for IEP Type assignment</strong> but <strong>optional for per-analyte PTP</strong> classification. R2: Enhanced is glucose-independent at the per-analyte level; glucose state determines Type II versus Type V at the integrated level (rules 3 and 4 below). R3: glycaemic suffixes a/b/c apply <strong>only</strong> to Types III, IV, and V; Types I and II are by construction glucose=a (Preserved/Recovered). R4: Discordant_High and Discordant_Low flags are not equivalent to Preserved and block Type I/II assignment. R5: weight loss is a contextual modifier, not a hard gate. R6: ξ_2 and ξ_3 are coordinates of the primary classification vector; any circular shape-balance descriptor derived from them is supplementary only. R7: the absence of Type I in a cohort is interpreted as genuine pathophysiological heterogeneity, not as a classification failure.</p>
+<p>The eight-rule precedence hierarchy was: (1) any non-glucose Altered → Type IV·II; (2) any Borderline Altered → Type IV·I; (3a) any Enhanced with glucose=a and no L1/L2 → Type II·II, otherwise (3b) → Type V·II; (4a) Borderline Enhanced with glucose=a and no L1/L2 → Type II·I, otherwise (4b) → Type V·I; (5) any Impaired/Blunted → Type III·II; (6) any Borderline Impaired → Type III·I; (7) all Preserved → Type I·I; (8) ≥ 1 Recovered with remainder Preserved/Recovered → Type I·II. Rules 3a/3b and 4a/4b expand to ten sub-rules under bifurcation by glycaemic context, equivalent to the eight-rule statement above. Glycaemic suffixes a/b/c apply only to Types III, IV, V.</p>
+</section>
+<section id="software-reproducibility-and-reporting" class="level2">
+<h2 class="anchored" data-anchor-id="software-reproducibility-and-reporting">Software, reproducibility, and reporting</h2>
+<p>Analyses used R 4·6 (<code>fdapace</code> 0·6·0; <code>face</code> 0·1-7; <code>MFPCA</code> 1·3-11; <code>funData</code> 1·3-9; <code>fdasrvf</code>; <code>data.table</code>; <code>arrow</code>) on macOS Sequoia with Apple Accelerate BLAS. Master seed <code>20260422</code>. The complete pipeline comprises <strong>16 R scripts</strong> mapped onto a five-layer architecture coherent with the L1 → L2 → L3 stratification: layer 1 (<code>01_harmonize.R</code>, <code>parse_master_table.R</code>) handles ingest and PCHIP harmonisation; layer 2 (pseudo-IPD generation block within <code>01_harmonize.R</code>) implements the Gaussian-process AR(1) draws; layer 3 (<code>02_fpca_pace.R</code>, <code>03_mfpca_happgreven.R</code>, <code>04b_srsf_registration.R</code>) executes FACEs estimation, Chiou-weighted Happ–Greven decomposition, and SRSF registration; layer 4 (<code>05_classify_ptp.R</code>, <code>05b_iep_perm.R</code>) assigns PTP labels and IEP Types; layer 5 (<code>06_inference.R</code>, <code>06b_mahalanobis.R</code>, <code>07_bootstrap.R</code>, <code>09_sensitivity.R</code>, <code>08b_lancet_figs.R</code>) executes Pillai inference, Mahalanobis distances, subject-level bootstrap, four pre-specified sensitivities, and figure generation. All scripts and outputs are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544) and GitHub (<code>sv8wmxnbp8-hash/EPP10</code> v1·3) under CC-BY 4·0. Reporting follows STROBE for cohort studies (Ramsay &amp; Silverman 2005 functional methods supplementing the standard checklist); TRIPOD+AI is declared not applicable (descriptive-inferential, not a clinical prediction model). Ecological aggregate-level analysis required no ethics review.</p>
+</section>
+<section id="role-of-the-funding-source" class="level2">
+<h2 class="anchored" data-anchor-id="role-of-the-funding-source">Role of the funding source</h2>
+<p>There was no funding for this study. The author had full access to all data and final responsibility for the decision to submit for publication.</p>
+<hr>
+</section>
+</section>
+<section id="findings" class="level1">
+<h1>Findings</h1>
+<section id="cohort-and-panel-composition" class="level2">
+<h2 class="anchored" data-anchor-id="cohort-and-panel-composition">Cohort and panel composition</h2>
+<p>The harmonised dataset comprised 92,150 long-format observations on 2,750 pseudo-subjects across 7 cohorts and 11 analyte forms. After applying the Happ–Greven block-size constraint (n ≥ 50 per univariate block to support stable score recovery), nine analyte forms entered the joint operator: ghrelin total and acyl, GIP total and active, GLP-1 total and active, glucagon, PYY total and 3-36. Glucose and insulin were retained as the glycaemic regulator and pancreatic effector inputs to the PTP/IEP precedence rules. The smallest joint block contained n=350 pseudo-subjects, which set the multivariate panel size for cross-cohort score contrasts (L3·1 caveat). Reference adequacy was full (n_ref ≥ 8) for every panel hormone (Table 1).</p>
+</section>
+<section id="phase-variability-and-registration" class="level2">
+<h2 class="anchored" data-anchor-id="phase-variability-and-registration">Phase variability and registration</h2>
+<p>Inter-subject SD of peak time exceeded 15 min for every analyte, ranging from 23·8 min (GIP active) to 63·8 min (ghrelin total). SRSF registration was therefore applied; both registered and unregistered analyses are reported, with the registered analysis taken as primary. Without registration, the second component captures phase artefactually and contaminates the early-versus-late interpretation.</p>
+</section>
+<section id="univariate-eigenstructure" class="level2">
+<h2 class="anchored" data-anchor-id="univariate-eigenstructure">Univariate eigenstructure</h2>
+<p>Every analyte returned three interpretable components capturing global amplitude (PC1), early-versus-late temporal redistribution (PC2), and biphasic or higher-order shape (PC3). Cumulative univariate FVE exceeded 99 % at three components for every analyte after over-parametrisation per L3·5. The first component captured 71–84 % of trajectory variance per hormone; the second 9·8–17·3 %; the third 3·1–6·9 %.</p>
+</section>
+<section id="multivariate-eigenstructure" class="level2">
+<h2 class="anchored" data-anchor-id="multivariate-eigenstructure">Multivariate eigenstructure</h2>
+<p>The Happ–Greven decomposition retained K_primary=12 components at the pre-specified multivariate FVE ≥ 0·90 threshold, following Golovkine–Gunning–Simpkin–Bargary (2025), who showed that univariate FVE thresholding does not guarantee multivariate FVE — the threshold was therefore applied directly to the joint eigenvalue sum; K_sensitivity=15 at FVE ≥ 0·95. The N/K ratio was 29·2, well above the identifiability criterion (≥ 10), and the eigenspectrum showed a clear inflection after K=12 (Table 3). Cumulative joint variance at the first five components was 21·2 %, 35·7 %, 47·6 %, 57·5 %, 65·0 %. The first eight eigenvalues were 1·73, 1·19, 0·97, 0·81, 0·61, 0·50, 0·45, 0·35.</p>
+<p>The first joint eigenfunction (ψ_1) was dominated by PYY total: integrated squared L²-norm 0·76, with secondary contributions from GLP-1 active (0·11), GIP total (0·07), and the remaining incretin and ghrelin channels each below 0·02. The integrated incretin loading (sum over GIP active+total and GLP-1 active+total) was 0·211. The first joint mode therefore captures distal L-cell variation rather than the classical incretin-amplitude contrast — an emergent consequence of Chiou normalisation against the smallest-block constraint that is interpreted mechanistically in Discussion.</p>
+<p>The second joint mode discriminated early-peak insulin/GIP profiles from late-peak GLP-1/PYY profiles, consistent with proximal-versus-distal gut entero-endocrine sequencing. The third joint mode captured biphasic glucose–insulin coupling.</p>
+</section>
+<section id="ptp-distribution-by-cohort-and-analyte" class="level2">
+<h2 class="anchored" data-anchor-id="ptp-distribution-by-cohort-and-analyte">PTP distribution by cohort and analyte</h2>
+<p>Across the 8,050 analyte–subject pairings, 67·1 % were classified Preserved, 8·6 % Borderline Impaired, 6·3 % Discordant_Basal, 5·8 % Borderline Altered, 4·8 % Discordant_High, 3·7 % Altered, 2·2 % Impaired, 1·5 % Discordant_Low, and zero Blunted in this run (the conjunctive Blunted criterion — z_{ξ1} &lt; −1·5 AND |z_basal| ≤ 1·0 AND secretion-dominant — was not met by any subject; reported transparently rather than collapsed into Impaired). T2DM and obesity+T2DM concentrated PTP-Altered and PTP-Borderline-Altered patterns in glucose and insulin axes, whereas RYGBP and SG concentrated PTP-Altered and PTP-Discordant-High patterns in PYY total and GLP-1 active axes.</p>
+</section>
+<section id="integrated-enteropancreatic-pattern-types-iv" class="level2">
+<h2 class="anchored" data-anchor-id="integrated-enteropancreatic-pattern-types-iv">Integrated Enteropancreatic Pattern Types I–V</h2>
+<p>Type prevalence by cohort (Table 2, Figure 4) revealed three signatures.</p>
+<p>First, the <strong>bariatric signature</strong>: Type V (enhanced–mixed with residual dysglycaemia) was dominant in RYGBP (43·3 %, Bonferroni-corrected permutation q=0·035) and SG (30·7 %, q=0·035). Type V was therefore <strong>bariatric-dominant rather than RYGBP-exclusive</strong>, contradicting prior accounts that frame Type V as a unique signature of gastric bypass. Both bariatric cohorts retained markedly elevated PYY total amplitude (positive z_{ξ1} &gt; 2 standard deviations) with concurrent ghrelin-total suppression; in RYGBP this was accompanied by GLP-1-active enhancement, in SG by ghrelin-total Blunted-equivalent depression consistent with fundic resection.</p>
+<p>Second, the <strong>disease signature</strong>: Type III (infra-physiological) dominated obesity+T2DM (40·0 %, q=0·035), caloric restriction (36·8 %, q=0·035), and T2DM (29·5 %). Type III subjects showed reduced PC1 amplitude on incretin axes without compensatory glucose dysregulation in the caloric-restriction subgroup; in obesity+T2DM, Type III·c (with glucose dysglycaemia) was the modal subtype.</p>
+<p>Third, the <strong>reference signature</strong>: Type I·I dominated the non-obese without T2D reference (32·2 %, q=0·035) and obesity (32·2 %). The reference cohort also showed 23·1 % not-classifiable (Bonferroni-corrected q=0·035): all 150 non-classifiable subjects originated from single-analyte source arms — arms that measured only one hormone — falling below the minimum of two non-glucose axes required for IEP type assignment (rule R1). This is a structural consequence of historical source-protocol heterogeneity, not a failure of the reference z-standardisation; all 9 analytes of the joint operator met the n ≥ 50 reference-adequacy criterion.</p>
+</section>
+<section id="cross-cohort-separability-and-bootstrap-stability" class="level2">
+<h2 class="anchored" data-anchor-id="cross-cohort-separability-and-bootstrap-stability">Cross-cohort separability and bootstrap stability</h2>
+<p>Pillai trace on the joint score panel (n=350 after block-size filter) gave an omnibus F=18·29, with pairwise vs reference F=52·09 (caloric restriction), 9·63 (obesity+T2DM), and 7·78 (obesity). Permutation p saturated at B⁻¹ ≈ 2·10⁻⁴; F values are reported as cohort-separation magnitudes per L3·9 (anti-F9). T2DM, RYGBP, and SG did not survive the n ≥ 50 per-block filter for the joint panel and their multivariate contrasts are reported only at the per-analyte univariate level — a limitation declared in Methods and revisited in Discussion. Mahalanobis distances vs reference were 2·89 (caloric restriction), 1·67 (obesity+T2DM), and 0·78 (obesity), all with permutation q=0·003 after Bonferroni.</p>
+<p>Subject-level bootstrap (B=2000 at the classification stage) returned ≥ 80 % stability for the modal Type assignment in each cohort, meeting the pre-specified target. Pipeline-stage bootstrap (B=50) preserved the rank ordering of eigenvalues and the integrated-loading direction of the first joint eigenfunction across replicates.</p>
+</section>
+<section id="sensitivity" class="level2">
+<h2 class="anchored" data-anchor-id="sensitivity">Sensitivity</h2>
+<p>Threshold displacement of ±0·5 SD altered ≤ 6·8 % of PTP labels; leave-one-axis-out preserved ≥ 90 % of integrated Type assignments for every dropped analyte except glucagon (where reduced reference support drove larger shifts). Pseudo-IPD ρ-sensitivity preserved K within ±2 components and the rank ordering of cohort separation magnitudes across ρ ∈ {0·3, 0·5, 0·7, 0·9}. Challenge-class pooling (SMMT, LMMT, OGTT) is reported as a structural caveat rather than a sensitivity outcome, since the harmonised input pools challenge classes.</p>
+<hr>
+</section>
+</section>
+<section id="discussion" class="level1">
+<h1>Discussion</h1>
+<section id="principal-findings" class="level2">
+<h2 class="anchored" data-anchor-id="principal-findings">Principal findings</h2>
+<p>In a pre-registered, axiomatised, deterministic PTP/IEP framework applied to 55 productive cohort-time-arms drawn from 23 source studies (71 Author × Cohort tuples), the joint enteropancreatic operator retained 12 multivariate components capturing 92 % of joint variance. Three findings refine prior accounts. First, <strong>Type V (enhanced–mixed with residual dysglycaemia) is bariatric-dominant rather than RYGBP-exclusive</strong>: 43·3 % of RYGBP and 30·7 % of SG, statistically separated from the non-obese without T2D reference at Bonferroni q=0·035. Second, <strong>Type III (infra-physiological) dominates obesity+T2DM (40·0 %) and caloric restriction (36·8 %)</strong>, indicating that partial glycaemic remission during caloric restriction is accompanied by persistent dysphysiological enteropancreatic signalling rather than uniform normalisation. Third, <strong>the integrated incretin loading on the first joint eigenfunction is 0·21 in this run, with PYY total dominating (0·76)</strong>: the joint enteropancreatic axis is not incretin-dominated when the panel is normalised by Chiou weights and the smallest-block constraint is enforced.</p>
+</section>
+<section id="comparison-with-existing-taxonomies" class="level2">
+<h2 class="anchored" data-anchor-id="comparison-with-existing-taxonomies">Comparison with existing taxonomies</h2>
+<p>The Ahlqvist five-cluster, Udler soft-genetic, Tübingen-prediabetes, and German Diabetes Study taxonomies classify individuals using static cross-sectional features and decompose neither the periprandial trajectory shape nor the multi-hormonal joint structure. The PREDICT cohort (Berry 2020) measured periprandial glucose, triglycerides, and insulin in 1,002 twins and demonstrated extensive interindividual heterogeneity even among healthy adults, but did not measure incretins, PYY, or ghrelin. Glucotypes (Hall 2018) decomposed continuous-glucose-monitoring trajectories into intra-individual patterns of dysregulation, restricted to glucose alone. The present framework extends this work to the joint enteropancreatic axis, which is the physiologically appropriate level given coupled secretion of insulin with GIP and GLP-1 and reciprocal regulation by ghrelin and PYY (Steinert 2017). Recent dual and triple receptor agonists — tirzepatide (Frías 2021 SURPASS-2; Heise 2022) and the GLP-1/GIP/glucagon agonist retatrutide (Rosenstock 2023) — make integrated multi-hormonal phenotyping a translational priority for matching agonist targets to individual enteropancreatic profiles.</p>
+</section>
+<section id="mechanistic-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="mechanistic-interpretation">Mechanistic interpretation</h2>
+<p>The bariatric-dominant Type V signature is consistent with the unique anatomical exposure of distal L-cells to undiluted nutrients in RYGBP — the supraphysiological GLP-1 and PYY surges mechanistically linked to post-bariatric hypoglycaemia (Salehi 2014) — and with the fundic resection of SG that suppresses ghrelin while preserving the distal incretin response (le Roux 2006; Madsbad 2014; Svane 2019). Grouping RYGBP and SG under a shared bariatric-dominant Type V at the cohort level does not preclude procedure-specific differentiation at the individual level, which is the intended application of this framework. RYGBP’s complete anatomical rerouting and supraphysiological distal L-cell exposure is expected to produce predominantly Type V·II·b (marked enhanced–mixed with hypoglycaemia) at the individual level, whereas SG’s ghrelin-dominant suppression with partial incretin preservation is expected to produce more Type V·I·a (borderline enhanced, glycaemia preserved). The glycaemic suffixes a (Preserved/Recovered), b (impaired/blunted), and c (altered/dysglycaemic) applied to Types III, IV, and V under rule R3 are precisely the instrument designed to resolve this procedure-specific intra-cohort heterogeneity — a distinction that cohort-level ecological proof-of-concept data cannot resolve but that individual-participant prospective application will capture. This distinguishes the PTP/IEP framework from empirical comparative approaches that derive patterns from observed procedure-specific differences (e.g., data-driven contrasts of glycaemic variability and hormone signatures between procedures): the present framework is axiomatic and deterministic — it defines, from physiological and pathophysiological premises, the full combinatorial space of periprandial states across the 11-analyte enteropancreatic panel before any empirical data are examined; the mFPCA recovers which states are dominant in a given corpus and the a/b/c suffixes resolve within-type glycaemic heterogeneity at the individual level. Any empirically observed procedure-specific pattern is accommodated within the existing 10-subtype, 3-glycaemic-state taxonomy without requiring taxonomic revision. The Type III dominance of caloric restriction reframes results from contemporary remission trials: partial glycaemic remission is accompanied by a persistent infra-physiological enteropancreatic state on multi-hormonal coordinates rather than uniform normalisation. The modal pattern in T2DM is Type III·I (29·5 % of subjects) with concentrated PTP-Borderline-Impaired classifications on the incretin axes, consistent with the classic incretin defect first described by Nauck (1986) and extended by Holst (2007) and Drucker (2018) — Type IV (dysphysiological) accounts for only 13·0 % of T2DM subjects in this corpus, indicating that the dominant T2DM signature is moderate amplitude reduction rather than overt dysregulation.</p>
+</section>
+<section id="strengths-and-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="strengths-and-limitations">Strengths and limitations</h2>
+<p>The framework’s strengths are (i) joint analysis of the complete enteropancreatic panel under explicit positive-semi-definite-by-construction estimation; (ii) eight axioms stated as theorems with proof citations rather than modelling assumptions; (iii) K=12 component selection by the Golovkine–Gunning–Simpkin–Bargary (2025) multivariate FVE criterion rather than univariate heuristics, with sensitivity cross-check at FVE ≥ 0·95 confirming K=15; (iv) explicit pre-registration with public deposition of all code and outputs; (v) full computational reproducibility from open-source software with Zenodo deposition; (vi) justifiable preference for mFPCA over CP tensor factorisation on three structural grounds — temporal asynchrony of hormone kinetics violates the CP separability constraint, the small variable mode (p=9) does not guarantee CP uniqueness, and BLUP handles MCAR missingness without imputation (for detailed comparison see §Estimation and inference, Procedure L3·3). The PTP/IEP classification vocabulary and five-type hierarchy are a priori physiological constructs independent of the mFPCA K selection; the statistical estimation recovers which patterns are empirically dominant, it does not generate the typology. Six explicit limitations bound interpretation. <strong>First</strong>, the level of analysis is <strong>ecological</strong>: cohort-time-arm aggregate data, not participant-level prevalence; ecological inferences are vulnerable to between-study confounding. <strong>Second</strong>, the <strong>MFPCA panel was restricted to n=350</strong> by the smallest-block constraint, which excluded T2DM, SG, and RYGBP from the multivariate Pillai contrasts; per-cohort PTP and IEP contrasts at n=2,750 remain available and inform the principal findings. <strong>Third</strong>, <strong>percentile thresholds</strong> await prospective cohort-validated cut-offs. <strong>Fourth</strong>, <strong>protocol heterogeneity</strong> across test meals, caloric loads, and sampling densities is substantial. <strong>Fifth</strong>, <strong>only total or active analyte forms</strong> were included; the framework is currently <strong>agnostic to circadian phase</strong> and continuous glucose monitoring context. <strong>Sixth</strong>, <strong>single-analyte source arms</strong> in the non-obese without T2D corpus drive the 23·1 % not-classifiable rate: 150 pseudo-subjects originated from arms that measured only one hormone, falling below the two-non-glucose-axis minimum for IEP assignment (R1); missing analytes were not imputed by design. All 9 analytes of the joint operator met the reference-adequacy criterion (n ≥ 50 per analyte in the reference cohort), so the z-standardisation is unaffected.</p>
+</section>
+<section id="implications-for-research-and-practice" class="level2">
+<h2 class="anchored" data-anchor-id="implications-for-research-and-practice">Implications for research and practice</h2>
+<p>The framework supports a more granular interpretation of periprandial responses than area-under-the-curve or peak summaries permit, particularly when selecting between GLP-1 receptor agonists, dual GIP/GLP-1 agonists, caloric restriction, and metabolic surgery. Type V dominance in RYGBP and its emergence in SG argue that what clinicians observe as “successful” metabolic surgery is more often an enhanced–mixed enteropancreatic state with residual dysregulation than uniform normalisation. Type III dominance after caloric restriction argues against the heuristic that successful glycaemic remission implies enteropancreatic normalisation. The PTP/IEP framework characterises the physiological and pathophysiological state of the entero-endocrine axis under natural periprandial stimulus, independently of pharmacological context. Pharmacological agents — including GLP-1 receptor agonists, dual GIP/GLP-1 agonists, and GLP-1/GIP/glucagon triple agonists such as retatrutide (Rosenstock 2023) — modify the axis during their therapeutic half-life, but their dynamics belong to pharmacokinetics and pharmacodynamics rather than to the entero-endocrine state classification the PTP/IEP framework addresses. The appropriate application of the framework to pharmacologically treated individuals is to assess the underlying IEP type at pharmacokinetic trough or after drug withdrawal — a design question for future clinical trials rather than a taxonomic extension of the five-type structure. Three extensions are immediate priorities. First, individual-participant validation in prospective cohorts (target n ≥ 500 with ≥ 7-point trajectories and complete analyte panels) would address ecological-level limitations and enable patient-level prediction. Second, expansion to glucagon and C-peptide will permit explicit α-cell and β-cell deconvolution. Third, linkage of multivariate scores to long-term outcomes — cardiovascular events, bone density, weight regain — would test whether persistent Type III after caloric restriction or persistent Type V after surgery is prognostically meaningful.</p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The PTP/IEP framework, anchored by eight axioms, recovers reproducible enteropancreatic Patterns I–V across health, disease, caloric restriction, and metabolic surgery from 55 productive cohort-time-arms drawn from 23 source studies. Type V is bariatric-dominant — not RYGBP-exclusive — and Type III predominates after caloric restriction, refining prior accounts of post-intervention normalisation. Individual-participant validation is required before clinical translation.</p>
+<hr>
+</section>
+</section>
+<section id="contributors" class="level1">
+<h1>Contributors</h1>
+<p>HMVA conceived the framework, curated the corpus, developed the analytical pipeline, conducted all functional principal component, classification, inference, and validation analyses, prepared all display items, and wrote the manuscript. HMVA is the sole author and accepts full responsibility for the integrity and accuracy of all reported analyses and findings. The author had full access to all data and final responsibility for the decision to submit for publication.</p>
+</section>
+<section id="declaration-of-interests" class="level1">
+<h1>Declaration of interests</h1>
+<p>The author declares no competing interests.</p>
+</section>
+<section id="data-sharing" class="level1">
+<h1>Data sharing</h1>
+<p>All digitised periprandial trajectories, the harmonised cohort corpus (<code>master_table.csv</code>, SHA-256 <code>2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117</code>), the 16-script analytic pipeline, the Lancet-run outputs (<code>03_outputs/lancet_run_2026-05-08/</code>), the numerical ledger (<code>numerical_ledger.md</code>), and the reproducibility scripts are deposited in Zenodo (concept DOI 10.5281/zenodo.19743544; version 1·3 DOI 10.5281/zenodo.19758429) and GitHub (<code>sv8wmxnbp8-hash/EPP10</code> v1·3) under CC-BY 4·0. The repository permits full reproduction of every numerical claim in this manuscript and follows the FAIR data principles. Pre-registration is at the Open Science Framework (DOI 10.17605/OSF.IO/3CZRE; project at https://osf.io/tr469, frozen 2026-04-22).</p>
+</section>
+<section id="aillm-disclosure" class="level1">
+<h1>AI/LLM disclosure</h1>
+<p>Analytic pipeline design, R code implementation, and manuscript drafting were supported by Claude (Anthropic, Opus 4·7, May 2026).</p>
+</section>
+<section id="acknowledgments" class="level1">
+<h1>Acknowledgments</h1>
+<p>The author thanks the Centro Universitario de Ciencias de la Salud, Universidad de Guadalajara, and the Instituto Mexicano del Seguro Social for institutional support, and acknowledges the developers of the open-source <code>face</code>, <code>fdapace</code>, <code>MFPCA</code>, <code>funData</code>, <code>fdasrvf</code>, <code>data.table</code>, and <code>arrow</code> packages without which this work would not have been possible.</p>
+<hr>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<ol type="1">
+<li>Mercer J. Functions of positive and negative type, and their connection with the theory of integral equations. <em>Phil Trans R Soc A</em> 1909; <strong>209</strong>: 415–46.</li>
+<li>Yao F, Müller HG, Wang JL. Functional data analysis for sparse longitudinal data. <em>J Am Stat Assoc</em> 2005; <strong>100</strong>: 577–90.</li>
+<li>Hall P, Müller HG, Wang JL. Properties of principal component methods for functional and longitudinal data analysis. <em>Ann Stat</em> 2006; <strong>34</strong>: 1493–517.</li>
+<li>Li Y, Hsing T. Uniform convergence rates for nonparametric regression and principal component analysis in functional/longitudinal data. <em>Ann Stat</em> 2010; <strong>38</strong>: 3321–51.</li>
+<li>Chiou JM, Chen YT, Yang YF. Multivariate functional principal component analysis: a normalization approach. <em>Stat Sin</em> 2014; <strong>24</strong>: 1571–96.</li>
+<li>Hsing T, Eubank R. <em>Theoretical foundations of functional data analysis, with an introduction to linear operators</em>. Chichester: Wiley, 2015.</li>
+<li>Ramsay JO, Silverman BW. <em>Functional data analysis</em>. 2nd edn. New York: Springer, 2005.</li>
+<li>Xiao L, Li C, Checkley W, Crainiceanu CM. Fast covariance estimation for sparse functional data. <em>Stat Comput</em> 2018; <strong>28</strong>: 511–22.</li>
+<li>Happ C, Greven S. Multivariate functional principal component analysis for data observed on different (dimensional) domains. <em>J Am Stat Assoc</em> 2018; <strong>113</strong>: 649–59.</li>
+<li>Degras DA. Simultaneous confidence bands for nonparametric regression with functional data. <em>Stat Sin</em> 2011; <strong>21</strong>: 1735–65.</li>
+<li>Goldsmith J, Greven S, Crainiceanu CM. Corrected confidence bands for functional data using principal components. <em>Biometrics</em> 2013; <strong>69</strong>: 41–51.</li>
+<li>Golovkine S, Gunning E, Simpkin AJ, Bargary N. On the estimation of the number of components in multivariate functional principal component analysis. <em>Commun Stat Simul Comput</em> 2025; published online Feb 25. https://doi.org/10.1080/03610918.2025.2459862</li>
+<li>Nauck M, Stöckmann F, Ebert R, Creutzfeldt W. Reduced incretin effect in type 2 (non-insulin-dependent) diabetes. <em>Diabetologia</em> 1986; <strong>29</strong>: 46–52.</li>
+<li>Holst JJ. The physiology of glucagon-like peptide 1. <em>Physiol Rev</em> 2007; <strong>87</strong>: 1409–39.</li>
+<li>Drucker DJ. Mechanisms of action and therapeutic application of glucagon-like peptide-1. <em>Cell Metab</em> 2018; <strong>27</strong>: 740–56.</li>
+<li>Nauck MA, Müller TD. Incretin hormones and type 2 diabetes. <em>Diabetologia</em> 2023; <strong>66</strong>: 1780–95.</li>
+<li>Shi Y, Halberg F, Cornélissen G, et al.&nbsp;Characterizing human postprandial metabolic response using multiway data analysis. <em>Metabolomics</em> 2024; <strong>20</strong>: 58. https://doi.org/10.1007/s11306-024-02109-y</li>
+<li>Steinert RE, Feinle-Bisset C, Asarian L, Horowitz M, Beglinger C, Geary N. Ghrelin, CCK, GLP-1, and PYY(3-36): secretory controls and physiological roles in eating and glycemia in health, obesity, and after RYGB. <em>Physiol Rev</em> 2017; <strong>97</strong>: 411–63.</li>
+<li>Laferrère B, Teixeira J, McGinty J, et al.&nbsp;Effect of weight loss by gastric bypass surgery versus hypocaloric diet on glucose and incretin levels in patients with type 2 diabetes. <em>J Clin Endocrinol Metab</em> 2008; <strong>93</strong>: 2479–85.</li>
+<li>le Roux CW, Aylwin SJB, Batterham RL, et al.&nbsp;Gut hormone profiles following bariatric surgery favor an anorectic state, facilitate weight loss, and improve metabolic parameters. <em>Ann Surg</em> 2006; <strong>243</strong>: 108–14.</li>
+<li>Madsbad S, Dirksen C, Holst JJ. Mechanisms of changes in glucose metabolism and bodyweight after bariatric surgery. <em>Lancet Diabetes Endocrinol</em> 2014; <strong>2</strong>: 152–64.</li>
+<li>Salehi M, Gastaldelli A, D’Alessio DA. Blockade of glucagon-like peptide 1 receptor corrects postprandial hypoglycemia after gastric bypass. <em>Gastroenterology</em> 2014; <strong>146</strong>: 669–680.e2.</li>
+<li>Svane MS, Bojsen-Møller KN, Martinussen C, et al.&nbsp;Postprandial nutrient handling and gastrointestinal hormone secretion after Roux-en-Y gastric bypass vs sleeve gastrectomy. <em>Gastroenterology</em> 2019; <strong>156</strong>: 1627–41.</li>
+<li>Mingrone G, Panunzi S, De Gaetano A, et al.&nbsp;Metabolic surgery versus conventional medical therapy in patients with type 2 diabetes: 10-year follow-up of an open-label, single-centre, randomised controlled trial. <em>Lancet</em> 2021; <strong>397</strong>: 293–304.</li>
+<li>Ahlqvist E, Storm P, Käräjämäki A, et al.&nbsp;Novel subgroups of adult-onset diabetes and their association with outcomes: a data-driven cluster analysis of six variables. <em>Lancet Diabetes Endocrinol</em> 2018; <strong>6</strong>: 361–69.</li>
+<li>Hall H, Perelman D, Breschi A, et al.&nbsp;Glucotypes reveal new patterns of glucose dysregulation. <em>PLoS Biol</em> 2018; <strong>16</strong>: e2005143.</li>
+<li>Berry SE, Valdes AM, Drew DA, et al.&nbsp;Human postprandial responses to food and potential for precision nutrition. <em>Nat Med</em> 2020; <strong>26</strong>: 964–73.</li>
+<li>Wagner R, Heni M, Tabák AG, et al.&nbsp;Pathophysiology-based subphenotyping of individuals at elevated risk for type 2 diabetes. <em>Nat Med</em> 2021; <strong>27</strong>: 49–57.</li>
+<li>Frías JP, Davies MJ, Rosenstock J, et al.&nbsp;Tirzepatide versus semaglutide once weekly in patients with type 2 diabetes (SURPASS-2). <em>N Engl J Med</em> 2021; <strong>385</strong>: 503–15.</li>
+<li>Rubino F, Cummings DE, Eckel RH, et al.&nbsp;Definition and diagnostic criteria of clinical obesity. <em>Lancet Diabetes Endocrinol</em> 2025; <strong>13</strong>: 221–62.</li>
+</ol>
+<hr>
+</section>
+<section id="display-item-captions" class="level1">
+<h1>Display item captions</h1>
+<p><strong>Figure 1 — Hilbert-product-space architecture.</strong> Conceptual figure of the weighted Hilbert product space H = ∏_{j=1}^{p} L²(T_j) with inner product ⟨f, g⟩<em>w = Σ_j w_j ∫ f^{(j)}(t) g^{(j)}(t) dt, Chiou weights w_j = 1/√tr(C^{(jj)}), and ontological L1 → axiomatic L2 → epistemological L3 stratification of the framework. The PSD-by-construction guarantee of the Happ–Greven 2018 estimator is illustrated: stacking subject-level univariate scores into Ξ ∈ ℝ^{N×M</em>+} and forming Ẑ = (N−1)^{−1} Ξ^⊤ Ξ produces a Gram matrix that is positive-semi-definite by construction; the corresponding joint operator Γ̂ = Σ_m ν̂_m Ψ̂_m ⊗ Ψ̂_m therefore lies intrinsically in the PSD cone of the space of Hilbert–Schmidt operators.</p>
+<p><strong>Figure 2 — Mathematical schema of the estimation pipeline.</strong> Flow diagram from raw periprandial trajectories Y_{ij} = μ(T_{ij}) + Σ_k ξ_{ik} φ_k(T_{ij}) + ε_{ij} through smooth mean μ̂(t), FACEs covariance Ĉ(s,t), Mercer eigendecomposition {λ̂<em>k, φ̂<em>k}, BLUP scoring ξ̂</em>{ik} = λ̂<em>k φ̂</em>{ik}^⊤ Σ̂</em>{Y_i}^{−1} (Y_i − μ̂_i) (Yao 2005, eq. 4), Chiou-weighted multivariate Happ–Greven decomposition with Ψ̂_m and ν̂<em>m, non-obese without T2D z-standardisation Z</em>{ih} = [z(B_{ih}), z(ξ_{ih,1}), z(ξ_{ih,2}), z(ξ_{ih,3})], to PTP labels and IEP Types I–V via the eight-rule precedence hierarchy.</p>
+<p><strong>Figure 3 — Cohort-stratified joint eigenfunctions with simultaneous 95 % bootstrap bands.</strong> First four multivariate eigenfunctions ψ̂_m^{(j)}(t) for m=1,…,4 and j=1,…,9 over the 0–180 min periprandial window. Simultaneous 95 % bootstrap bands constructed from B=2000 subject-level resamples by the sup-t method (Goldsmith 2013; Degras 2011). The first joint mode is dominated by PYY total (squared L²-norm partition 0·76); subsequent modes capture early-versus-late temporal redistribution and biphasic coupling. Colour-blind safe (Okabe-Ito) palette.</p>
+<p><strong>Figure 4 — IEP Type I–V prevalence by cohort with permutation magnitudes.</strong> Heatmap of within-cohort prevalence of integrated Pattern Types I (physiological), III (infra-physiological), IV (dysphysiological), V (enhanced–mixed), and not-classifiable, across non-obese without T2D reference, obesity, T2DM, obesity+T2DM, caloric restriction, sleeve gastrectomy, and Roux-en-Y gastric bypass. Permutation-derived separation magnitudes (B=5000) per L3·9; Bonferroni-corrected significant cells (q &lt; 0·05) marked. Type V is bariatric-dominant: 43·3 % RYGBP, 30·7 % SG. Type III dominates obesity+T2DM (40·0 %) and caloric restriction (36·8 %). Type I·I is concentrated in non-obese without T2D and obesity (32·2 % each).</p>
+<hr>
+</section>
+<section id="tables" class="level1">
+<h1>Tables</h1>
+<section id="table-1-cohort-panel-and-reference-adequacy" class="level2">
+<h2 class="anchored" data-anchor-id="table-1-cohort-panel-and-reference-adequacy">Table 1 — Cohort, panel, and reference adequacy</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cohort</th>
+<th>Pseudo-subjects (N=50/arm)</th>
+<th>Studies</th>
+<th>MFPCA panel hormones (n_ref full status)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Non-obese without T2D (<code>no_obese_without_T2DM</code>, reference)</td>
+<td>650</td>
+<td>13 arms</td>
+<td>9/9 full</td>
+</tr>
+<tr class="even">
+<td>Obesity</td>
+<td>600</td>
+<td>14 arms</td>
+<td>9/9 full</td>
+</tr>
+<tr class="odd">
+<td>T2DM</td>
+<td>200</td>
+<td>4 arms</td>
+<td>9/9 full</td>
+</tr>
+<tr class="even">
+<td>Obesity + T2DM</td>
+<td>300</td>
+<td>7 arms</td>
+<td>9/9 full</td>
+</tr>
+<tr class="odd">
+<td>Caloric restriction (Post-CR)</td>
+<td>250</td>
+<td>4 arms</td>
+<td>9/9 full</td>
+</tr>
+<tr class="even">
+<td>Sleeve gastrectomy</td>
+<td>300</td>
+<td>7 arms</td>
+<td>9/9 full</td>
+</tr>
+<tr class="odd">
+<td>Roux-en-Y gastric bypass</td>
+<td>450</td>
+<td>10 arms</td>
+<td>9/9 full</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td><strong>2,750</strong></td>
+<td><strong>55 productive arms</strong></td>
+<td><strong>9 hormones full</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>Pseudo-subjects generated by Gaussian-process AR(1) ρ=0·5 with hormone-specific CV. Master <code>master_table.csv</code> SHA-256 <code>2829cd78…</code>. Glucose and insulin are inputs to the PTP/IEP precedence rules but not entered into the joint Happ–Greven operator (separate analytic role as glycaemic regulator and pancreatic effector).</em></p>
+</section>
+<section id="table-2-iep-type-iv-prevalence-by-cohort" class="level2">
+<h2 class="anchored" data-anchor-id="table-2-iep-type-iv-prevalence-by-cohort">Table 2 — IEP Type I–V prevalence by cohort</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Cohort</th>
+<th>Type I·I</th>
+<th>Type III·I</th>
+<th>Type IV·I</th>
+<th>Type V·I</th>
+<th>Not classifiable</th>
+<th>Permutation q (Bonf.)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Non-obese without T2D</td>
+<td><strong>0·322</strong></td>
+<td>0·185</td>
+<td>0·076</td>
+<td>0·188</td>
+<td>0·231</td>
+<td>I·I, NC q=0·035</td>
+</tr>
+<tr class="even">
+<td>Obesity</td>
+<td>0·322</td>
+<td>0·183</td>
+<td>0·165</td>
+<td>0·163</td>
+<td>0·167</td>
+<td>I·I q=0·035</td>
+</tr>
+<tr class="odd">
+<td>T2DM</td>
+<td>0·175</td>
+<td>0·295</td>
+<td>0·130</td>
+<td>0·150</td>
+<td>0·250</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Obesity + T2DM</td>
+<td>0·317</td>
+<td><strong>0·400</strong></td>
+<td>0·107</td>
+<td>0·177</td>
+<td>0·000</td>
+<td>III·I q=0·035</td>
+</tr>
+<tr class="odd">
+<td>Caloric restriction</td>
+<td>0·264</td>
+<td><strong>0·368</strong></td>
+<td>0·092</td>
+<td>0·076</td>
+<td>0·200</td>
+<td>III·I q=0·035</td>
+</tr>
+<tr class="even">
+<td>Sleeve gastrectomy</td>
+<td>0·273</td>
+<td>0·093</td>
+<td>0·160</td>
+<td><strong>0·307</strong></td>
+<td>0·167</td>
+<td>V·I q=0·035</td>
+</tr>
+<tr class="odd">
+<td>RYGBP</td>
+<td>0·064</td>
+<td>0·113</td>
+<td>0·167</td>
+<td><strong>0·433</strong></td>
+<td>0·222</td>
+<td>V·I q=0·035</td>
+</tr>
+</tbody>
+</table>
+<p><em>Pillai-trace cross-cohort separation magnitudes (n=350 panel, after block-size filter): omnibus F=18·29; pairwise vs non-obese without T2D F=52·1 (caloric restriction), 9·6 (obesity+T2DM), 7·8 (obesity); reported as cohort-separation magnitudes per L3·9 (anti-F9). Mahalanobis distances vs reference: 2·89 caloric restriction, 1·67 obesity+T2DM, 0·78 obesity (q=0·003 Bonferroni).</em></p>
+</section>
+<section id="table-3-eigenstructure-of-the-joint-operator-k12-retained" class="level2">
+<h2 class="anchored" data-anchor-id="table-3-eigenstructure-of-the-joint-operator-k12-retained">Table 3 — Eigenstructure of the joint operator (K=12 retained)</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Eigenvalue ν̂_m</th>
+<th>Cumulative FVE</th>
+<th>Dominant block (squared L²-norm partition)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1·73</td>
+<td>0·212</td>
+<td>PYY total (0·76); GLP-1 active (0·11); GIP total (0·07); incretin Σ=0·211</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>1·19</td>
+<td>0·357</td>
+<td>early-peak insulin/GIP vs late-peak GLP-1/PYY</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>0·97</td>
+<td>0·476</td>
+<td>biphasic glucose–insulin coupling (univariate axis)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>0·81</td>
+<td>0·575</td>
+<td>ghrelin acyl/total mixed contribution</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>0·61</td>
+<td>0·650</td>
+<td>glucagon late-phase persistence</td>
+</tr>
+<tr class="even">
+<td>6–12</td>
+<td>0·50 → 0·19</td>
+<td>0·650 → 0·920</td>
+<td>residual cross-hormonal modes</td>
+</tr>
+</tbody>
+</table>
+<p><em>K_primary=12 at FVE ≥ 0·90; K_sensitivity=15 at FVE ≥ 0·95; N/K=29·2.</em></p>
+<hr>
+</section>
+</section>
+<section id="supplementary-material" class="level1">
+<h1>Supplementary material</h1>
+<section id="supplementary-table-s1-intensional-definitions-of-patterns-iivii" class="level2">
+<h2 class="anchored" data-anchor-id="supplementary-table-s1-intensional-definitions-of-patterns-iivii">Supplementary Table S1 — Intensional definitions of Patterns I·I–V·II</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Type · sub</th>
+<th>Operational definition</th>
+<th>Pathophysiological reading</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>I·I</strong></td>
+<td>All non-glucose Preserved AND glucose=a</td>
+<td>Reference-concordant <em>physiologic periprandial responsiveness</em> across the entire enteropancreatic axis</td>
+</tr>
+<tr class="even">
+<td><strong>I·II</strong></td>
+<td>≥ 1 non-glucose Recovered AND remainder Preserved or Recovered AND glucose=a</td>
+<td>Restoration to within-band amplitude after a documented prior abnormal state, on every classifiable axis</td>
+</tr>
+<tr class="odd">
+<td><strong>II·I</strong></td>
+<td>≥ 1 Borderline Enhanced AND glucose=a AND no L1/L2</td>
+<td>Mild supra-reference enhancement consistent with successful enteropancreatic recovery</td>
+</tr>
+<tr class="even">
+<td><strong>II·II</strong></td>
+<td>≥ 1 Enhanced AND glucose=a AND no L1/L2</td>
+<td>Marked supra-reference enhancement with intact glycaemic regulation</td>
+</tr>
+<tr class="odd">
+<td><strong>III·I</strong></td>
+<td>≥ 1 Borderline Impaired (no Enhanced or Altered)</td>
+<td>Mild infra-reference reduction; coherent with early-stage incretin defect or partial caloric-restriction recovery</td>
+</tr>
+<tr class="even">
+<td><strong>III·II</strong></td>
+<td>≥ 1 Impaired or Blunted (no Enhanced or Altered)</td>
+<td>Marked infra-reference reduction; coherent with established T2DM or post-CR persistent reduction</td>
+</tr>
+<tr class="odd">
+<td><strong>IV·I</strong></td>
+<td>≥ 1 Borderline Altered (with pathophysiological significance)</td>
+<td>Mild dysphysiological signalling without overt dysglycaemia</td>
+</tr>
+<tr class="even">
+<td><strong>IV·II</strong></td>
+<td>≥ 1 Altered (with pathophysiological significance)</td>
+<td>Overt dysphysiological enteropancreatic signalling, characteristic of obesity+T2DM with hyperglycaemia</td>
+</tr>
+<tr class="odd">
+<td><strong>V·I</strong></td>
+<td>≥ 1 Borderline Enhanced co-present with L1/L2 OR with glucose=b/c</td>
+<td>Mild enhanced–mixed pattern with residual impairment or dysglycaemia (typical post-bariatric remission with incomplete enteropancreatic restoration)</td>
+</tr>
+<tr class="even">
+<td><strong>V·II</strong></td>
+<td>≥ 1 Enhanced co-present with L1/L2 OR with glucose=b/c</td>
+<td>Marked enhanced–mixed enteropancreatic state with overt dysglycaemia or co-existing impairment, characteristic of RYGBP responders with residual T2DM features</td>
+</tr>
+</tbody>
+</table>
+<p><em>Glycaemic suffixes a/b/c apply only to Types III, IV, V (rule R3). Types I and II are by construction glucose=a (Preserved/Recovered). Cohort-separation magnitudes for Table 2 footnote: Pillai omnibus F=18·29 (df₁=36, df₂=1011); pairwise vs non-obese without T2D: caloric restriction F=52·1, obesity+T2DM F=9·6, obesity F=7·8; reported as cohort-separation magnitudes because pseudo-N=2,750 saturates permutation p at B⁻¹ ≈ 2·10⁻⁴ (procedure L3·9). Mahalanobis distances vs reference: 2·89 (caloric restriction), 1·67 (obesity+T2DM), 0·78 (obesity); Bonferroni q=0·003.</em></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

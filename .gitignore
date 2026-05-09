@@ -20,6 +20,19 @@ __pycache__/
 .Rproj.user/
 .Renviron.local
 *.Rcheck/
+Rplots.pdf
+
+# Backups
+*.bak
+*.bak.csv
+
+# Cover letter renders (.md is the source of truth; .docx is derived)
+04_manuscript/A1/cover_letter.docx
+04_manuscript/cover_letter.docx
+
+# Quarto preview HTML (manuscript.docx and manuscript.pdf ARE tracked — they are deliverables)
+04_manuscript/A1/manuscript_preview.html
+04_manuscript/manuscript_preview.html
 
 # Editor
 .vscode/

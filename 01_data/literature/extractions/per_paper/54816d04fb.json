@@ -1,0 +1,72 @@
+{
+  "paper_id": "54816d04fb",
+  "filename": "Valores_Normales_de_Enterohormonas_Formas_Totales.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1177/0004563220975658",
+    "pmid": null,
+    "year": null,
+    "title": "Valores Normales de Enterohormonas: Formas Totales y Activas"
+  },
+  "cohorts_detected": [],
+  "hormones_detected": [
+    "glucagon",
+    "glucose"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 9
+    }
+  ],
+  "trajectory_rows_extracted": 7,
+  "extraction_quality": "auto",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "trajectory_rows_raw": [
+    {
+      "time_min": 60.0,
+      "value": 142.0,
+      "raw_col": "Hormona",
+      "page": 1
+    },
+    {
+      "time_min": 60.0,
+      "value": 104944215.0,
+      "raw_col": "Ayuno\n(pmol/L)",
+      "page": 1
+    },
+    {
+      "time_min": 60.0,
+      "value": 650750.0,
+      "raw_col": "Cambio\nPostprandial\n\u0000%\u0000",
+      "page": 1
+    },
+    {
+      "time_min": 60.0,
+      "value": 7580330352.0,
+      "raw_col": "Pico/Nadir\nPostprandial\n(pmol/L)",
+      "page": 1
+    },
+    {
+      "time_min": 60.0,
+      "value": 45009000.0,
+      "raw_col": "AUC 0\u0000120\nmin\n(pmol/L×min)",
+      "page": 1
+    },
+    {
+      "time_min": 60.0,
+      "value": 675013500.0,
+      "raw_col": "AUC 0\u0000180\nmin\n(pmol/L×min)",
+      "page": 1
+    },
+    {
+      "time_min": 60.0,
+      "value": 9095.0,
+      "raw_col": "Relación\nTípica",
+      "page": 1
+    }
+  ]
+}

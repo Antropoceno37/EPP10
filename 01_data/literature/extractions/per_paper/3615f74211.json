@@ -1,0 +1,22 @@
+{
+  "paper_id": "3615f74211",
+  "filename": "Me_todos_para_Diagnosticar_Disfuncio_n_Secretora_Ent.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1210/clinem/dgaf210/8128978",
+    "pmid": null,
+    "year": null,
+    "title": "Métodos para Diagnosticar Disfunción Secretora Enteroendocrina"
+  },
+  "cohorts_detected": [],
+  "hormones_detected": [],
+  "challenge": "OGTT",
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

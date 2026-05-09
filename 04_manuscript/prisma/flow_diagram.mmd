@@ -1,0 +1,10 @@
+flowchart TB
+    A[Records identified through database<br/>and other searching<br/>n = 126] --> B[Records after duplicates removed<br/>n = 126]
+    B --> C[Records screened<br/>n = 126]
+    C --> D[Full-text articles assessed<br/>n = 126]
+    D --> E[Records excluded<br/>n = 105]
+    D --> F[Studies included in synthesis<br/>n = 21]
+    classDef excluded fill:#fde,stroke:#e44;
+    classDef included fill:#dfe,stroke:#2a6;
+    class E excluded
+    class F included

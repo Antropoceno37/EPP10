@@ -1,0 +1,37 @@
+{
+  "paper_id": "a17afc0318",
+  "filename": "Effect_of_Weight_Loss_by_Diet_or_Gastric_Bypass_Surgery_on_Peptide_YY3_36_Levels.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1097/SLA.0b013e3181a6cdb0",
+    "pmid": null,
+    "year": 2010,
+    "title": "Ann Surg. Author manuscript; available in PMC 2010 June 1."
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Obesity_T2DM",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "GLP1_total",
+    "PYY_3_36",
+    "ghrelin_acyl",
+    "ghrelin_total",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": 30,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

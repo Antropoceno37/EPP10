@@ -1,0 +1,31 @@
+{
+  "paper_id": "7dbe5fcea2",
+  "filename": "Mathematical_Modelling_of_Endocrine_Systems.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": null,
+    "title": "Mathematical Modelling of Endocrine"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

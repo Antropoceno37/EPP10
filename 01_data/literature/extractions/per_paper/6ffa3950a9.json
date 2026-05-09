@@ -1,0 +1,43 @@
+{
+  "paper_id": "6ffa3950a9",
+  "filename": "TABLAS_CO4_MPLETAS_34_ESTUDIOS_INCLUIDOS_EN_METAANA_LISIS.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2007,
+    "title": "TABLAS COMPLETAS — 34 ESTUDIOS INCLUIDOS EN METAANÁLISIS"
+  },
+  "cohorts_detected": [],
+  "hormones_detected": [],
+  "challenge": null,
+  "n_subjects": 321,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 20
+    },
+    {
+      "page": 1,
+      "n_rows": 7
+    },
+    {
+      "page": 1,
+      "n_rows": 6
+    },
+    {
+      "page": 1,
+      "n_rows": 9
+    },
+    {
+      "page": 1,
+      "n_rows": 5
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "falta ['glucose']",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540" font-family="Helvetica, Arial, sans-serif">
+  <style>
+    .ttl    { font-size: 14px; font-weight: 700; }
+    .lbl    { font-size: 11px; }
+    .lblb   { font-size: 11px; font-weight: 700; }
+    .math   { font-style: italic; font-size: 12px; }
+    .cap    { font-size: 9px; fill: #555; }
+    .layer  { font-size: 11px; font-weight: 700; }
+    .axis   { stroke: #444; stroke-width: 1; }
+    .grid   { stroke: #ddd; stroke-width: 0.5; }
+    .curve1 { stroke: #E69F00; stroke-width: 1.6; fill: none; }
+    .curve2 { stroke: #56B4E9; stroke-width: 1.6; fill: none; }
+    .curve3 { stroke: #009E73; stroke-width: 1.6; fill: none; }
+    .curve4 { stroke: #D55E00; stroke-width: 1.6; fill: none; }
+    .pyr1   { fill: #fde7c3; stroke: #b07a18; stroke-width: 1; }
+    .pyr2   { fill: #c8e6f5; stroke: #1f7aa3; stroke-width: 1; }
+    .pyr3   { fill: #c5e8d3; stroke: #1f7a3c; stroke-width: 1; }
+    .arrow  { stroke: #333; stroke-width: 1.2; fill: none; marker-end: url(#tri); }
+  </style>
+  <defs>
+    <marker id="tri" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="20" y="22" class="ttl">Figure 1. Hilbert product-space architecture and the L1 → L2 → L3 hierarchy</text>
+
+  <!-- Panel A: Hormonal trajectories as elements of L^2([0,180]) -->
+  <text x="20" y="56" class="lblb">A. Periprandial trajectories as L²([0, 180]) elements</text>
+  <g transform="translate(20,68)">
+    <line x1="0" y1="120" x2="280" y2="120" class="axis"/>
+    <line x1="0" y1="0"   x2="0"   y2="120" class="axis"/>
+    <text x="-2" y="-4"  class="cap">value</text>
+    <text x="282" y="124" class="cap" text-anchor="end">180 min</text>
+    <text x="0" y="134" class="cap">0</text>
+    <line x1="93"  y1="118" x2="93"  y2="122" class="axis"/>
+    <line x1="186" y1="118" x2="186" y2="122" class="axis"/>
+    <text x="93"  y="134" class="cap" text-anchor="middle">60</text>
+    <text x="186" y="134" class="cap" text-anchor="middle">120</text>
+    <!-- Curves -->
+    <path class="curve1" d="M0,90 C30,40 60,20 100,28 S170,80 220,75 S280,68 280,65"/>
+    <path class="curve2" d="M0,75 C40,80 80,95 130,110 S210,95 280,85"/>
+    <path class="curve3" d="M0,55 C40,60 70,30 110,28 S170,55 220,70 S280,80 280,80"/>
+    <path class="curve4" d="M0,100 C30,95 70,40 120,32 S180,85 220,90 S280,95 280,95"/>
+    <!-- Legend -->
+    <g transform="translate(180, 0)" font-size="9">
+      <rect x="0"  y="0" width="10" height="3" fill="#E69F00"/><text x="14" y="4" class="cap">GLP-1</text>
+      <rect x="0"  y="12" width="10" height="3" fill="#56B4E9"/><text x="14" y="16" class="cap">Ghrelin</text>
+      <rect x="50" y="0" width="10" height="3" fill="#009E73"/><text x="64" y="4" class="cap">Insulin</text>
+      <rect x="50" y="12" width="10" height="3" fill="#D55E00"/><text x="64" y="16" class="cap">PYY</text>
+    </g>
+    <text x="0" y="160" class="cap">Each curve x_h(t) ∈ L²([0, 180]); 7 canonical analyte-forms.</text>
+  </g>
+
+  <!-- Panel B: Hilbert product space H -->
+  <text x="380" y="56" class="lblb">B. Weighted Hilbert product space ℋ</text>
+  <g transform="translate(380, 70)">
+    <rect x="0" y="0" width="320" height="170" fill="#f7faff" stroke="#88a" stroke-width="0.8" stroke-dasharray="3 3"/>
+    <text x="10" y="20" class="math">ℋ = ∏ⱼ L²([0, 180])</text>
+    <text x="10" y="40" class="math">⟨f, g⟩_w = ∑ⱼ wⱼ ∫ f⁽ʲ⁾ g⁽ʲ⁾ dt</text>
+    <text x="10" y="58" class="cap">Chiou normalization wⱼ = 1 / tr Ĉ⁽ʲʲ⁾</text>
+    <!-- Sub-spaces as nested boxes -->
+    <g transform="translate(20, 70)">
+      <rect x="0"  y="0" width="58" height="32" fill="#fde7c3" stroke="#b07a18"/>
+      <rect x="62" y="0" width="58" height="32" fill="#c8e6f5" stroke="#1f7aa3"/>
+      <rect x="124" y="0" width="58" height="32" fill="#c5e8d3" stroke="#1f7a3c"/>
+      <rect x="186" y="0" width="58" height="32" fill="#fbd5e3" stroke="#a8336a"/>
+      <text x="29"  y="20" class="cap" text-anchor="middle">L²(GLP-1)</text>
+      <text x="91"  y="20" class="cap" text-anchor="middle">L²(GIP)</text>
+      <text x="153" y="20" class="cap" text-anchor="middle">L²(PYY)</text>
+      <text x="215" y="20" class="cap" text-anchor="middle">…</text>
+    </g>
+    <text x="10" y="130" class="math">x ↦ Σₘ ρₘ ψₘ  (Karhunen–Loève / Happ–Greven)</text>
+    <text x="10" y="148" class="cap">Empirical Gram Ẑ = (N − 1)⁻¹ Ξᵀ Ξ ∈ PSD by construction (Axiom L2.4)</text>
+  </g>
+
+  <!-- Panel C: 3-layer hierarchy -->
+  <text x="20" y="290" class="lblb">C. Three-layer hierarchical architecture (lower layer is evidentially prior)</text>
+  <g transform="translate(20, 305)">
+    <!-- Pyramid: L1 base wide, L3 top narrow -->
+    <polygon class="pyr1" points="0,180 660,180 540,120 120,120"/>
+    <polygon class="pyr2" points="120,120 540,120 440,60 220,60"/>
+    <polygon class="pyr3" points="220,60 440,60 360,0 300,0"/>
+    <text x="330" y="160" class="layer" text-anchor="middle">L1 — Ontological</text>
+    <text x="330" y="100" class="layer" text-anchor="middle">L2 — Axiomatic</text>
+    <text x="330" y="38"  class="layer" text-anchor="middle">L3 — Epistemological</text>
+    <text x="330" y="174" class="cap" text-anchor="middle">unit of analysis · entero-pancreatic oscillator · Lean-Healthy reference</text>
+    <text x="330" y="114" class="cap" text-anchor="middle">Mercer–KL · BLUP-Yao · PSD by construction · Chiou normalization · Parseval isometry</text>
+    <text x="330" y="54"  class="cap" text-anchor="middle">FACEs/PACE · subject-level bootstrap · 8-rule precedence</text>
+  </g>
+
+  <text x="20" y="525" class="cap">Inverting the order is grounds for desk rejection. Source: meta-prompt v1.1 §L1–§L3.</text>
+</svg>

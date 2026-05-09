@@ -1,0 +1,15 @@
+test,metric,value,axis_dropped,pct_type_unchanged,rho,K,incretin_loading,note
+(i) ±0.5 SD displacement,pct_reassigned_-0.5SD,50.2857142857143,,,,,,
+(i) ±0.5 SD displacement,pct_reassigned_+0.5SD,34.4,,,,,,
+(ii) leave-one-axis-out,,,GIP,0,,,,
+(ii) leave-one-axis-out,,,GLP1,0,,,,
+(ii) leave-one-axis-out,,,PYY,0,,,,
+(ii) leave-one-axis-out,,,ghrelin_acyl,0,,,,
+(ii) leave-one-axis-out,,,ghrelin_total,0,,,,
+(ii) leave-one-axis-out,,,glucose,0,,,,
+(ii) leave-one-axis-out,,,insulin,0,,,,
+(iii) ρ sensitivity,,,,,0.3,,,skipped — synthetic data mode
+(iii) ρ sensitivity,,,,,0.5,,,skipped — synthetic data mode
+(iii) ρ sensitivity,,,,,0.7,,,skipped — synthetic data mode
+(iii) ρ sensitivity,,,,,0.9,,,skipped — synthetic data mode
+(iv) challenge-class pooling,skipped,,,,,,,synthetic data has no challenge_class

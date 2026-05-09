@@ -1,0 +1,40 @@
+# ~/.Rprofile — Opciones globales para sesiones R en este equipo.
+# Aplica a todos los proyectos hasta que se sobrescriba con un .Rprofile local.
+
+local({
+  # Espejo CRAN
+  options(repos = c(CRAN = "https://cloud.r-project.org"))
+
+  # Ncpus para install.packages — usa solo perf-cores extras
+  options(Ncpus = 4L)
+
+  # Errores y warnings más informativos
+  options(warn = 1, show.error.locations = TRUE)
+
+  # Decimales útiles para ciencia
+  options(scipen = 6, digits = 6)
+
+  # data.table threads
+  if (suppressWarnings(requireNamespace("data.table", quietly = TRUE))) {
+    data.table::setDTthreads(4L)
+  }
+
+  # future plan por defecto (los scripts pueden cambiarlo)
+  if (interactive() && suppressWarnings(requireNamespace("future", quietly = TRUE))) {
+    future::plan(future::multisession, workers = 4L)
+  }
+
+  # arrow / parquet
+  Sys.setenv(ARROW_R_DEV = "true")
+
+  # Mensaje de bienvenida
+  if (interactive()) {
+    blas <- tryCatch(basename(extSoftVersion()["BLAS"]), error = function(e) "?")
+    msg <- sprintf(
+      "R %s.%s :: %s :: 4 threads :: BLAS=%s",
+      R.version$major, R.version$minor,
+      Sys.info()[["nodename"]], blas
+    )
+    packageStartupMessage(msg)
+  }
+})

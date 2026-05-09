@@ -1,0 +1,31 @@
+{
+  "paper_id": "b9f5f09893",
+  "filename": "Peptide_YY_and_Glucagon-like_Peptide-1_Secretion_in_Obesity.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": null,
+    "title": "Peptide YY and Glucagon-like Peptide-1 Secretion in Obesity"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "GLP1_active",
+    "PYY_total",
+    "glucagon",
+    "glucose"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

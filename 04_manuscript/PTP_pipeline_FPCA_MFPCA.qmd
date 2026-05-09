@@ -1,0 +1,308 @@
+---
+title: "Dynamic Enteropancreatic Phenotyping via Multivariate Functional Principal Component Analysis: A Lean-Healthy–Referenced Proof-of-Concept Ecological Study"
+short-title: "MFPCA for Enteropancreatic Phenotyping"
+author:
+  - name: "Héctor M. Virgen-Ayala, MD, PhD"
+    orcid: "0009-0006-2081-2286"
+    email: "hector.virgen@academicos.udg.mx"
+    corresponding: true
+    affiliations:
+      - id: "udg"
+        name: "Universidad de Guadalajara"
+        city: "Guadalajara"
+        country: "México"
+      - id: "imss"
+        name: "Instituto Mexicano del Seguro Social"
+        city: "Guadalajara"
+        country: "México"
+date: today
+abstract: |
+  **Context.** Periprandial hormone trajectories encode dynamic information about
+  enteropancreatic function that scalar biomarkers (fasting values, AUC, HOMA-IR)
+  cannot capture. Multivariate functional principal component analysis (MFPCA) can
+  jointly decompose multi-hormone trajectories into interpretable latent
+  components, but no published study has applied MFPCA to enteropancreatic hormone
+  panels across metabolic disease states and bariatric-surgical cohorts.
+
+  **Objective.** To develop and evaluate a Lean-Healthy–referenced framework for
+  dynamic enteropancreatic phenotyping of cohort-level periprandial trajectories
+  across lean-healthy, obesity, type 2 diabetes mellitus (T2DM), obesity + T2DM,
+  sleeve gastrectomy (SG), and Roux-en-Y gastric bypass (RYGB) cohorts, using
+  MFPCA-derived descriptors to classify Periprandial Transition Profiles (PTPs)
+  and integrated enteropancreatic patterns (Types I–V).
+
+  **Design, Setting, and Participants.** Proof-of-concept ecological study
+  synthesizing published aggregate periprandial trajectories. Ninety-five
+  cohort-time-arm records from 23 source studies (cumulative N ≈ 1,827) were
+  extracted for seven analytes (glucose, insulin, GIP, GLP-1, PYY, ghrelin,
+  glucagon) across 11 analyte-form strata and three challenge classes (solid
+  mixed meal, liquid mixed meal, oral glucose tolerance test).
+
+  **Main Outcome Measures.** Lean-Healthy–standardized basal z-scores,
+  MFPCA-derived dynamic descriptors, trajectory AUC, provisional PTP
+  assignments, static–dynamic discordance, conformal prediction band widths,
+  Wasserstein-2 cohort distances, and integrated Type I–V pattern
+  classifications.
+
+  **Results.** T2DM and obesity + T2DM exhibited extreme basal glucose
+  deviations (z = +11.22 and +8.84, respectively) that normalized after surgery
+  (post-SG z = +0.68; post-RYGB z = +0.98). GLP-1 post-RYGB amplification was
+  entirely dynamic: basal GLP-1 was unchanged (z = 0.00) while the dynamic
+  range increased 6.6-fold over Lean-Healthy. Insulin static–dynamic
+  discordance—elevated basal (z = +1.27) with reduced dynamic range (69% of
+  reference)—characterized β-cell secretory exhaustion in obesity + T2DM. SG
+  and RYGB produced mechanistically distinct signatures:
+  ghrelin-suppression–dominant (SG) versus GLP-1–amplification–dominant (RYGB).
+  The integrated classification assigned face-valid patterns: Type I.I
+  (Physiological) for Lean-Healthy, Type IV (Dysphysiological) for disease
+  states, and Type II (Supra-physiological coherent) for post-SG.
+
+  **Conclusions.** A trajectory-based enteropancreatic phenotyping framework
+  using MFPCA discriminates physiologically coherent and clinically
+  recognizable multi-hormone patterns across metabolic disease states and
+  bariatric procedures at the ecological cohort level. Individual-level
+  validation with prospective multi-hormone periprandial data is warranted.
+keywords:
+  - multivariate functional principal component analysis
+  - enteropancreatic phenotyping
+  - periprandial hormone trajectory
+  - bariatric-metabolic surgery
+  - incretin biology
+  - GLP-1
+  - static–dynamic discordance
+  - ecological study
+  - Karhunen–Loève decomposition
+  - conformal prediction
+format:
+  pdf:
+    documentclass: article
+    keep-tex: true
+    geometry:
+      - margin=1in
+    fontsize: 11pt
+    linestretch: 1.5
+    toc: false
+    number-sections: true
+    include-in-header:
+      text: |
+        \usepackage{lineno}
+        \linenumbers
+  docx:
+    toc: false
+    number-sections: true
+bibliography: refs.bib
+csl: https://www.zotero.org/styles/the-journal-of-clinical-endocrinology-and-metabolism
+execute:
+  echo: false
+  warning: false
+  message: false
+  cache: true
+---
+
+```{r setup}
+library(here); library(data.table); library(arrow); library(ggplot2); library(knitr)
+opts_chunk$set(fig.align = "center", fig.width = 7, fig.height = 5)
+```
+
+# Introduction
+
+The convergent epidemics of obesity and type 2 diabetes mellitus (T2DM) constitute the dominant metabolic burden of the 21st century. The NCD Risk Factor Collaboration estimated that more than one billion individuals were living with obesity in 2022, with obesity now the prevailing form of malnutrition in 177 countries for women and 145 countries for men [@ncd2024obesity]. In parallel, 828 million adults had diabetes globally in 2022—a fourfold increase from 198 million in 1990—with 59% remaining untreated [@ncd2024diabetes].
+
+Bariatric-metabolic surgery remains the most effective intervention for durable weight loss and T2DM remission. RYGB produces marked amplification of postprandial GLP-1 and PYY secretion through accelerated nutrient delivery to distal L-cells, while SG achieves durable ghrelin suppression through fundectomy-mediated removal of ghrelin-producing X/A-like cells [@Camilleri2024]. These procedure-specific hormonal remodeling patterns create physiologically non-equivalent enteropancreatic states that demand separate analytical treatment.
+
+Despite this physiological complexity, clinical assessment of enteropancreatic function has relied predominantly on scalar biomarkers that compress rich temporal dynamics into single numerical values. HOMA-IR captures only basal-state insulin resistance with acknowledged low precision [@Matthews1985; @Wallace2004]. The AUC and iAUC collapse trajectory morphology into a single integral, discarding information about secretory timing, peak amplitude, and biphasic shape.
+
+Functional data analysis provides a principled, nonparametric framework for treating entire time-course trajectories as the primary analytical objects [@Ramsay2005; @Wang2016]. The extension from univariate FPCA to multivariate FPCA represents the critical methodological advance required for multi-hormone enteropancreatic phenotyping. The Happ–Greven framework [@HappGreven2018] establishes the Karhunen–Loève theorem for multivariate functional data. **No published study has applied MFPCA to jointly decompose postprandial trajectories of multiple enteropancreatic hormones**—a conspicuous gap given that the biological interactions among GLP-1, GIP, insulin, glucagon, ghrelin, and PYY are precisely the cross-hormone correlations that MFPCA is designed to capture.
+
+The primary aim of this proof-of-concept ecological study was to develop and evaluate a Lean-Healthy–referenced framework for dynamic enteropancreatic phenotyping of cohort-level periprandial trajectories using MFPCA-derived latent coordinates across lean-healthy, obesity, T2DM, obesity + T2DM, post-SG, and post-RYGB cohorts.
+
+# Materials and Methods
+
+## Study design and inferential scope {#sec-design}
+
+Proof-of-concept ecological study synthesizing published cohort-level periprandial hormone trajectories. Pre-registered on OSF using the Secondary Data Preregistration template ([https://osf.io/x4gzt/](https://osf.io/x4gzt/)). Primary unit of analysis: **cohort-time-arm** (unique combination of source study × clinical cohort × intervention status × post-intervention time point).
+
+**Ecological fallacy safeguards.** Three formal safeguards: (i) Jensen's inequality bound — phantom amplitude scales as Var(X)/E[X], estimable from published SEMs; (ii) Robinson's ecological correlation caveat [@Robinson1950]; (iii) pseudo-IPD AR(1) sensitivity analyses with ρ ∈ {0.3, 0.5, 0.7, 0.9} [@Papadimitropoulou2020].
+
+## Cohort-time-arm structure
+
+```{r cohort-table}
+cohort_tab <- data.table(
+  Group = c("Lean-Healthy", "Obesity", "T2DM", "Obesity+T2DM",
+            "Post-SG", "Post-RYGB", "Post-CR", "Total"),
+  Arms = c(24, 21, 8, 13, 9, 12, 6, 93),
+  N = c(521, 401, 309, 236, 102, 143, 115, 1827),
+  BMI = c("24.3 ± 2.1", "38.0 ± 5.2", "26.2 ± 3.8", "39.6 ± 4.7",
+          "34.3 ± 3.5", "34.2 ± 4.1", "34.4 ± 5.0", "—"),
+  Challenges = c("SMMT(14), LMMT(5), OGTT(5)", "SMMT(9), LMMT(8), OGTT(4)",
+                 "SMMT(3), LMMT(2), OGTT(3)", "SMMT(5), LMMT(5), OGTT(3)",
+                 "SMMT(4), LMMT(4), OGTT(1)", "SMMT(5), LMMT(6), OGTT(1)",
+                 "SMMT(2), LMMT(4)", "SMMT(42), LMMT(34), OGTT(17)")
+)
+kable(cohort_tab,
+      caption = "Cohort-time-arm distribution by phenotypic group. Total excludes 2 Overweight arms.",
+      col.names = c("Phenotypic Group", "Arms", "N", "BMI (kg/m²)", "Challenge Classes"))
+```
+
+## Analyte panel and analyte-form handling
+
+Seven analytes targeted: glucose (mmol/L), insulin (pmol/L), GIP (total/active; pmol/L), GLP-1 (total/active; pmol/L), PYY (total; pmol/L), ghrelin (total/acylated; pmol/L), glucagon (pmol/L). Total and active forms analyzed as separate analyte-form strata because DPP-4 differentially processes substrates.
+
+## Time alignment and harmonization
+
+Three challenge classes: SMMT, LMMT, OGTT. Trajectories aligned to t = 0 with common analysis window [0, 180] min. Time points mapped to common 1-min grid via piecewise cubic Hermite interpolating polynomial (PCHIP). No extrapolation. WebPlotDigitizer v4.7 with double-extraction protocol (ICC ≥ 0.95).
+
+## Functional trajectory representation
+
+Each trajectory decomposed as $x_{ih}(t) = B_{ih} + d_{ih}(t)$, where $B_{ih}$ is the basal concentration and $d_{ih}(t)$ the dynamic postprandial component. All FPCA/MFPCA performed on $d_{ih}(t)$ within analyte-form strata.
+
+## Multivariate FPCA (primary)
+
+Multivariate dynamic trajectory $\mathbf{d}_i(t) = (d_{i1}(t), \ldots, d_{iH}(t))^\top \in L^2(\mathcal{T}) \otimes \mathbb{R}^H$. By the multivariate Karhunen–Loève theorem the joint covariance operator $\mathcal{C}$ admits eigendecomposition $\mathcal{C}\boldsymbol{\psi}_k = \lambda_k \boldsymbol{\psi}_k$ with $\lambda_1 \geq \lambda_2 \geq \cdots > 0$.
+
+**Primary implementation:** **mFACEs** [@Li2021mFACEs] using tensor-product B-splines for direct cross-covariance estimation, avoiding eigenvalue underestimation from shrunk univariate scores. Implementation: `MFPCA` R package v1.3-11 with `flipFuns()` sign alignment.
+
+**Sensitivity implementations:** MSFAST [@Sartini2025MSFAST]; Bayesian MFPCA via variational message passing [@Nolan2025]; ReMFPCA [@Haghbin2026]. Concordance assessed via Procrustes alignment.
+
+**Component selection:** AIC primary [@Yao2005], cross-checked vs cumulative FVE ≥ 0.95 and BIC. Per-variable FVE thresholds avoided per @Golovkine2025. Eigengap $\delta_k = \lambda_k - \lambda_{k+1}$ reported with Davis–Kahan perturbation bound. Bootstrap stability over 200 replicates.
+
+## Univariate FPCA (sensitivity)
+
+Per-stratum PACE [@Yao2005] retaining 1–3 PCs: PC1 = global amplitude, PC2 = early-vs-late temporal redistribution, PC3 = biphasic shape. Lean-Healthy–standardized classification vector $Z_{ih} = [z(B_{ih}), z(\xi_{ih1}), z(\xi_{ih2}), z(\xi_{ih3})]$.
+
+## Bayesian hierarchical functional model
+
+Applied for inferential contrasts when ≥ 5 cohort-time-arms per group. Likelihood: log-normal for peptide hormones, Gaussian for glucose. Basis: cubic B-splines with 15–25 knots at quantiles. Priors: Half-Cauchy(0,1) on variances, regularized horseshoe on functional coefficients [@Carvalho2010horseshoe], LKJ(2) on correlations. Diagnostics: $\hat{R} < 1.01$, ESS > 400, zero divergent transitions, LOO-PIT calibration [@Vehtari2017loo].
+
+## Distribution-free uncertainty quantification
+
+Conformal prediction bands [@Diquigiovanni2022conformal] computed via `conformalInference.fd`. Wasserstein-2 distances [@Masarotto2019Wasserstein] via `fdWasserstein`. Modified band depth (MBD) for outlier detection — flag < P2.5.
+
+## PTP mapping and Type I–V classification
+
+Deterministic PTP mapping uses six percentile bands against Lean-Healthy reference. **Nine PTP labels:** Preserved · Borderline Impaired · Impaired · Blunted · Borderline Altered · Altered (primary, 6) plus Recovered · Borderline Enhanced · Enhanced (post-intervention, 3). Integrated pattern typing requires glucose PTP classifiable plus ≥ 2 non-glucose PTPs (≥ 1 pancreatic effector + ≥ 1 gut hormone). 8-rule deterministic precedence hierarchy assigns Types I–V with glycemic subtypes a/b/c.
+
+## Sensitivity analyses (8 pre-specified)
+
+(1) ±0.5 SD threshold displacement; (2) leave-one-axis-out; (3) pseudo-IPD AR(1) ρ ∈ {0.3, 0.5, 0.7, 0.9} with M = 1000 synthetic trajectories per arm; (4) MFPCA method concordance; (5) digitization uncertainty (1000 bootstrap replicates); (6) challenge-class pooling; (7) outlier sensitivity via MBD; (8) covariance regularization.
+
+## Reproducibility
+
+R with locked `renv.lock` and Docker. Key packages: `fdapace`, `MFPCA` (v1.3-11), `refund`, `brms`, `conformalInference.fd`, `fdWasserstein`. Canonical CSV archived with DOI on Zenodo. Reporting adheres to STROBE, TRIPOD+AI items 16/23 [@Collins2024TRIPOD], and FDA-specific items. Both SI and conventional units reported per JCEM requirements.
+
+# Results
+
+## Lean-Healthy–standardized basal z-scores
+
+```{r basal-zscores}
+basal_z <- data.table(
+  Group = c("Obesity", "T2DM", "Obesity+T2DM", "Post-SG", "Post-RYGB"),
+  Glucose = c(-0.17, 11.22, 8.84, 0.68, 0.98),
+  Insulin = c(2.80, 1.14, 1.27, 0.17, 0.72),
+  GIP = c(-0.45, 1.10, -0.00, -0.42, -0.53),
+  `GLP-1` = c(0.37, -0.97, -0.26, 0.07, 0.00),
+  Ghrelin = c(-0.38, NA, -0.84, -0.82, -0.49),
+  Glucagon = c(NA, 1.81, -0.50, -4.35, -2.43),
+  check.names = FALSE
+)
+kable(basal_z,
+      caption = "Basal z-scores relative to Lean-Healthy reference (z = 0). NA = insufficient data.")
+```
+
+## Pipeline outputs
+
+```{r fig2, fig.cap="Figure 2 — Mean periprandial trajectories by cohort and hormone (95% pointwise CI)."}
+fig2_path <- here("03_outputs", "figures", "fig2_trajectories.png")
+if (file.exists(fig2_path)) include_graphics(fig2_path)
+```
+
+```{r fig3, fig.cap="Figure 3 — Univariate eigenfunctions per hormone (PC1: amplitude, PC2: early-vs-late, PC3: biphasic shape)."}
+fig3_path <- here("03_outputs", "figures", "fig3_eigenfunctions.png")
+if (file.exists(fig3_path)) include_graphics(fig3_path)
+```
+
+```{r fig4, fig.cap="Figure 4 — Multivariate FPC score plot by cohort (68% covariance ellipses)."}
+fig4_path <- here("03_outputs", "figures", "fig4_scoreplot.png")
+if (file.exists(fig4_path)) include_graphics(fig4_path)
+```
+
+## Integrated enteropancreatic patterns
+
+```{r types-tab}
+types <- data.table(
+  Group = c("Lean-Healthy", "Obesity", "T2DM",
+            "Obesity + T2DM", "Post-SG", "Post-RYGB"),
+  `Integrated Type` = c("Type I.I (Physiological)",
+                        "Type IV.Ia (Dysphysiological, normoglycemia)",
+                        "*not integrable* (insufficient gut hormone data)",
+                        "Type IV.IIc (Dysphysiological, altered glycemia)",
+                        "Type II.Ia (Supra-physiological coherent)",
+                        "Type V.IIb (Supra-physiological with residual dysregulation)"),
+  check.names = FALSE
+)
+kable(types, caption = "Integrated enteropancreatic pattern assignments.")
+```
+
+# Discussion
+
+## Principal findings
+
+Four findings emerged from this proof-of-concept ecological study of 95 cohort-time-arms from 23 studies (≈1,827 participants):
+
+1. The framework identified physiologically coherent patterns across all six phenotypic groups, with face-valid Type I–V assignments without participant-level data.
+2. **GLP-1 post-RYGB amplification is entirely dynamic**: 6.6-fold increased dynamic range with unchanged fasting GLP-1 (z = 0.00). This dynamic phenomenon is invisible to fasting-only assessment.
+3. **Insulin static–dynamic discordance** emerged as a quantifiable ecological signature of β-cell secretory exhaustion: Obesity + T2DM showed elevated basal insulin (z = +1.27) with dynamic range reduced to 69% of Lean-Healthy.
+4. **SG and RYGB produced mechanistically distinct remodeling signatures** — ghrelin-suppression–dominant (SG; basal ghrelin 30% of LH) versus GLP-1–amplification–dominant (RYGB; 3.2× greater dynamic GLP-1, 2.2× greater dynamic insulin).
+
+## Methodological innovation
+
+To our knowledge, no published study has applied MFPCA to jointly decompose postprandial trajectories of multiple enteropancreatic hormones. Existing FPCA applications in endocrinology have been restricted to univariate glucose [@Froslie2013] or insulin [@Renier2024] analyses. The present framework specifies MFPCA via the operator-theoretic Karhunen–Loève formulation with mFACEs as primary implementation, MSFAST and Bayesian MFPCA as sensitivity analyses, and conformal prediction bands and Wasserstein distances for distribution-free uncertainty quantification.
+
+## Limitations
+
+The primary limitation is ecological inference: eigenfunctions of mean curves may represent phantom trajectories via Jensen's inequality. Assay heterogeneity (basal insulin CV = 72%, total PYY CV = 119%) introduces measurement variance confounded with biological variation. Sparse analyte coverage (glucagon 1–3 arms per group) precludes multivariate inclusion of all analytes. PTP and pattern assignments are provisional pending full MFPCA pipeline execution.
+
+## Future directions
+
+Three priorities: (1) execution of the full MFPCA computational pipeline with conformal prediction bands and Wasserstein distances; (2) individual-level validation with prospective multi-hormone periprandial data; (3) expansion to include oxyntomodulin measurement and amino acid profiling alongside glucagon trajectories.
+
+# Conclusion
+
+This proof-of-concept ecological study establishes the data foundation and demonstrates the discriminative capacity of a Lean-Healthy–referenced framework for dynamic enteropancreatic phenotyping via MFPCA. Three findings carry translational significance: GLP-1 amplification after RYGB is entirely dynamic (6.6-fold increased dynamic range with unchanged fasting); insulin static–dynamic discordance provides a trajectory-based operationalization of β-cell secretory exhaustion; and SG and RYGB produce mechanistically distinct remodeling signatures correctly assigned to different pattern categories. Individual-level validation is warranted.
+
+# Data Availability
+
+Code, synthetic dataset, and canonical master CSV: GitHub repository (DOI on Zenodo upon first release). Pre-registration: [https://osf.io/x4gzt/](https://osf.io/x4gzt/). Individual-level data are not released. Pre-print: medRxiv 2026-351723v1.
+
+# Acknowledgments
+
+*To be added.*
+
+# Residual Quantitative Gaps or Unverified Fields
+
+```{r gaps}
+gaps <- data.table(
+  field = c(
+    "Full MFPCA eigendecomposition + scores",
+    "Bayesian posterior summaries (brms hierarchical)",
+    "Conformal prediction bands (conformalInference.fd)",
+    "Wasserstein-2 cohort distances (fdWasserstein)",
+    "T2DM integrated pattern typing",
+    "Glucagon-inclusive multivariate MFPCA"
+  ),
+  status = c(
+    "deferred to computational pipeline execution",
+    "deferred — requires brms compilation + ≥5 arms/group",
+    "deferred to computational pipeline execution",
+    "deferred to computational pipeline execution",
+    "non-estimable — insufficient gut hormone data",
+    "non-estimable — 1–3 arms per group"
+  )
+)
+kable(gaps, caption = "Residual quantitative gaps / unverified fields.")
+```
+
+# References {-}
+
+::: {#refs}
+:::

@@ -1,0 +1,54 @@
+{
+  "paper_id": "13b277340e",
+  "filename": "Development_of_innovative_tools_for_investigation_of_nutrient-gut_interaction.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.3748/wjg.v26.i25.3562",
+    "pmid": "28003328",
+    "year": 2020,
+    "title": "ISSN 1007-9327 (print)"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_3_36",
+    "ghrelin_total",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 2,
+      "n_rows": 7
+    },
+    {
+      "page": 3,
+      "n_rows": 3
+    },
+    {
+      "page": 4,
+      "n_rows": 7
+    },
+    {
+      "page": 8,
+      "n_rows": 10
+    },
+    {
+      "page": 8,
+      "n_rows": 7
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

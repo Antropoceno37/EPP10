@@ -1,0 +1,119 @@
+{
+  "paper_id": "d52d76b4f6",
+  "filename": "NEJM_style_PTP_enteropancreatic_manuscript_v5_2.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2026,
+    "title": "Non-Stationary Enteropancreatic Dynamics Captured by"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Obesity_T2DM",
+    "Post-CR",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "GIP_active",
+    "GLP1_active",
+    "PYY_3_36",
+    "ghrelin_acyl",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": 14,
+  "tables": [
+    {
+      "page": 4,
+      "n_rows": 7
+    },
+    {
+      "page": 5,
+      "n_rows": 4
+    },
+    {
+      "page": 5,
+      "n_rows": 3
+    },
+    {
+      "page": 6,
+      "n_rows": 4
+    },
+    {
+      "page": 7,
+      "n_rows": 8
+    },
+    {
+      "page": 8,
+      "n_rows": 8
+    },
+    {
+      "page": 8,
+      "n_rows": 3
+    },
+    {
+      "page": 9,
+      "n_rows": 6
+    },
+    {
+      "page": 10,
+      "n_rows": 3
+    },
+    {
+      "page": 11,
+      "n_rows": 5
+    },
+    {
+      "page": 12,
+      "n_rows": 4
+    },
+    {
+      "page": 13,
+      "n_rows": 5
+    },
+    {
+      "page": 14,
+      "n_rows": 5
+    },
+    {
+      "page": 15,
+      "n_rows": 5
+    },
+    {
+      "page": 16,
+      "n_rows": 6
+    },
+    {
+      "page": 17,
+      "n_rows": 2
+    },
+    {
+      "page": 28,
+      "n_rows": 3
+    },
+    {
+      "page": 29,
+      "n_rows": 7
+    },
+    {
+      "page": 30,
+      "n_rows": 7
+    },
+    {
+      "page": 31,
+      "n_rows": 7
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

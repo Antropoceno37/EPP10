@@ -1,0 +1,46 @@
+{
+  "paper_id": "8b8040c33c",
+  "filename": "Models_and_Tools_for_Studying_Enteroendocrine_Cells_2.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1210/en.2018-00672",
+    "pmid": null,
+    "year": 2018,
+    "title": "M I N I - R E V I E W"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 2,
+      "n_rows": 12
+    },
+    {
+      "page": 3,
+      "n_rows": 7
+    },
+    {
+      "page": 3,
+      "n_rows": 2
+    },
+    {
+      "page": 7,
+      "n_rows": 13
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

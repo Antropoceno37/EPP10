@@ -1,0 +1,29 @@
+{
+  "paper_id": "b462f37a9e",
+  "filename": "Editorial_Beyond_Bariatric_Surgery_Expected_and_Unexpected_Long-Term_Evolution.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.3389/fendo.2021.838892",
+    "pmid": null,
+    "year": 2021,
+    "title": "published:16February2022"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

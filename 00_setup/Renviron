@@ -1,0 +1,20 @@
+# ~/.Renviron — Mac mini M4 Pro 24 GB
+# Doc 2 §11: 4 workers (no 8) para no duplicar la huella de R.
+
+# RAM máxima por proceso R (deja 4 GB para macOS + apps)
+R_MAX_VSIZE=20Gb
+
+# Threads BLAS / OpenMP / Accelerate (4 = solo perf cores extras)
+OMP_NUM_THREADS=4
+OPENBLAS_NUM_THREADS=4
+VECLIB_MAXIMUM_THREADS=4
+MKL_NUM_THREADS=4
+
+# Reproducibilidad: usa el .Rprofile del usuario (simlinkado desde 00_setup/Rprofile)
+R_PROFILE_USER=~/.Rprofile
+
+# Acelera arrow/parquet
+ARROW_R_DEV=true
+
+# Repo CRAN por defecto
+R_LIBS_USER=~/Library/R/arm64/4.4/library

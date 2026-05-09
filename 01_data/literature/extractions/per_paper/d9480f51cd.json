@@ -1,0 +1,35 @@
+{
+  "paper_id": "d9480f51cd",
+  "filename": "Changes_in_ghrelin_GLP-1_and_PYY_levels_after_diet_and_exercise_in_obese_individuals.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1590/1806-9282.20230263",
+    "pmid": null,
+    "year": 2024,
+    "title": "Changes in ghrelin, GLP-1, and PYY levels after diet and exercise in obese"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Post-CR",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "ghrelin_acyl",
+    "glucagon",
+    "glucose"
+  ],
+  "challenge": null,
+  "n_subjects": 100,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 2
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "sin pancreatic effector ni gut hormone",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

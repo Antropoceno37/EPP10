@@ -1,0 +1,34 @@
+{
+  "paper_id": "0d8e6e44ab",
+  "filename": "Mechanisms_of_surgical_control_of_type_2_diabet_es_GLP-1_is_key_factor_copia.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2016,
+    "title": "SurgeryforObesityandRelatedDiseases](2016)00–00"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Obesity_T2DM",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_3_36",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": 85,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

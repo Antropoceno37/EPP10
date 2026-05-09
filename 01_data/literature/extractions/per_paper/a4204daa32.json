@@ -1,0 +1,142 @@
+{
+  "paper_id": "a4204daa32",
+  "filename": "DINA_MICA_PERIPRANDIAL_DE_HORMONAS_ENTEROENDOCRINAS-_TABLA_META-ANALI_TICA_COMPARATIVA.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2025,
+    "title": "DINÁMICA PERIPRANDIAL DE HORMONAS"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_3_36",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": 312,
+  "tables": [
+    {
+      "page": 2,
+      "n_rows": 21
+    },
+    {
+      "page": 3,
+      "n_rows": 6
+    },
+    {
+      "page": 3,
+      "n_rows": 3
+    },
+    {
+      "page": 4,
+      "n_rows": 2
+    },
+    {
+      "page": 4,
+      "n_rows": 5
+    },
+    {
+      "page": 5,
+      "n_rows": 5
+    },
+    {
+      "page": 5,
+      "n_rows": 2
+    },
+    {
+      "page": 6,
+      "n_rows": 5
+    },
+    {
+      "page": 6,
+      "n_rows": 5
+    },
+    {
+      "page": 7,
+      "n_rows": 2
+    },
+    {
+      "page": 7,
+      "n_rows": 5
+    },
+    {
+      "page": 8,
+      "n_rows": 4
+    },
+    {
+      "page": 8,
+      "n_rows": 3
+    },
+    {
+      "page": 9,
+      "n_rows": 3
+    },
+    {
+      "page": 9,
+      "n_rows": 2
+    },
+    {
+      "page": 10,
+      "n_rows": 10
+    },
+    {
+      "page": 10,
+      "n_rows": 4
+    },
+    {
+      "page": 11,
+      "n_rows": 8
+    },
+    {
+      "page": 11,
+      "n_rows": 5
+    },
+    {
+      "page": 12,
+      "n_rows": 10
+    },
+    {
+      "page": 13,
+      "n_rows": 2
+    },
+    {
+      "page": 13,
+      "n_rows": 7
+    },
+    {
+      "page": 13,
+      "n_rows": 7
+    },
+    {
+      "page": 14,
+      "n_rows": 5
+    },
+    {
+      "page": 15,
+      "n_rows": 18
+    },
+    {
+      "page": 16,
+      "n_rows": 2
+    },
+    {
+      "page": 16,
+      "n_rows": 5
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "challenge=None no en ['SMMT', 'LMMT', 'OGTT']",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

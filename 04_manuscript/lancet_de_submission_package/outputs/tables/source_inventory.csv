@@ -1,0 +1,4 @@
+path,ext,size_kb,md5,added_on,unit_of_analysis,evidence_tier,challenge_class,cohort,analyte_form,notes
+01_data/raw/master_table.csv,csv,97.7,ad60c74e317fbc19e5bb332bb3652f9f,2026-05-08,,,,,,
+01_data/raw/master_table.with_postcr.bak.csv,csv,97.7,ad60c74e317fbc19e5bb332bb3652f9f,2026-05-08,,,,,,
+01_data/raw/master_table_raw.csv,csv,544.8,de2131e2cbcbeaca73d695405ba0e07c,2026-05-08,,,,,,

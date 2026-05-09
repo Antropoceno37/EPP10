@@ -1,0 +1,104 @@
+---
+title: "PRISMA 2020 systematic-review synthesis (companion to PTP/IEP manuscript)"
+author:
+  - name: "Héctor M. Virgen-Ayala, MD, PhD"
+    orcid: "0009-0006-2081-2286"
+    email: "hector.virgen@academicos.udg.mx"
+date: today
+format:
+  html:
+    toc: true
+    code-fold: true
+  docx:
+    toc: true
+execute:
+  echo: false
+  warning: false
+---
+
+```{r setup}
+library(here); library(data.table); library(knitr)
+```
+
+## 1. Search strategy
+
+*(To be filled after final search.)*
+
+- **Databases**: PubMed/MEDLINE, EMBASE, Scopus, Web of Science.
+- **Keywords**: `("periprandial" OR "postprandial") AND ("GLP-1" OR "GIP" OR "PYY" OR "ghrelin" OR "incretin") AND ("mixed meal" OR "OGTT" OR "meal test")`
+- **Date range**: 1990 – present.
+- **Languages**: English, Spanish.
+- **Registry**: PROSPERO ID *<TBD>*.
+
+## 2. Inclusion / Exclusion criteria (PRISMA 2020)
+
+| Domain | Inclusion | Exclusion |
+|---|---|---|
+| **Population** | Humans, adults | Animal-only studies; pediatric-only |
+| **Intervention** | Mixed-meal test, LMMT, SMMT, or OGTT with periprandial sampling | Non-meal challenges (e.g., IV glucose alone) |
+| **Comparator** | Lean-Healthy reference or pre-/post-intervention | Not required for inclusion |
+| **Outcome** | Periprandial trajectories of GLP-1, GIP, PYY, ghrelin, insulin, glucagon, or glucose with ≥4 timepoints | Single timepoint or fasting-only |
+| **Study design** | Original cohort/RCT/observational with primary data | Reviews, meta-analyses, case reports |
+| **Sample size** | n ≥ 5 per cohort | n < 5 per cohort |
+| **Data availability** | Numeric tables OR digitizable figures (axis calibration recoverable) | Text-only summaries without extractable data |
+
+## 3. PRISMA 2020 flow diagram
+
+```{r flow}
+flow_path <- here("04_manuscript", "prisma", "flow_diagram.mmd")
+if (file.exists(flow_path)) {
+  cat("```{mermaid}\n")
+  cat(readLines(flow_path), sep = "\n")
+  cat("\n```\n")
+} else {
+  cat("*Pendiente — corre `python 02_code/parse_literature.py report` después de procesar PDFs.*")
+}
+```
+
+## 4. Included studies summary
+
+```{r included-table}
+log_path <- here("01_data", "literature", "extractions", "prisma_log.csv")
+if (file.exists(log_path)) {
+  df <- fread(log_path)
+  inc <- df[decision == "included",
+            .(filename, year, n_subjects, cohorts, hormones, challenge)]
+  kable(inc, caption = "Studies included in PRISMA synthesis.")
+} else {
+  cat("*Pendiente — corre `python 02_code/parse_literature.py prisma` primero.*")
+}
+```
+
+## 5. Quality assessment
+
+Risk of bias evaluado con la herramienta **ROBINS-I** (Risk Of Bias In Non-randomised Studies of Interventions; Sterne et al. 2016) para cohortes observacionales y **RoB 2.0** (Sterne et al. 2019) para RCTs. Cada estudio se clasifica en *low / moderate / serious / critical risk* a través de 7 dominios.
+
+*(Tabla a llenar después de la evaluación dual-reader.)*
+
+## 6. Synthesis: cómo se integra con el manuscrito principal
+
+Esta síntesis sistemática complementa el manuscrito principal `Sparse mFACEs and PTP/IEP Classification` (medRxiv 2026-351723v1) en dos dimensiones:
+
+1. **Expansión del master_table.csv** (estrategia A). Las trayectorias extraídas de papers incluidos se concatenan al actual `master_table.csv` (95 cohort-time-arms). Se reporta el delta de cohort-time-arms, la cobertura analítica nueva, y se re-corre el pipeline canónico (`bash run_pipeline.sh`) con los datos expandidos.
+2. **Síntesis narrativa para Introduction y Discussion** (estrategia C). La tabla resumen alimenta los párrafos de:
+   - *Introduction*: revisión del estado del arte por hormona × cohort.
+   - *Discussion §4.4 Limitations*: comparación de protocolos heterogéneos (kcal load, texture, sampling schedules) y cómo PTP/IEP los acomoda.
+   - *Discussion §4.3 Physiological insights*: triangulación con literatura externa de los hallazgos canónicos (GLP-1 RYGB 6.6×, ghrelin SG 30% LH, etc.).
+
+## 7. Reproducibilidad
+
+- **Código de extracción:** `02_code/parse_literature.py`
+- **PDFs procesados:** `01_data/literature/pdfs/` (no commitear al repo si tienen licencia restrictiva)
+- **JSONs de extracción:** `01_data/literature/extractions/per_paper/`
+- **Master log PRISMA:** `01_data/literature/extractions/prisma_log.csv`
+- **Trayectorias auto-extraídas:** `01_data/literature/extractions/trajectories.csv`
+
+```{bash}
+#| eval: false
+# Workflow completo (4 pasos):
+cd ~/Research/PTP_JCEM
+python 02_code/parse_literature.py extract   # paso 1: PDF → JSON
+python 02_code/parse_literature.py prisma    # paso 2: aplicar PRISMA
+python 02_code/parse_literature.py merge     # paso 3: extraer trayectorias
+python 02_code/parse_literature.py report    # paso 4: generar flow + summary
+```
