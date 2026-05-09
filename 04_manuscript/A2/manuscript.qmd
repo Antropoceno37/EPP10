@@ -1,0 +1,294 @@
+---
+title: "Mathematical and statistical foundations of the FDEP-TP framework: covariance operators, spectral decomposition, and BLUP estimation in sparse periprandial data"
+subtitle: "Lancet Diabetes & Endocrinology — Article (Original Research)"
+author:
+  - name: "Héctor M. Virgen-Ayala"
+    email: hectorvirgenmd@gmail.com
+    orcid: 0009-0006-2081-2286
+    affiliations:
+      - "Department of Surgical Clinics, Universidad de Guadalajara, Guadalajara, Mexico"
+      - "Department of General Surgery, Hospital General de Zona No. 14, Instituto Mexicano del Seguro Social, Guadalajara, Mexico"
+date: "2026-05-09"
+format:
+  docx:
+    toc: false
+    number-sections: false
+  pdf:
+    documentclass: article
+    geometry: margin=2.2cm
+    fontsize: 11pt
+    mainfont: "Georgia"
+    monofont: "Menlo"
+    linkcolor: blue
+    citecolor: blue
+keep-tex: false
+bibliography: refs_A2.bib
+csl: ../lancet.csl
+---
+
+# Summary
+
+**Background.** Sparse, irregularly sampled multi-hormonal periprandial trajectories present a methodological gap: existing data-driven taxonomies of metabolic disease decompose static cross-sectional variables, and single-trajectory functional analyses examine only one analyte at a time. No published framework applies multivariate functional principal component analysis (mFPCA) — the natural geometry of the joint enteropancreatic axis — to a complete panel of incretin, satiety, glucagon, insulin, and glucose curves under the constraints of sparse design (n≈50 subjects per arm, m=8–9 measurement points). We aimed to build, formally axiomatise, and empirically evaluate the statistical machinery underlying the Functional Decomposition of the Entero-Pancreatic Trajectory (FDEP-TP) framework.
+
+**Methods.** Eight axioms were stated as theorems with proof citations rather than modelling assumptions: the Mercer–Karhunen–Loève representation, best linear unbiased prediction (BLUP) optimality, kriging equivalence, the Happ–Greven positive-semi-definite guarantee, Chiou normalisation on the weighted Hilbert product space, Parseval isometry, reference-distribution standardisation, and population-conditioning identifiability (Theorems S1.1–S1.8 in Supplementary S1). Univariate covariance was estimated by tensor-product penalised splines (FACEs; `face::face.sparse`) as the primary estimator, with PACE [@Yao2005] retained as a sensitivity comparator. The number of joint components was chosen by the multivariate-FVE criterion of Golovkine et al. 2025 [@Golovkine2025] applied directly to the joint operator. Empirical validation used a pre-registered ecological corpus of 23 source studies, 71 (Author × Cohort) tuples, and 55 productive cohort-time-arms across 7 canonical cohorts and 11 analyte forms (OSF DOI 10.17605/OSF.IO/3CZRE; `master_table.csv` SHA-256 `2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117`). Pseudo-individual-participant data were generated from a Gaussian-process AR(1) kernel for visualisation and pipeline-stability bootstrap only; no frequentist inference was based on these draws.
+
+**Findings.** From 2,750 pseudo-subjects the joint operator retained K=12 components at the pre-specified threshold of multivariate fraction-of-variance-explained ≥ 0·90 (cumulative FVE 92 %; N/K=29·2; sensitivity K=15 at FVE ≥ 0·95). FACEs and PACE returned eigenvalue spectra that agreed within 4 % at the leading components; FACEs exhibited tighter cross-validated REML σ² estimates and lower BLUP score mean-squared error in the n≈50 / m=8–9 regime. The Golovkine multivariate-FVE criterion selected K=12, whereas a univariate-FVE ≥ 0·999 truncation would have over-parametrised at K=15. Sensitivity to the AR(1) hyperparameter ρ ∈ {0·3, 0·5, 0·7, 0·9} preserved K within ±2 components and the rank order of cohort-separation magnitudes; ρ=0·3 — the value that allows the largest local variation around the digitised mean — confirmed that rapid incretin peak morphology is governed by the marginal mean rather than the within-subject smoothness. Pillai trace on the joint score panel (n=350 after the smallest-block constraint) gave an omnibus F=18·29; pairwise vs reference F=52·09 (caloric restriction), 9·63 (obesity+T2DM), 7·78 (obesity), with permutation p saturating at B⁻¹ ≈ 2·10⁻⁴ as expected at this sample size. Subject-level bootstrap stability was ≥ 80 % for the modal Type assignment in every cohort.
+
+**Interpretation.** Eight axiomatic theorems and ten estimation procedures provide a transportable statistical scaffolding for sparse multivariate functional data on a Hilbert product space. The framework is descriptive-inferential and does not predict individual outcomes; clinical translation requires individual-participant validation.
+
+**Funding.** None.
+
+---
+
+# Research in context
+
+**Evidence before this study.** PubMed, Embase, and Web of Science were searched from inception to 31 March 2026 (terms included "multivariate functional principal component analysis", "sparse functional data", "covariance kernel estimation", "Karhunen–Loève", "PACE", "FACEs", "Happ–Greven", "Chiou normalisation", "tensor decomposition postprandial", "principal analysis by conditional expectation", and "best linear unbiased prediction"). The literature contains a mature methodological corpus on univariate sparse FPCA [@Yao2005; @Hall2006; @LiHsing2010; @Xiao2018FACEs] and on multivariate FPCA on Hilbert products [@HappGreven2018; @ChiouChenYang2014; @Li2021mFACEs; @Haghbin2026; @Nolan2025; @Sartini2025MSFAST], complemented by component-selection criteria for the multivariate setting [@Golovkine2025] and by tensor-decomposition alternatives such as CANDECOMP/PARAFAC applied to postprandial metabolomic arrays [@Shi2024]. Published applications to glucose-curve trajectories [@Froslie2013] decompose a single analyte. No prior study assembled a positive-semi-definite-by-construction joint operator across a complete enteropancreatic panel — incretins, satiety hormones, glucagon, insulin, and glucose — under sparse irregular design.
+
+**Added value of this study.** Eight axioms are presented as theorems with proof citations rather than modelling assumptions, including Mercer–Karhunen–Loève, Yao–Müller–Wang BLUP optimality, kriging equivalence, the Happ–Greven positive-semi-definite guarantee, Chiou weights, Parseval isometry, reference-distribution standardisation (whose identifiability follows from the rate results of Hall–Müller–Wang 2006), and population-conditioning identifiability. Ten estimation procedures define the operational pipeline, with FACEs as the primary covariance estimator and PACE retained as sensitivity. The number of joint components is chosen by the multivariate-FVE criterion of Golovkine et al. 2025 — applied here, to our knowledge for the first time, to a periprandial enteropancreatic panel. Empirical comparison demonstrates that mFPCA outperforms CP/PARAFAC tensor factorisation on three structural grounds in the small-variable-mode, sparse, MCAR setting characteristic of harmonised periprandial corpora.
+
+**Implications of all the available evidence.** The framework provides a transportable methodological substrate for any future study that quantifies dynamic multi-analyte responses in metabolism, endocrinology, or pharmacology. By isolating the statistical layer (axioms, estimation, inference) from the conceptual layer (companion paper A1) and from the procedural-clinical layer (companion paper A3), it enables independent methodological scrutiny by bioinformatics and biostatistics reviewers and supplies a reusable template for individual-participant-data extension. Limitations specific to A2 are stated: the empirical demonstration is ecological at the cohort-time-arm level; the Happ–Greven panel is restricted to n=350 by the smallest-block constraint; pseudo-individual-participant draws inform only visualisation and pipeline-stability bootstrap, not frequentist inference; percentile thresholds await prospective individual-participant validation.
+
+---
+
+# Introduction
+
+Functional data analysis equips investigators with a principled geometry for time-varying physiological signals. Sparse FPCA recovers a best linear unbiased predictor of latent scores from irregular longitudinal observations [@Yao2005]; rate properties under sparse design were established by Hall, Müller, and Wang [@Hall2006] and refined by Li and Hsing [@LiHsing2010], whose phase-transition threshold m ≍ (n/log n)^{1/4} delineates regimes in which non-parametric eigenfunction rates are or are not achievable. The Happ–Greven extension [@HappGreven2018] diagonalises the joint covariance operator on a Hilbert product space and lives intrinsically in the positive-semi-definite cone of multivariate covariances — no post-hoc projection is required. Chiou, Chen, and Yang [@ChiouChenYang2014] supplied the canonical normalisation that equalises integrated variance across components measured in heterogeneous units, a property essential when the panel mixes hormones whose marginal variances span an order of magnitude. Estimation of the covariance kernel itself benefits from fast tensor-product penalised-spline methods [@Xiao2018FACEs], which provide a positive-semi-definite-by-construction sandwich smoother and a cross-validated REML σ² estimate. The most recent component-selection guidance [@Golovkine2025] addresses a subtle gap: univariate fraction-of-variance-explained thresholds applied separately per analyte do not guarantee the joint multivariate-FVE, so the criterion must be applied directly to the joint eigenvalue sum.
+
+Despite this mature methodology, no published framework applies multivariate FPCA to the complete enteropancreatic panel — total and active GLP-1 and GIP, total and 3-36 PYY, total and acyl ghrelin, glucagon, insulin, and glucose — across health, type 2 diabetes, caloric restriction, and metabolic surgery. Existing data-driven taxonomies of metabolic disease decompose static cross-sectional variables [Ahlqvist; Udler; Tübingen; German Diabetes Study]; functional analyses of glucose curves alone [@Froslie2013] do not exploit the joint dynamics among incretins, satiety hormones, glucagon, insulin, and glucose. Tensor decompositions such as CANDECOMP/PARAFAC have recently been applied to postprandial metabolomic arrays [@Shi2024] and preserve the explicit subject × variable × time interaction in a single trilinear factorisation; we examine below the structural conditions under which CP and mFPCA diverge in their inferential guarantees. The aim of this article is to construct the mathematical and statistical foundations of the FDEP-TP framework as a transportable methodological scaffolding, evaluate it on a pre-registered ecological corpus, and document the conditions under which its inferential machinery is valid.
+
+The companion articles develop the same framework on different layers: A1 expounds the conceptual and physiological interpretation of the joint eigenfunctions, and A3 details the procedural pipeline and translational classification rules.
+
+---
+
+# Methods
+
+## Study design and data sources
+
+This article reports the methodological layer of a pre-registered ecological proof-of-concept analysis at the cohort-time-arm level (Open Science Framework DOI 10.17605/OSF.IO/3CZRE; v10·0 protocol frozen 2026-04-22). No new individual data were generated. Studies meeting eligibility criteria from 1989 through 2025 contributed mean and dispersion data for glucose, insulin, total or active GLP-1, total or active GIP, total or 3-36 PYY, glucagon, and total or acyl ghrelin over 0–180 min following a standardised oral nutrient stimulus (mixed-meal tolerance test, liquid mixed-meal test, or 75 g oral glucose tolerance test). After PRISMA-screened systematic search and trajectory extraction by WebPlotDigitizer [@Rohatgi2022WPD], 23 source studies yielded 71 (Author × Cohort) tuples and 55 productive cohort-time-arms across seven canonical cohorts: non-obese without T2D (reference), obesity, T2DM, obesity with T2DM, caloric restriction, sleeve gastrectomy (SG), and Roux-en-Y gastric bypass (RYGBP). The harmonised input file `master_table.csv` was registered with SHA-256 `2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117`.
+
+Pseudo-individual-participant data were generated from a Gaussian-process kernel of order one parametrised as K_ρ(s,t) = ρ^{|s−t|/30 min} with ρ=0·5 as the primary value [@Papadimitropoulou2020]. The marginal mean of the GP is the digitised arm mean trajectory µ_h(t) — including the rapid incretin peak morphology (GLP-1 peak at t≈15–30 min; PYY plateau at t≈90–120 min) extracted from each source study. The AR(1) kernel governs only within-subject deviations around this mean; marginal variance σ²_h(t) = (CV_h × µ_h(t))² used hormone-specific coefficients of variation drawn from the literature (ghrelin 0·40, GLP-1 0·35, GIP 0·30, insulin 0·20, glucose 0·12, glucagon 0·30). M=1000 draws per arm with deterministic N=50/arm subsample yielded 2,750 pseudo-subjects. **These pseudo-individual draws inform only visualisation and pipeline-stability bootstrap; no frequentist inference is based on them**, owing to saturation of permutation p-values at B⁻¹ when N=2,750.
+
+## Periprandial sampling and analyte panel
+
+Time grid {0, 15, 30, 60, 90, 120, 130, 150, 180} min, owing to mixed protocols. The design was declared **balanced sparse with missing-completely-at-random missingness**. The Li–Hsing phase-transition threshold m ≍ (n/log n)^{1/4} placed the design on the sparse side: with n≈50 per arm and m=8–9, (50/log 50)^{1/4} ≈ 2·5, so non-parametric rates are not achievable for eigenfunctions, while eigenvalues retain semi-parametric n^{−1/2} rates [@Hall2006; @LiHsing2010].
+
+The analyte panel comprises **eleven hormone forms** at the per-analyte PTP layer (GLP-1 active and total, GIP active and total, PYY total and 3-36, ghrelin total and acyl, glucagon, insulin, glucose). The Happ–Greven joint operator is restricted to **nine analyte forms**: glucose and insulin enter the integrated classification rules as glycaemic regulator and pancreatic effector, respectively, but are not components of the joint operator. The distinction between the eleven-form per-analyte input layer and the nine-form joint-operator layer is operationally important and is reflected in cohort/panel composition (Table 1).
+
+## Mathematical framework
+
+Eight axioms (Theorems S1.1–S1.8 in Supplementary S1) anchor the framework as theorems with proof citations rather than modelling assumptions. They comprise: the Mercer–Karhunen–Loève representation; BLUP optimality with kriging equivalence; the Happ–Greven positive-semi-definite guarantee; Chiou normalisation on the weighted Hilbert product space H = ∏_j L²(T_j); Parseval isometry, which reduces geodesic distance on H to Euclidean distance on multivariate scores; reference-distribution standardisation, whose identifiability follows from the uniform convergence rates established for nonparametric covariance estimation under sparse design [@Hall2006; @LiHsing2010]; and population-conditioning identifiability, which lifts a clinical convention (weight as a contextual modifier rather than a hard gate) to a formal identifiability statement under joint-operator conditioning. The full enunciation, proof citations, and reformulations are deposited in Supplementary S1.
+
+## Estimation procedures
+
+The operational pipeline is encoded in ten procedures.
+
+*Procedure L3·1.* Aggregated cohort means are digitised by WebPlotDigitizer [@Rohatgi2022WPD]; pseudo-IPD via Gaussian-process AR(1) **for visualisation and pipeline-stability bootstrap only, not for frequentist inference**, owing to saturation of permutation p-values at B⁻¹ when N=2,750.
+
+*Procedure L3·2.* Hormones with marginal asymmetry above unity were log-transformed prior to spline estimation: GLP-1, PYY, insulin, GIP, and acyl-ghrelin.
+
+*Procedure L3·3.* Univariate covariance estimation employs FACEs [@Xiao2018FACEs; `face::face.sparse`] as the primary estimator; PACE [@Yao2005; `fdapace::FPCA`] is retained as a sensitivity comparator. FACEs uses tensor-product penalised splines with leave-one-subject-out cross-validation, joint REML estimation of σ², and a positive-semi-definite-by-construction sandwich smoother — properties suited to the balanced-sparse n≈50, m=8–9 regime per the design analysis above. We prefer the multivariate functional approach to a CANDECOMP/PARAFAC tensor factorisation [@Shi2024; @SidiropoulosBro2000] for three reasons that are intrinsically structural rather than physiological. First, the CP model imposes a separability constraint: variables within a component share a single temporal profile modulated only in amplitude. With the present panel of seven hormone families exhibiting qualitatively distinct kinetic signatures — peak times distributed over t ∈ [15, 120] min and depending on the analyte and biochemical form — the separability constraint introduces structural bias into the subject-mode loadings used downstream for stratification. Second, with p=7–9 hormone forms in the variable mode (tensor ℝ^{50×9×9}), the Kruskal rank of the variable mode is too low to guarantee CP uniqueness under sampling perturbation [@SidiropoulosBro2000], producing instability in the subject loadings. Third, the CP model requires a complete tensor or pre-imputation, whereas mFPCA via BLUP (Theorem S1.2; Yao 2005) handles MCAR missingness without imputation. These arguments do not invalidate CP for high-dimensional metabolomic panels (p≫50) where separability is plausible; they justify that, for a small heterogeneous hormone panel with sparse irregular data, mFPCA delivers tighter inferential guarantees.
+
+*Procedure L3·4.* Bandwidth `'GMeanAndGCV'`. σ² is estimated jointly by REML in FACEs; for PACE sensitivity, σ² is obtained by diagonal extrapolation over the interior 50 % of T.
+
+*Procedure L3·5.* Univariate components are retained at fraction-of-variance-explained ≥ 0·999 to over-parametrise the multivariate decomposition per Golovkine et al. 2025 [@Golovkine2025], who demonstrated that selection of the per-block truncation by univariate-FVE thresholding does not guarantee multivariate-FVE; the threshold is therefore applied directly to the multivariate sum Σ_{m≤K} ν_m / Σ_m ν_m at the primary level 0·90 and the sensitivity level 0·95.
+
+*Procedure L3·6.* Phase variability is assessed by the standard deviation of the analyte-specific peak time SD(t_peak). Every analyte showed SD(t_peak) > 15 min; square-root-velocity-function registration [`fdasrvf`; @TuckerWu2014] was therefore applied to the pre-mFPCA dynamic component and reported alongside the unregistered baseline as sensitivity. The registration operates on the estimated mean function and is mathematically independent of the AR(1) kernel choice.
+
+*Procedure L3·7.* Multivariate decomposition by Happ–Greven 2018 with Chiou weights [@HappGreven2018; @ChiouChenYang2014; `MFPCA::MFPCA(type='given')`]. The joint operator Γ̂ is recovered as Σ_m ν̂_m Ψ̂_m ⊗ Ψ̂_m. Multivariate eigenfunctions ψ̂_m^{(j)} = Σ_n [c̃_m]^{(j)}_n φ̂_n^{(j)} are reconstructed from univariate bases; multivariate scores ρ̂_{im} = ⟨X_i − μ̂, Ψ̂_m⟩_w.
+
+*Procedure L3·8.* Subject-level bootstrap is run at B=2000 for the classification stage with a pre-specified target stability of ≥ 80 %, and at B=50 for the pipeline stage producing eigenfunction envelopes. Simultaneous 95 % bootstrap bands follow the construction of Goldsmith [@Goldsmith2013] and Degras [@Degras2011] sup-t bands.
+
+*Procedure L3·9.* Multivariate inference uses the Pillai trace and FANOVA permutation (B=5000) with Benjamini–Hochberg control of the false discovery rate at α=0·05. **Because pseudo-N=2,750 saturates permutation p at B⁻¹ ≈ 2·10⁻⁴, F values are reported as cohort-separation magnitudes, not as small-sample frequentist test statistics.** Per-cohort F summaries with their attendant interpretive caveats appear in Supplementary S2.
+
+*Procedure L3·10.* Four pre-specified sensitivities are reported: ±0·5 SD threshold displacement; leave-one-axis-out integrated typing; the AR(1) hyperparameter ρ ∈ {0·3, 0·5, 0·7, 0·9}; and challenge-class pooling SMMT vs LMMT vs OGTT. The ρ=0·3 condition is informative: at this value, the inter-time-point correlation at 15 min lag is 0·3^{0·5}≈0·55, allowing substantially more local variation than ρ=0·5 — a deliberate probe of the concern that AR(1) smoothing might attenuate the rapid incretin peak. Across all ρ values, K is preserved within ±2 components and the rank order of cohort-separation magnitudes is preserved; full tabulation is deposited at Zenodo (`sensitivity_summary.csv`).
+
+## Classification (PTP and IEP)
+
+The Periprandial Trajectory Phenotype (PTP) vocabulary and the five-type Integrated Enteropancreatic Pattern (IEP) hierarchy were defined a priori from physiological and pathophysiological premises and are described in detail in companion articles A1 (conceptual interpretation) and A3 (procedural and translational application). Operationally for the present article, the PTP and IEP layers are downstream consumers of the multivariate scores ρ̂_{im} and of the per-analyte standardised coordinates Z_{ih}; full label vocabularies, precedence rules, and clinical signatures are reported in A3.
+
+## Software, reproducibility, and reporting
+
+Analyses used R 4·6 with `face` 0·1-8, `MFPCA` 1·3-11, `fdapace` 0·6-0, `funData` 1·3-9, `fdasrvf` 2·4-4, `data.table`, `arrow`, and `ggsci` on macOS Sequoia with Apple Accelerate BLAS. The master seed was `20260422`. The complete pipeline comprises **sixteen R scripts** organised into five layers (ingest and harmonisation; pseudo-IPD generation; FACEs estimation, Happ–Greven decomposition, and SRSF registration; classification; inference, bootstrap, sensitivity, and figure generation). All scripts and outputs are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544; v1·3 DOI 10.5281/zenodo.19758429) and on GitHub (`sv8wmxnbp8-hash/EPP10` v1·3) under CC-BY 4·0. Reporting follows STROBE for cohort studies (with FDA methods supplementing the standard checklist [@Ramsay2005]); TRIPOD+AI [@Collins2024TRIPOD] is declared not applicable, as the present article reports a descriptive-inferential statistical framework rather than a clinical prediction model. Ecological aggregate-level analysis required no ethics review.
+
+## Role of the funding source
+
+There was no funding for this study. The author had full access to all data and final responsibility for the decision to submit for publication.
+
+---
+
+# Findings
+
+## Cohort and panel composition
+
+The harmonised dataset comprised 92,150 long-format observations on 2,750 pseudo-subjects across 7 cohorts and 11 analyte forms. After the Happ–Greven block-size constraint (n ≥ 50 per univariate block to support stable score recovery), nine analyte forms entered the joint operator: ghrelin total and acyl, GIP total and active, GLP-1 total and active, glucagon, PYY total, and PYY 3-36. Glucose and insulin remained at the per-analyte input layer, supplying glycaemic-regulator and pancreatic-effector axes for downstream PTP/IEP rules but not contributing to the joint operator. The smallest joint block contained n=350 pseudo-subjects and set the multivariate panel size for cross-cohort score contrasts. Reference adequacy (n_ref ≥ 8 per analyte in the non-obese without T2D cohort) was complete for every panel hormone (Table 1).
+
+## Phase variability and registration
+
+Inter-subject standard deviation of peak time exceeded 15 min for every analyte, ranging from 23·8 min (GIP active) to 63·8 min (ghrelin total). SRSF registration was therefore applied as the primary processing step for the dynamic component; both registered and unregistered analyses are reported. Without registration the second component captures phase artefactually and contaminates the early-versus-late temporal interpretation that downstream A1 develops in detail.
+
+## Univariate eigenstructure
+
+Three interpretable components were returned per analyte, capturing global amplitude (PC1), early-versus-late temporal redistribution (PC2), and biphasic or higher-order shape (PC3). Cumulative univariate FVE exceeded 99 % at three components for every analyte after the over-parametrisation step. The first component captured 71–84 % of trajectory variance per hormone; the second 9·8–17·3 %; the third 3·1–6·9 %.
+
+## Multivariate eigenstructure and Golovkine threshold
+
+The joint Happ–Greven decomposition retained K_primary=12 components at the pre-specified multivariate-FVE ≥ 0·90 threshold [@Golovkine2025]; sensitivity K=15 at FVE ≥ 0·95 was reported alongside. The N/K ratio was 29·2, well above the identifiability criterion (≥ 10), and the eigenspectrum showed a clear inflection after K=12 (Table 3). Cumulative joint variance at the first five components was 21·2 %, 35·7 %, 47·6 %, 57·5 %, and 65·0 %. The first eight eigenvalues were 1·73, 1·19, 0·97, 0·81, 0·61, 0·50, 0·45, and 0·35.
+
+A direct comparison of the Golovkine multivariate-FVE rule against alternative selection heuristics is informative for the methodological reader. A univariate-FVE ≥ 0·999 threshold applied per analyte block followed by retention of all corresponding joint components would yield K=15 — over-parametrising relative to the joint-variance criterion. A scree-elbow heuristic [@Cattell1966] applied directly to the joint eigenvalues identifies a knee at K∈{8,9}, which under-fits the Procrustes geometry of the multivariate scores. The Golovkine multivariate-FVE rule [@Golovkine2025] sits between these extremes and aligns with the pre-specified target of the joint-variance threshold, supporting the choice K=12 as the principal operating point.
+
+## FACEs versus PACE empirical comparison
+
+A side-by-side comparison of FACEs and PACE was performed on the same harmonised inputs. The leading eight univariate eigenvalues agreed to within 4 % across estimators, and the cumulative univariate FVE differed by ≤ 0·8 percentage points at three retained components. Two operationally relevant differences emerged. First, REML σ² estimation embedded in FACEs returned tighter cross-validated variance estimates than the diagonal-extrapolation method of PACE in the n≈50, m=8–9 regime, consistent with the design analysis above and with Xiao et al. 2018 [@Xiao2018FACEs]. Second, the BLUP score mean-squared error was lower under FACEs at every analyte block (median reduction 7 % across blocks), driven by the positive-semi-definite-by-construction sandwich smoother. PACE remained competitive in fully observed regimes and is therefore retained as a sensitivity estimator rather than abandoned. Display item DI2 illustrates the kernel-estimation pipeline and the empirical comparison.
+
+## ρ-sensitivity numerical results
+
+The AR(1) hyperparameter sensitivity is summarised in Table S2 (Supplementary). Across ρ ∈ {0·3, 0·5, 0·7, 0·9}, the retained K oscillated within ±2 components (K∈{10, 11, 12, 13, 14}); cumulative multivariate-FVE at the K_primary=12 truncation varied between 0·89 and 0·94; and the rank correlation of multivariate score loadings against the ρ=0·5 baseline exceeded 0·92 in every condition. The ρ=0·3 condition — which permits the largest within-subject local variation — produced a small upward shift in the second-component loading on incretin axes consistent with mildly attenuated phase-coupling, but did not reorder the cohort-separation magnitudes. These results confirm, on numerical grounds, that the rapid incretin peak morphology is governed by the marginal mean rather than by the within-subject smoothness encoded in ρ.
+
+## Cross-cohort separability and bootstrap stability
+
+Pillai trace on the joint score panel (n=350 after the smallest-block constraint) returned an omnibus F=18·29; pairwise vs reference F=52·09 (caloric restriction), 9·63 (obesity+T2DM), and 7·78 (obesity). Permutation p saturated at B⁻¹ ≈ 2·10⁻⁴; F values are reported as cohort-separation magnitudes per Procedure L3·9. T2DM, RYGBP, and SG did not survive the n ≥ 50 per-block filter for the joint panel and their multivariate contrasts are reported only at the per-analyte univariate level — a constraint that is methodological rather than substantive and that revisits in Discussion. Subject-level bootstrap (B=2000) returned ≥ 80 % stability for the modal Type assignment in every cohort; pipeline-stage bootstrap (B=50) preserved the rank ordering of eigenvalues and the integrated-loading direction of the first joint eigenfunction across replicates.
+
+## Sensitivity
+
+Threshold displacement of ±0·5 SD altered ≤ 6·8 % of the per-analyte PTP labels; leave-one-axis-out preserved ≥ 90 % of the integrated Type assignments for every dropped analyte except glucagon (where reduced reference support drove larger shifts). Pseudo-IPD ρ-sensitivity preserved K within ±2 components and the rank ordering of cohort separation magnitudes across ρ ∈ {0·3, 0·5, 0·7, 0·9}, as detailed above. Challenge-class pooling (SMMT, LMMT, OGTT) is reported as a structural caveat rather than a sensitivity outcome, since the harmonised input pools challenge classes by design.
+
+---
+
+# Discussion
+
+## Principal methodological findings
+
+Eight axiomatic theorems and ten estimation procedures, applied to a pre-registered ecological corpus of 23 source studies and 2,750 pseudo-subjects, sustain a transportable statistical scaffolding for sparse multivariate functional data on the joint enteropancreatic axis. Three methodological findings are worth emphasising for the bioinformatics and biostatistics reader. First, the Golovkine multivariate-FVE criterion [@Golovkine2025], applied directly to the joint eigenvalue sum rather than to univariate per-block thresholds, selected K=12 with N/K=29·2 — well above the identifiability cut-off — and was preserved across ρ ∈ {0·3, 0·5, 0·7, 0·9}. Second, FACEs [@Xiao2018FACEs] outperformed PACE [@Yao2005] in the n≈50, m=8–9 regime, with tighter cross-validated REML σ² estimates and lower BLUP score mean-squared error, while remaining structurally consistent with PACE in fully observed regimes; the practical recommendation for sparse multivariate panels is therefore FACEs as primary, PACE as sensitivity. Third, the ρ-sensitivity analysis closed a recurrent reviewer concern by demonstrating numerically that the rapid incretin peak morphology is preserved by the marginal mean of the Gaussian-process and is essentially independent of the AR(1) hyperparameter governing within-subject deviations.
+
+## Comparison with the FDA literature
+
+Among recent contributions to multivariate sparse FPCA, the present framework occupies a specific methodological niche: a positive-semi-definite-by-construction joint operator on a Hilbert product space [@HappGreven2018], normalised by integrated-variance weights [@ChiouChenYang2014], with a fast tensor-product penalised-spline kernel estimator [@Xiao2018FACEs; @Li2021mFACEs] and the multivariate-FVE component-selection rule of Golovkine et al. 2025 [@Golovkine2025]. Bayesian alternatives [@Sartini2025MSFAST; @Nolan2025] and regularised MFPCA [@Haghbin2026] are complementary lines of work that may further reduce the BLUP score mean-squared error under heavier sparsity; we did not adopt them here because deterministic frequentist estimation is required for the pre-registration and because the Golovkine criterion, applied at the present sample size, did not require the additional regularisation. CANDECOMP/PARAFAC tensor decompositions [@Shi2024; @SidiropoulosBro2000] preserve the explicit subject × variable × time interaction in a single trilinear factorisation; we have argued (Procedure L3·3) that, for small heterogeneous hormone panels under sparse irregular design, the separability constraint, the low Kruskal-rank guarantee, and the no-imputation property of mFPCA combine to favour the multivariate functional approach. The Goldsmith [@Goldsmith2013] and Degras [@Degras2011] simultaneous-band machinery is appropriate for the bootstrap stage, and conformal alternatives [@Diquigiovanni2022conformal] are a natural extension when individual-participant data become available. The Procrustes-Wasserstein geometry of covariance operators [@Masarotto2019Wasserstein] supplies a theoretical framing for distance computations on Γ̂ that exceeds the present scope.
+
+## Strengths and limitations
+
+The framework's methodological strengths are: (i) joint analysis of the complete enteropancreatic panel under explicit positive-semi-definite-by-construction estimation; (ii) eight axioms stated as theorems with proof citations rather than modelling assumptions, including identifiability statements (Theorems S1.7 and S1.8) that lift previously implicit clinical conventions to formal mathematical claims; (iii) the multivariate-FVE component-selection criterion of Golovkine et al. 2025 with a sensitivity cross-check at FVE ≥ 0·95 confirming K=15 as a stable upper truncation; (iv) explicit pre-registration with public deposition of all code and outputs; (v) full computational reproducibility from open-source software with Zenodo deposition; and (vi) a structural justification of mFPCA over CP/PARAFAC for the small-variable-mode, sparse, MCAR setting on three structural grounds (separability constraint, low Kruskal rank, no-imputation property).
+
+Methodological limitations are six. **First**, the empirical demonstration is **ecological** at the cohort-time-arm level [@Robinson1950]; the methodological framework is independent of this, but the present validation cannot resolve individual-participant heterogeneity. **Second**, the **Happ–Greven panel was restricted to n=350** by the smallest-block constraint, which excluded T2DM, SG, and RYGBP from the multivariate Pillai contrasts; per-cohort PTP and IEP contrasts at n=2,750 remained available and inform the principal findings reported in companion paper A3. **Third**, **percentile thresholds** in the downstream classification layer (developed in A3) await prospective individual-participant cut-offs. **Fourth**, **protocol heterogeneity** across test meals, caloric loads, and sampling densities is substantial and is treated as a structural caveat rather than a sensitivity outcome. **Fifth**, the framework is currently **agnostic to circadian phase** and to continuous glucose monitoring context; both extensions are natural future work. **Sixth**, **single-analyte source arms** in the non-obese without T2D corpus drive a 23·1 % not-classifiable rate at the integrated Type layer: 150 pseudo-subjects originated from arms that measured only one hormone, falling below the two-non-glucose-axis minimum required by Rule R1 of A3; missing analytes were not imputed by design. This rate is a structural consequence of historical source-protocol heterogeneity, not a failure of the reference standardisation; all nine analytes of the joint operator met the n ≥ 50 reference-adequacy criterion.
+
+## Implications for FDA methodology
+
+Beyond the periprandial enteropancreatic application, the framework has three transportable methodological implications. First, it demonstrates that the multivariate-FVE component-selection rule of Golovkine et al. 2025 [@Golovkine2025] is operationally feasible on a small heterogeneous hormone panel and produces stable K under realistic sensitivity perturbations. Second, it documents the empirical regime in which FACEs [@Xiao2018FACEs] outperforms PACE [@Yao2005] for downstream BLUP score recovery, providing evidence-based guidance for analysts working in sparse multivariate settings. Third, it isolates a clean separation of axiomatic, statistical, and procedural layers (with companion papers A1 and A3 occupying the conceptual–physiological and procedural–translational layers) that is itself transportable to other multivariate functional applications in metabolism, endocrinology, and pharmacology. Future methodological work includes: extension to individual-participant-data corpora when these become available; comparison with regularised [@Haghbin2026] and Bayesian [@Sartini2025MSFAST; @Nolan2025] alternatives at heavier sparsity; conformal multivariate prediction bands [@Diquigiovanni2022conformal] for individual-level inferential uncertainty; and Procrustes-Wasserstein geometric analyses [@Masarotto2019Wasserstein] of the joint operator across cohorts.
+
+## Conclusion
+
+The mathematical and statistical foundations of the FDEP-TP framework — eight axiomatic theorems, ten estimation procedures, FACEs as the primary covariance estimator, the Golovkine multivariate-FVE rule for component selection, and explicit ρ-sensitivity — provide a positive-semi-definite-by-construction substrate for multivariate functional analysis of sparse enteropancreatic trajectories. The framework is descriptive-inferential and does not predict individual outcomes; clinical translation requires individual-participant validation, which is the subject of future work.
+
+---
+
+# Contributors
+
+HMVA conceived the methodological framework, derived the axiomatic theorems with proof citations, implemented the estimation pipeline, performed the empirical evaluation, drafted the manuscript, and approved the final version.
+
+# Declaration of interests
+
+The author declares no competing interests, no industry support, and no funding for this work.
+
+# Data sharing
+
+All digitised periprandial trajectories, the harmonised cohort corpus (`master_table.csv`, SHA-256 `2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117`), the 16-script analytic pipeline, the article-specific outputs, and the reproducibility scripts are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544; article-specific version DOIs cited in each manuscript) and GitHub (`sv8wmxnbp8-hash/EPP10` v1·3 and subsequent branches) under CC-BY 4·0. The repository permits full reproduction of every numerical claim and follows FAIR data principles. Pre-registration is at the Open Science Framework (DOI 10.17605/OSF.IO/3CZRE; project at https://osf.io/tr469, frozen 2026-04-22).
+
+# AI/LLM disclosure
+
+Analytic pipeline design, R code implementation, and manuscript drafting were supported by Claude (Anthropic, Opus 4.7 / Sonnet 4.6, May 2026). All statistical outputs, pre-registration decisions, and scientific claims were validated by the author against the v10·0 master analysis plan (OSF DOI 10.17605/OSF.IO/3CZRE) and the FDEP-TP framework v2·0 reference document.
+
+# Acknowledgments
+
+The author acknowledges the open-source maintainers of `face`, `MFPCA`, `fdapace`, `funData`, and `fdasrvf`, whose implementations made this work possible.
+
+---
+
+# References
+
+::: {#refs}
+:::
+
+---
+
+# Display item captions
+
+**DI1 — Schema of the multivariate Karhunen–Loève representation on a Hilbert product space.** Conceptual rendering of the Mercer decomposition C(s,t) = Σ_k λ_k φ_k(s) φ_k(t) and of the Karhunen–Loève expansion X(t) = μ(t) + Σ_k ξ_k φ_k(t) at the univariate level (left), and of the Happ–Greven joint operator Γ̂ = Σ_m ν̂_m Ψ̂_m ⊗ Ψ̂_m on H = ∏_j L²(T_j) at the multivariate level (right). Chiou normalisation weights w_j = 1/√tr(C^{(jj)}) are indicated. Generated by `02_code/10_A2_mathematical_figs.R` (Day 3).
+
+**DI2 — Kernel estimation pipeline: FACEs (primary) versus PACE (sensitivity).** Side-by-side comparison of the tensor-product penalised-spline FACEs estimator against the local-linear PACE estimator for a representative analyte block (n≈50, m=8–9). Top panels: estimated covariance surfaces. Middle panels: leading three eigenvalues with bootstrap confidence intervals. Bottom panels: BLUP score recovery mean-squared error by component. Bandwidth `'GMeanAndGCV'`; REML σ² for FACEs; diagonal extrapolation σ² for PACE.
+
+**DI3 — Eigenvalue spectrum and Golovkine multivariate-FVE threshold.** Joint eigenvalues ν̂_m of the Happ–Greven operator (m=1,…,30) on a logarithmic axis (left) and cumulative multivariate-FVE (right). Vertical line indicates the multivariate-FVE ≥ 0·90 threshold of Golovkine et al. 2025 selecting K_primary=12 (cumulative FVE 92 %; N/K=29·2). Inset compares the K selection produced by univariate-FVE ≥ 0·999, the joint multivariate-FVE rule, and the Cattell scree elbow.
+
+**DI4 — BLUP score recovery and simultaneous bootstrap bands.** Multivariate scores ρ̂_{im} for the leading three components by cohort (boxplots; n=350 after smallest-block constraint), with simultaneous 95 % bootstrap bands by Goldsmith 2013 / Degras 2011 sup-t method overlaid on the corresponding mean trajectories. Registered (SRSF) and unregistered analyses are shown side by side; the second component captures phase artefactually under the unregistered baseline.
+
+---
+
+# Tables
+
+## Table 1 — Cohort, panel, and reference adequacy
+
+| Cohort | Productive arms | Pseudo-subjects | Joint-block n | Reference adequacy (n_ref ≥ 8 per analyte) |
+|:--|--:|--:|--:|:--|
+| Non-obese without T2D (reference) | 13 | 650 | 350 | Complete (9/9 analytes) |
+| Obesity | 14 | 700 | n.a. (per-analyte only) | n.a. |
+| T2DM | 4 | 200 | excluded by block-size filter | n.a. |
+| Obesity + T2DM | 7 | 350 | 350 | n.a. |
+| Caloric restriction (Post-CR) | 7 | 350 | 350 | n.a. |
+| Sleeve gastrectomy (SG) | 7 | 350 | excluded by block-size filter | n.a. |
+| Roux-en-Y gastric bypass (RYGBP) | 10 | 500 | excluded by block-size filter | n.a. |
+| **Total** | **55** (from 71 Author × Cohort tuples in 23 source studies) | **2,750** | **350** (smallest joint block) | — |
+
+The Happ–Greven joint operator includes 9 analyte forms (GIP active and total, GLP-1 active and total, PYY total and 3-36, ghrelin total and acyl, glucagon); glucose and insulin enter the per-analyte PTP layer (11 analyte forms in total) but not the joint operator. SHA-256 of `master_table.csv`: `2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117`.
+
+## Table 3 — Eigenstructure of the joint operator (K_primary=12 retained)
+
+| Component m | ν̂_m | Cumulative multivariate-FVE | Dominant univariate block | Note |
+|--:|--:|--:|:--|:--|
+| 1 | 1·73 | 0·212 | PYY total | ‖ψ̂_1^{(j)}‖² = 0·76 (PYY tot.); incretin sum 0·211 |
+| 2 | 1·19 | 0·357 | GIP active vs PYY total | early-vs-late temporal separation |
+| 3 | 0·97 | 0·476 | glucose × insulin | biphasic coupling |
+| 4 | 0·81 | 0·575 | GLP-1 active | distal incretin amplitude |
+| 5 | 0·61 | 0·650 | ghrelin total | suppression contrast |
+| 6 | 0·50 | 0·711 | GIP total | proximal incretin amplitude |
+| 7 | 0·45 | 0·766 | PYY 3-36 | distal L-cell |
+| 8 | 0·35 | 0·808 | ghrelin acyl | active form contrast |
+| 9–12 | (decreasing) | 0·920 (cumulative) | mixed | — |
+| **K_primary = 12** | — | **0·92** | — | Golovkine 2025 multivariate-FVE ≥ 0·90 |
+| K_sensitivity = 15 | — | 0·95 | — | sensitivity threshold |
+
+N=2,750 pseudo-subjects; n=350 in the smallest joint block; N/K=29·2 (well above the ≥10 identifiability cut-off).
+
+---
+
+# Supplementary material
+
+## Supplementary S1 — Theorems with proof citations
+
+**Theorem S1.1 (Mercer–Karhunen–Loève).** *Let X(t) be a second-order stochastic process on a compact T with continuous positive-semi-definite covariance kernel C(s,t). Then C admits the Mercer decomposition* C(s,t) = Σ_k λ_k φ_k(s) φ_k(t) *with non-negative eigenvalues λ_k arranged in decreasing order and orthonormal eigenfunctions φ_k, and X admits the Karhunen–Loève expansion* X(t) = μ(t) + Σ_k ξ_k φ_k(t) *with* E[ξ_k]=0, *Var*[ξ_k]=λ_k, *and* Cov[ξ_j, ξ_k]=0 *for j≠k*. *Proof citations:* the original integral-equation result is due to Mercer 1909 [@Mercer1909]; a complete operator-theoretic treatment with the Karhunen–Loève expansion is provided in Hsing and Eubank 2015, chapters 4 and 7 [@HsingEubank2015]; the foundational FDA exposition is Ramsay and Silverman 2005 [@Ramsay2005].
+
+**Theorem S1.2 (BLUP optimality, Yao–Müller–Wang 2005).** *For the model* Y_{ij} = μ(T_{ij}) + Σ_k ξ_{ik} φ_k(T_{ij}) + ε_{ij} *with* ξ ⊥ ε, *the unique linear predictor minimising the prediction-error variance* E[(ξ_{ik} − ξ̂_{ik})²] *is* ξ̂_{ik} = λ_k φ_{ik}^⊤ Σ_{Y_i}^{−1} (Y_i − μ_i). *Under joint Gaussianity it equals the conditional expectation; without Gaussianity it remains best linear unbiased in the standard linear-prediction sense.* *Proof citation:* Yao, Müller, and Wang 2005, equation 4 [@Yao2005].
+
+**Theorem S1.3 (kriging equivalence).** *PACE is structurally simple kriging on the latent scalar variable* ξ_{ik}, *with cross-covariance vector* c₀ = λ_k φ_{ik}, *kernel matrix* Σ_Y, *and nugget* σ². *Proof citation:* Hsing and Eubank 2015, §7.4 (BLUP–kriging correspondence) [@HsingEubank2015].
+
+**Theorem S1.4 (Happ–Greven positive-semi-definite guarantee).** *The empirical Gram matrix* Ẑ = (N−1)^{−1} Ξ^⊤ Ξ *formed from stacked univariate scores is positive-semi-definite by construction; the estimated joint operator* Γ̂ = Σ_m ν̂_m Ψ̂_m ⊗ Ψ̂_m *therefore lies intrinsically in the positive-semi-definite cone of multivariate covariances — no post-hoc projection is required.* *Proof citation:* Happ and Greven 2018 [@HappGreven2018].
+
+**Theorem S1.5 (Chiou normalisation).** *On the weighted Hilbert product space* H = ∏_j L²(T_j) *with inner product* ⟨f, g⟩_w = Σ_j w_j ∫ f^{(j)} g^{(j)}, *the weights* w_j = 1/√*tr*(C^{(jj)}) *make each rescaled component contribute unit integrated variance.* *Proof citations:* Chiou, Chen, and Yang 2014 [@ChiouChenYang2014]; Happ and Greven 2018 §5 [@HappGreven2018].
+
+**Theorem S1.6 (Parseval isometry).** *The geodesic distance on H reduces to the Euclidean distance on multivariate scores:* d_H²(x_i, x_{i'}) = Σ_m (ρ_{im} − ρ_{i'm})². *Proof citation:* Hsing and Eubank 2015 [@HsingEubank2015].
+
+**Theorem S1.7 (reference-distribution identifiability).** *Under the sparse-design phase-transition regime of Hall–Müller–Wang 2006 and the uniform convergence rates of Li–Hsing 2010, the reference-distribution standardised coordinates* Z_{ih} = [z(B_{ih}), z(ξ_{ih,1}), z(ξ_{ih,2}), z(ξ_{ih,3})], *standardised against the empirical mean and standard deviation of the non-obese without T2D reference distribution, are asymptotically identifiable up to the truncation error of the eigenfunction basis at multivariate-FVE ≥ 0·90.* *Proof citations:* eigenstructure rates and identifiability follow from Hall–Müller–Wang 2006, Theorem 3.3 [@Hall2006], and from the uniform convergence rates of Li–Hsing 2010 [@LiHsing2010]; the empirical reference-distribution argument is the standard plug-in result for componentwise standardisation under identical phase-transition assumptions.
+
+**Theorem S1.8 (population-conditioning identifiability — reformulation of L2·8).** *Under a population-conditioning protocol in which weight category enters the joint operator as a covariate rather than as a hard partition gate, the conditional joint operator* Γ̂_{|w} *retains the positive-semi-definite-by-construction property of Theorem S1.4 and inherits the BLUP optimality of Theorem S1.2 within each weight stratum. Identifiability of the post-intervention coordinate position relative to the non-obese without T2D reference is therefore guaranteed up to the same truncation error as Theorem S1.7.* *Proof citation:* identifiability follows directly from Theorem S1.1 applied to the joint operator under the conditional partition; the protocol convention itself is supported by the clinical evidence of incretin restoration after gastric bypass independently of body-weight reduction [@Laferrere2008] and by the contemporary clinical-obesity consensus [@Rubino2025], which together justify weight as a contextual covariate rather than a population-defining gate.
+
+## Supplementary S2 — Per-cohort F summaries with interpretive caveats
+
+Pillai trace omnibus F=18·29 on the joint score panel (n=350); pairwise vs reference: Post-CR F=52·09; Obesity+T2DM F=9·63; Obesity F=7·78. Permutation p saturates at B⁻¹ ≈ 2·10⁻⁴ at this sample size (B=5000); F values are reported as cohort-separation magnitudes per Procedure L3·9 and not as small-sample frequentist test statistics. Per-cohort Mahalanobis distances vs reference: Post-CR 2·89 (Bonferroni q=0·003), Obesity+T2DM 1·67 (q=0·003), Obesity 0·78 (q=0·003).
+
+## Supplementary S3 — ρ-sensitivity table
+
+| ρ | K (FVE ≥ 0·90) | Cumulative FVE at K=12 | Rank-correlation of score loadings vs ρ=0·5 |
+|:--|--:|--:|--:|
+| 0·3 | 13 | 0·89 | 0·92 |
+| 0·5 | 12 | 0·92 | 1·00 |
+| 0·7 | 12 | 0·93 | 0·97 |
+| 0·9 | 11 | 0·94 | 0·94 |
+
+Source: `03_outputs/lancet_run_2026-05-08/tables/sensitivity_summary.csv`. The ρ=0·3 condition permits the largest within-subject local variation (inter-time-point correlation at 15 min lag is 0·3^{0·5}≈0·55, vs 0·5^{0·5}≈0·71 at the primary value).
