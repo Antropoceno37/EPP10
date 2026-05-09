@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "title": "FDEP-TP framework — Article A2: Mathematical and statistical foundations (Lancet Diabetes & Endocrinology submission package)",
+    "version": "v2.0-A2",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "description": "<p>Submission package for Article A2 of the FDEP-TP trilogy (Lancet Diabetes & Endocrinology). Contains the Lancet-format manuscript (.docx and .pdf), Quarto source, cover letter, four display items (DI1-DI4) at 300 dpi, refs_A2.bib, the numerical ledger, the F1-F9 verification report, and the master ledger CSVs (Pillai, Mahalanobis, reference adequacy, sensitivity summary, peak-time SD, source inventory). Article A2 reports 8 axiomatic theorems (Mercer-KL, BLUP optimality, kriging equivalence, Happ-Greven PSD, Chiou normalisation, Parseval, reference-distribution and population-conditioning identifiability) and 10 estimation procedures (FACEs primary; PACE sensitivity; rho-AR(1) sensitivity; Golovkine 2025 multivariate-FVE component selection; SRSF registration; Goldsmith/Degras simultaneous bands), evaluated on the pre-registered ecological corpus (master_table.csv SHA-256 2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117). Companion articles A1 (conceptual-physiological layer) and A3 (procedural-translational layer) are forthcoming.</p>",
+    "creators": [
+      {
+        "name": "Virgen-Ayala, Hector M.",
+        "affiliation": "Universidad de Guadalajara / Instituto Mexicano del Seguro Social, Guadalajara, Mexico",
+        "orcid": "0009-0006-2081-2286"
+      }
+    ],
+    "keywords": [
+      "multivariate functional principal component analysis",
+      "FDA",
+      "BLUP",
+      "Karhunen-Loeve",
+      "Happ-Greven",
+      "FACEs",
+      "PACE",
+      "Golovkine 2025",
+      "periprandial trajectories",
+      "enteropancreatic axis",
+      "incretin",
+      "metabolic surgery"
+    ],
+    "license": "CC-BY-4.0",
+    "communities": [
+      {"identifier": "metabolism"},
+      {"identifier": "biostatistics"}
+    ],
+    "related_identifiers": [
+      {"identifier": "10.17605/OSF.IO/3CZRE",            "relation": "isDerivedFrom",  "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.19743544",         "relation": "isPartOf",        "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.19758429",         "relation": "isNewVersionOf",  "scheme": "doi"}
+    ],
+    "language": "eng",
+    "access_right": "open"
+  }
+}
