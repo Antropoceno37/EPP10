@@ -1,0 +1,45 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Quarto / render artifacts
+_quarto/
+*_files/
+*_cache/
+.quarto/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+.Renviron.local
+*.Rcheck/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Heavy / regenerable outputs (kept under Zenodo + manuscripts only)
+03_outputs/logs/
+03_outputs/**/*_cache/
+04_manuscript/lancet_de_v1_files/
+04_manuscript/PTP_pipeline_FPCA_MFPCA_cache/
+04_manuscript/lancet_de_v1.html
+04_manuscript/PTP_pipeline_FPCA_MFPCA.docx
+04_manuscript/lancet_de_v1.pdf
+
+# Tex aux
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
