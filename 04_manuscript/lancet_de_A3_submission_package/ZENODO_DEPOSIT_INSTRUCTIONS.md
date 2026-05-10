@@ -10,7 +10,7 @@ This document gives two equally valid paths.
 
 1. Go to https://zenodo.org/deposit and sign in.
 2. Open the **concept** record DOI 10.5281/zenodo.19743544 (the "Periprandial Transition Profiles" parent).
-3. Click **New version**. Zenodo will pre-fill the metadata from the previous version (v1·4 deposited 2026-04-28, DOI 10.5281/zenodo.19758429; or v3·0-A1 / v2·0-A2 once those are minted).
+3. Click **New version**. Zenodo will pre-fill the metadata from the previous version (v1·4 deposited 2026-04-28, DOI 10.5281/zenodo.19853747; or v3·0-A1 / v2·0-A2 once those are minted).
 4. Replace the title with: *FDEP-TP framework — Article A3: Methodological and translational foundations (Lancet Diabetes & Endocrinology submission package)*.
 5. Set the version to `v3.0-A3`.
 6. Replace the description, keywords, and related_identifiers using the values in `ZENODO_metadata.json`.
