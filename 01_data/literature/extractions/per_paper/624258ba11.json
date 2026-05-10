@@ -1,0 +1,24 @@
+{
+  "paper_id": "624258ba11",
+  "filename": "Estimacio_n_de_los_li_mites_de_cambio_deltacheck_en_el_laboratorio_cli_nico.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2021,
+    "title": "AdvLabMed2021;2(3):424–431"
+  },
+  "cohorts_detected": [
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

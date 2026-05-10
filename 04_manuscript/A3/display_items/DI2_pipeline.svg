@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='864.00pt' height='576.00pt' viewBox='0 0 864.00 576.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='864.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA=)'>
+<rect x='0.00' y='0.00' width='864.00' height='576.00' style='stroke-width: 0.97; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNC45OHw3MDkuOTN8MzMuNzV8NTcxLjAy'>
+    <rect x='4.98' y='33.75' width='704.94' height='537.27' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNC45OHw3MDkuOTN8MzMuNzV8NTcxLjAy)'>
+<rect x='4.98' y='39.55' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #00468B;' />
+<rect x='4.98' y='72.72' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #00468B;' />
+<rect x='4.98' y='105.88' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #00468B;' />
+<rect x='4.98' y='139.05' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #ED0000;' />
+<rect x='4.98' y='172.21' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #42B540;' />
+<rect x='4.98' y='205.38' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #42B540;' />
+<rect x='4.98' y='238.54' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #42B540;' />
+<rect x='4.98' y='271.71' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #0099B4;' />
+<rect x='4.98' y='304.87' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #0099B4;' />
+<rect x='4.98' y='338.04' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<rect x='4.98' y='371.20' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<rect x='4.98' y='404.37' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<rect x='4.98' y='437.53' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<rect x='4.98' y='470.70' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<rect x='4.98' y='503.86' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<rect x='4.98' y='537.02' width='173.82' height='28.19' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<text x='14.64' y='56.51' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='56.42px' lengthAdjust='spacingAndGlyphs'>00_inventory.R</text>
+<text x='14.64' y='89.68' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='82.67px' lengthAdjust='spacingAndGlyphs'>parse_master_table.R</text>
+<text x='14.64' y='122.84' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='61.00px' lengthAdjust='spacingAndGlyphs'>01_harmonize.R</text>
+<text x='14.64' y='156.01' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='142.75px' lengthAdjust='spacingAndGlyphs'>01_harmonize.R (pseudo-IPD section)</text>
+<text x='14.64' y='189.17' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='60.12px' lengthAdjust='spacingAndGlyphs'>02_fpca_pace.R</text>
+<text x='14.64' y='222.33' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='94.16px' lengthAdjust='spacingAndGlyphs'>03_mfpca_happgreven.R</text>
+<text x='14.64' y='255.50' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='88.84px' lengthAdjust='spacingAndGlyphs'>04b_srsf_registration.R</text>
+<text x='14.64' y='288.66' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='67.19px' lengthAdjust='spacingAndGlyphs'>05_classify_ptp.R</text>
+<text x='14.64' y='321.83' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='61.44px' lengthAdjust='spacingAndGlyphs'>05b_iep_perm.R</text>
+<text x='14.64' y='354.99' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='56.58px' lengthAdjust='spacingAndGlyphs'>06_inference.R</text>
+<text x='14.64' y='388.16' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='69.41px' lengthAdjust='spacingAndGlyphs'>06_lme4_scores.R</text>
+<text x='14.64' y='421.32' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='74.69px' lengthAdjust='spacingAndGlyphs'>06b_mahalanobis.R</text>
+<text x='14.64' y='454.49' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='57.91px' lengthAdjust='spacingAndGlyphs'>07_bootstrap.R</text>
+<text x='14.64' y='487.65' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='47.73px' lengthAdjust='spacingAndGlyphs'>08_figures.R</text>
+<text x='14.64' y='520.82' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='67.62px' lengthAdjust='spacingAndGlyphs'>08b_lancet_figs.R</text>
+<text x='14.64' y='553.98' style='font-size: 7.97px; font-weight: bold;fill: #FFFFFF; font-family: "Helvetica";' textLength='59.52px' lengthAdjust='spacingAndGlyphs'>09_sensitivity.R</text>
+<text x='178.80' y='56.20' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='121.52px' lengthAdjust='spacingAndGlyphs'>Inventory + ingestion of source studies</text>
+<text x='178.80' y='89.37' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='141.48px' lengthAdjust='spacingAndGlyphs'>Parse master_table.csv (SHA-256 anchored)</text>
+<text x='178.80' y='122.53' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='129.17px' lengthAdjust='spacingAndGlyphs'>Harmonise units, time grid, analyte forms</text>
+<text x='178.80' y='155.70' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='176.88px' lengthAdjust='spacingAndGlyphs'>Gaussian-process AR(1) draws (rho=0.5; B=50 / B=300)</text>
+<text x='178.80' y='188.86' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='194.64px' lengthAdjust='spacingAndGlyphs'>FACEs primary (PACE sensitivity) univariate kernel estimation</text>
+<text x='178.80' y='222.03' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='165.56px' lengthAdjust='spacingAndGlyphs'>Happ-Greven joint operator with Chiou normalisation</text>
+<text x='178.80' y='255.19' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='182.58px' lengthAdjust='spacingAndGlyphs'>Square-root-velocity-function phase-amplitude registration</text>
+<text x='178.80' y='288.35' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='126.33px' lengthAdjust='spacingAndGlyphs'>PTP nine-label per-analyte classification</text>
+<text x='178.80' y='321.52' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='157.75px' lengthAdjust='spacingAndGlyphs'>IEP Type I-V integration with permutation q-values</text>
+<text x='178.80' y='354.68' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='175.44px' lengthAdjust='spacingAndGlyphs'>Pillai trace, FANOVA permutation, omnibus + pairwise F</text>
+<text x='178.80' y='387.85' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='149.27px' lengthAdjust='spacingAndGlyphs'>Linear-mixed-effects scores (lme4, Tukey HSD)</text>
+<text x='178.80' y='421.01' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='106.31px' lengthAdjust='spacingAndGlyphs'>Mahalanobis distances per cohort</text>
+<text x='178.80' y='454.18' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='181.36px' lengthAdjust='spacingAndGlyphs'>Simultaneous bootstrap bands (Goldsmith / Degras sup-t)</text>
+<text x='178.80' y='487.34' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='165.61px' lengthAdjust='spacingAndGlyphs'>Generic figures (per-analyte trajectories, score plots)</text>
+<text x='178.80' y='520.51' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='123.69px' lengthAdjust='spacingAndGlyphs'>Lancet-formatted figures (ggsci palette)</text>
+<text x='178.80' y='553.67' style='font-size: 7.11px;fill: #262626; font-family: "Helvetica";' textLength='95.66px' lengthAdjust='spacingAndGlyphs'>Four pre-specified sensitivities</text>
+</g>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA=)'>
+<rect x='725.29' y='259.61' width='16.43' height='16.43' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #00468B;' />
+<rect x='725.29' y='276.89' width='16.43' height='16.43' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #ED0000;' />
+<rect x='725.29' y='294.17' width='16.43' height='16.43' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #42B540;' />
+<rect x='725.29' y='311.45' width='16.43' height='16.43' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #0099B4;' />
+<rect x='725.29' y='328.73' width='16.43' height='16.43' style='stroke-width: 0.64; stroke: #404040; stroke-linecap: butt; stroke-linejoin: miter; fill: #925E9F;' />
+<text x='747.13' y='270.34' style='font-size: 7.00px; font-family: "Helvetica";' textLength='85.53px' lengthAdjust='spacingAndGlyphs'>L1 - Ingest &amp; harmonisation</text>
+<text x='747.13' y='287.62' style='font-size: 7.00px; font-family: "Helvetica";' textLength='86.72px' lengthAdjust='spacingAndGlyphs'>L2 - Pseudo-IPD generation</text>
+<text x='747.13' y='304.90' style='font-size: 7.00px; font-family: "Helvetica";' textLength='46.66px' lengthAdjust='spacingAndGlyphs'>L3 - Estimation</text>
+<text x='747.13' y='322.18' style='font-size: 7.00px; font-family: "Helvetica";' textLength='55.23px' lengthAdjust='spacingAndGlyphs'>L4 - Classification</text>
+<text x='747.13' y='339.46' style='font-size: 7.00px; font-family: "Helvetica";' textLength='106.91px' lengthAdjust='spacingAndGlyphs'>L5 - Inference, sensitivity &amp; figures</text>
+<text x='4.98' y='26.77' style='font-size: 9.00px;fill: #4D4D4D; font-family: "Helvetica";' textLength='423.38px' lengthAdjust='spacingAndGlyphs'>FACEs primary; PACE / rho-AR(1) / leave-one-axis-out as pre-specified sensitivities (companion paper A2)</text>
+<text x='4.98' y='12.90' style='font-size: 11.00px; font-weight: bold; font-family: "Helvetica";' textLength='278.28px' lengthAdjust='spacingAndGlyphs'>DI2 - Computational pipeline (16 R scripts in 5 layers)</text>
+</g>
+</g>
+</svg>

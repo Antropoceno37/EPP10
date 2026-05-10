@@ -1,0 +1,1 @@
+/Users/hectormanuelvirgenayala/Library/Mobile Documents/com~apple~CloudDocs/Enteroendocrino/Data literatrure/EH TOTAL Y ACTIVA O INACTIVA/EH Cuantification assay and derivatives EH/Peptide YY (PYY) Is Associated with Cardiovascular Risk in Patients with Acute Myocardial Infarction.pdf

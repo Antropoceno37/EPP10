@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "title": "FDEP-TP framework — Article A3: Methodological and translational foundations (Lancet Diabetes & Endocrinology submission package)",
+    "version": "v3.0-A3",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "description": "<p>Submission package for Article A3 of the FDEP-TP trilogy (Lancet Diabetes & Endocrinology). Contains the Lancet-format manuscript (.docx and .pdf), Quarto source, cover letter, four display items (DI1-DI4) at 300 dpi, refs_A3.bib (26 cited references), the numerical ledger, the F1-F9 verification report, and the master ledger CSVs. Article A3 reports the procedural and translational layer of the FDEP-TP framework: the nine-label Periprandial Type Profile (PTP) per-analyte vocabulary, the eight-rule precedence hierarchy that aggregates per-analyte labels into Integrated Enteropancreatic Pattern (IEP) Types I-V with .i/.ii subtypes and a/b/c glycaemic-context suffixes, the sixteen-script reproducible analytic pipeline, and a hypothesis-generating clinical-decision algorithm for agonist selection (single GLP-1 RA, dual GIP/GLP-1, triple GLP-1/GIP/glucagon retatrutide as the Tipo VI extension) and metabolic-surgery indication. Pre-registered ecological proof-of-concept analysis (OSF DOI 10.17605/OSF.IO/3CZRE; v10.0 protocol frozen 2026-04-22): 23 source studies, 71 (Author x Cohort) tuples, 55 productive cohort-time-arms, 2,750 pseudo-subjects across 7 canonical cohorts and 11 analyte forms (master_table.csv SHA-256 2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117). Three signatures: Type V bariatric-dominant (RYGBP 43.3%, SG 30.7%; Bonferroni q=0.035), Type III in obesity+T2DM (40.0%) and post-caloric-restriction (36.8%) (q=0.035), Type I.I in non-obese-without-T2D reference (32.2%). PTP per-analyte distribution across 8,050 classifications: 67.1% Preserved. Threshold sensitivity reassigns <=6.8%. The framework is hypothesis-generating; TRIPOD+AI declared pending prospective individual-participant validation. Companion paper A1 (conceptual-physiological layer) and A2 (mathematical-statistical layer; tag A2-submitted-2026-05-09) complete the trilogy. Supplementary S2 publishes the operational acquisition protocol that prospective validation studies should follow.</p>",
+    "creators": [
+      {
+        "name": "Virgen-Ayala, Hector M.",
+        "affiliation": "Universidad de Guadalajara / Instituto Mexicano del Seguro Social, Guadalajara, Mexico",
+        "orcid": "0009-0006-2081-2286"
+      }
+    ],
+    "keywords": [
+      "Periprandial Type Profile",
+      "PTP/IEP classification",
+      "multivariate functional principal component analysis",
+      "mFPCA",
+      "Happ-Greven operator",
+      "FACEs",
+      "clinical-decision algorithm",
+      "incretin-based pharmacology",
+      "tirzepatide",
+      "retatrutide",
+      "metabolic surgery",
+      "Roux-en-Y gastric bypass",
+      "sleeve gastrectomy",
+      "type 2 diabetes",
+      "caloric restriction",
+      "TRIPOD+AI",
+      "FDEP-TP framework"
+    ],
+    "license": "CC-BY-4.0",
+    "communities": [
+      {"identifier": "metabolism"},
+      {"identifier": "biostatistics"}
+    ],
+    "related_identifiers": [
+      {"identifier": "10.17605/OSF.IO/3CZRE",     "relation": "isDerivedFrom",   "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.19743544",   "relation": "isPartOf",         "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.19758429",   "relation": "isNewVersionOf",   "scheme": "doi"}
+    ],
+    "language": "eng",
+    "access_right": "open"
+  }
+}

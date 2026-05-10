@@ -1,0 +1,22 @@
+{
+  "paper_id": "8813265dae",
+  "filename": "On_premises_and_principles_for_measurement_of_gastrointestinal_peptide_hormones.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": null,
+    "title": "(cid:0)P(cid:0)e(cid:0)p(cid:0)t(cid:0)i(cid:0)d(cid:0)e(cid:0)s(cid:0)1(cid:0)4(cid:0)1(cid:0)((cid:0)2(cid:0)0(cid:0)2(cid:0)1(cid:0))(cid:0)1(cid:0)7(cid:0)0(cid:0)5(cid:0)4(cid:0)5"
+  },
+  "cohorts_detected": [],
+  "hormones_detected": [],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

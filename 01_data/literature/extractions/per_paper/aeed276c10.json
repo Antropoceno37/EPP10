@@ -1,0 +1,39 @@
+{
+  "paper_id": "aeed276c10",
+  "filename": "Vertical_Banded_Gastroplasty_Modifies_Plasma_Ghrelin_Secretion_In_Obese_Patients.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2002,
+    "title": "Obesity Surgery,15,1129-1132"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "ghrelin_total",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "LMMT",
+  "n_subjects": 180,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 2
+    },
+    {
+      "page": 3,
+      "n_rows": 6
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

@@ -1,0 +1,41 @@
+{
+  "paper_id": "3720069184",
+  "filename": "s41366-024-01461-2.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2024,
+    "title": "International Journal of Obesity"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": 34,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 16
+    },
+    {
+      "page": 4,
+      "n_rows": 15
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

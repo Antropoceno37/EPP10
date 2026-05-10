@@ -1,0 +1,31 @@
+{
+  "paper_id": "f9277ecf83",
+  "filename": "CARACTERI_STICAS_METODOLO_GICAS_DETALLADAS_POR_ESTUDIO.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2007,
+    "title": "CARACTERÍSTICAS METODOLÓGICAS DETALLADAS POR ESTUDIO"
+  },
+  "cohorts_detected": [],
+  "hormones_detected": [],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 28
+    },
+    {
+      "page": 2,
+      "n_rows": 10
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

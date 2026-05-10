@@ -1,0 +1,175 @@
+{
+  "paper_id": "18351b2cdd",
+  "filename": "4_PRISMA_Diagram_tablas_de_resultados_y_ca_lculos_detallados.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2016,
+    "title": "4***** PRISMA Diagram, tablas de resultados y cálculos detallados"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_3_36",
+    "glucagon",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": 674,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 9
+    },
+    {
+      "page": 1,
+      "n_rows": 7
+    },
+    {
+      "page": 1,
+      "n_rows": 5
+    },
+    {
+      "page": 1,
+      "n_rows": 5
+    },
+    {
+      "page": 1,
+      "n_rows": 5
+    },
+    {
+      "page": 1,
+      "n_rows": 9
+    },
+    {
+      "page": 1,
+      "n_rows": 5
+    },
+    {
+      "page": 1,
+      "n_rows": 3
+    },
+    {
+      "page": 1,
+      "n_rows": 6
+    },
+    {
+      "page": 1,
+      "n_rows": 5
+    },
+    {
+      "page": 1,
+      "n_rows": 5
+    },
+    {
+      "page": 2,
+      "n_rows": 5
+    },
+    {
+      "page": 2,
+      "n_rows": 5
+    },
+    {
+      "page": 2,
+      "n_rows": 5
+    },
+    {
+      "page": 2,
+      "n_rows": 4
+    },
+    {
+      "page": 2,
+      "n_rows": 8
+    },
+    {
+      "page": 2,
+      "n_rows": 4
+    },
+    {
+      "page": 2,
+      "n_rows": 8
+    },
+    {
+      "page": 2,
+      "n_rows": 5
+    },
+    {
+      "page": 2,
+      "n_rows": 5
+    },
+    {
+      "page": 3,
+      "n_rows": 4
+    },
+    {
+      "page": 3,
+      "n_rows": 4
+    },
+    {
+      "page": 3,
+      "n_rows": 4
+    },
+    {
+      "page": 3,
+      "n_rows": 4
+    },
+    {
+      "page": 3,
+      "n_rows": 7
+    },
+    {
+      "page": 3,
+      "n_rows": 5
+    },
+    {
+      "page": 3,
+      "n_rows": 9
+    },
+    {
+      "page": 4,
+      "n_rows": 8
+    },
+    {
+      "page": 4,
+      "n_rows": 12
+    },
+    {
+      "page": 4,
+      "n_rows": 6
+    },
+    {
+      "page": 4,
+      "n_rows": 7
+    },
+    {
+      "page": 4,
+      "n_rows": 6
+    },
+    {
+      "page": 4,
+      "n_rows": 6
+    },
+    {
+      "page": 4,
+      "n_rows": 5
+    }
+  ],
+  "trajectory_rows_extracted": 1,
+  "extraction_quality": "auto",
+  "prisma_decision": "excluded",
+  "prisma_reason": "falta ['glucose']",
+  "trajectory_rows_raw": [
+    {
+      "time_min": 120.0,
+      "value": -1.0,
+      "raw_col": "GIP",
+      "page": 1
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "paper_id": "28487d28e4",
+  "filename": "The_Role_of_the_Gut_Microbiome_on_Skeletal_Muscle_Mass_and_Physical_Function_2019_Update.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.3389/fphys.2019.01435",
+    "pmid": null,
+    "year": 2019,
+    "title": "published: 26 November 2019"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucose"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

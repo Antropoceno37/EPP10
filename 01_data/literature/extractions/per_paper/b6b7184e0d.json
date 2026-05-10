@@ -1,0 +1,33 @@
+{
+  "paper_id": "b6b7184e0d",
+  "filename": "The_Regulation_of_Peripheral_Metabolism_by_Gut-Derived_Hormones.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.3389/fendo.2018.00754",
+    "pmid": null,
+    "year": 2018,
+    "title": "published:04January2019"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Post-CR",
+    "RYGBP",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_3_36",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

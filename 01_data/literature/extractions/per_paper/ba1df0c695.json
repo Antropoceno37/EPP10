@@ -1,0 +1,31 @@
+{
+  "paper_id": "ba1df0c695",
+  "filename": "the_gut_hormona_pyy.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": null,
+    "title": "\"#(cid:25)(cid:7)$%&(cid:7)’(cid:27)(cid:28)(cid:30)(cid:27)(cid:5)(cid:25)(cid:7)((cid:25))&(cid:14)(cid:12)(cid:25)(cid:7)(cid:9)(cid:9)"
+  },
+  "cohorts_detected": [],
+  "hormones_detected": [],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 4,
+      "n_rows": 3
+    },
+    {
+      "page": 6,
+      "n_rows": 3
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

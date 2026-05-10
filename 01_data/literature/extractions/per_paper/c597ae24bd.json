@@ -1,0 +1,34 @@
+{
+  "paper_id": "c597ae24bd",
+  "filename": "Enteroendocrine_Dynamics_New_Tools_Reveal_Hormonal_Plasticity_in_the_Gut.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1210/endrev/bnaa018",
+    "pmid": null,
+    "year": 2020,
+    "title": "Enteroendocrine Dynamics – New Tools Reveal"
+  },
+  "cohorts_detected": [
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 4
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

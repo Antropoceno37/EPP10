@@ -1,0 +1,24 @@
+{
+  "paper_id": "a1e57b77eb",
+  "filename": "La_Paradoja_de_la_Medicio_n_de_Incretinas_Activas_.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.1210/clinem/dgaf210/8128978",
+    "pmid": null,
+    "year": 1960,
+    "title": "La Paradoja de la Medición de Incretinas Activas: Razones Históricas,"
+  },
+  "cohorts_detected": [
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [],
+  "challenge": "OGTT",
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

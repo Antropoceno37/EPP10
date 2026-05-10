@@ -1,0 +1,22 @@
+{
+  "paper_id": "d4f7a5505a",
+  "filename": "Morlet_CWT_HF_LF_CrossWavelet_GLP1_metodo.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2026,
+    "title": "Morlet CWT, potencia HF/LF y cross-wavelet (GLP-1 activo"
+  },
+  "cohorts_detected": [],
+  "hormones_detected": [],
+  "challenge": "OGTT",
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

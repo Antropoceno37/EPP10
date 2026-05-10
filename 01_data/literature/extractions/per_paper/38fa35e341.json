@@ -1,0 +1,50 @@
+{
+  "paper_id": "38fa35e341",
+  "filename": "Comparison_of_Bariatric_Surgical_Procedures_for_Diabetes_Remission_Efficacy_and_Mechanisms.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": "10.2337/diaspect.25.4.200",
+    "pmid": null,
+    "year": 2012,
+    "title": "Diabetes Spectr. Author manuscript; available in PMC 2012 December 20."
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "Post-CR",
+    "RYGBP",
+    "SG",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": 250,
+  "tables": [
+    {
+      "page": 19,
+      "n_rows": 7
+    },
+    {
+      "page": 20,
+      "n_rows": 3
+    },
+    {
+      "page": 21,
+      "n_rows": 5
+    },
+    {
+      "page": 22,
+      "n_rows": 5
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "included",
+  "prisma_reason": "criterios PRISMA cumplidos",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

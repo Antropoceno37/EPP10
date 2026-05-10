@@ -1,0 +1,119 @@
+{
+  "paper_id": "20a2bb8183",
+  "filename": "Mechanisms_controlling_hormone_secretion_in_human_gut_and_its_relevance_to_metabolism.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 2020,
+    "title": "Journal of A M Martin, E W Sun et al. Gut hormones and metabolism 244:1 R1–R15"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": "OGTT",
+  "n_subjects": null,
+  "tables": [
+    {
+      "page": 1,
+      "n_rows": 2
+    },
+    {
+      "page": 2,
+      "n_rows": 2
+    },
+    {
+      "page": 2,
+      "n_rows": 2
+    },
+    {
+      "page": 3,
+      "n_rows": 3
+    },
+    {
+      "page": 4,
+      "n_rows": 2
+    },
+    {
+      "page": 4,
+      "n_rows": 2
+    },
+    {
+      "page": 5,
+      "n_rows": 3
+    },
+    {
+      "page": 6,
+      "n_rows": 2
+    },
+    {
+      "page": 6,
+      "n_rows": 2
+    },
+    {
+      "page": 7,
+      "n_rows": 3
+    },
+    {
+      "page": 8,
+      "n_rows": 2
+    },
+    {
+      "page": 8,
+      "n_rows": 2
+    },
+    {
+      "page": 9,
+      "n_rows": 3
+    },
+    {
+      "page": 10,
+      "n_rows": 2
+    },
+    {
+      "page": 10,
+      "n_rows": 2
+    },
+    {
+      "page": 11,
+      "n_rows": 3
+    },
+    {
+      "page": 12,
+      "n_rows": 2
+    },
+    {
+      "page": 12,
+      "n_rows": 2
+    },
+    {
+      "page": 13,
+      "n_rows": 3
+    },
+    {
+      "page": 14,
+      "n_rows": 2
+    },
+    {
+      "page": 14,
+      "n_rows": 2
+    },
+    {
+      "page": 15,
+      "n_rows": 3
+    }
+  ],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}

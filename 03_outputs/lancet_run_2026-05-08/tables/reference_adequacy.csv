@@ -1,0 +1,10 @@
+hormone,N_ref,status,eligible
+GLP1_active,250,full,TRUE
+PYY_total,300,full,TRUE
+ghrelin_acyl,150,full,TRUE
+GIP_active,100,full,TRUE
+ghrelin_total,100,full,TRUE
+GLP1_total,250,full,TRUE
+PYY_3_36,100,full,TRUE
+GIP_total,300,full,TRUE
+glucagon,100,full,TRUE

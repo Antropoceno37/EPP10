@@ -1,0 +1,32 @@
+{
+  "paper_id": "14f036dc18",
+  "filename": "4Gut_Hormones_in_Health_and_Obesity_The_Upcoming_Role_of_Short_Chain_Fatty_Acids.pdf",
+  "extracted_on": "2026-05-02",
+  "metadata": {
+    "doi": null,
+    "pmid": null,
+    "year": 1975,
+    "title": "Gut Hormones in Health and Obesity: The Upcoming Role of"
+  },
+  "cohorts_detected": [
+    "Obesity",
+    "RYGBP",
+    "T2DM",
+    "no_obese_without_T2DM"
+  ],
+  "hormones_detected": [
+    "PYY_3_36",
+    "glucagon",
+    "glucose",
+    "insulin"
+  ],
+  "challenge": null,
+  "n_subjects": null,
+  "tables": [],
+  "trajectory_rows_extracted": 0,
+  "extraction_quality": "manual_required",
+  "prisma_decision": "excluded",
+  "prisma_reason": "n=0 < 5",
+  "note": "Sin tablas con timepoints. Considerar WebPlotDigitizer si tiene figuras.",
+  "trajectory_rows_raw": []
+}
