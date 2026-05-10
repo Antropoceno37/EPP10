@@ -91,6 +91,6 @@
 | OSF | DOI 10.17605/OSF.IO/3CZRE · project tr469 |
 | Zenodo concept | 10.5281/zenodo.19743544 |
 | Zenodo v1·4 (deposited 2026-04-28) | 10.5281/zenodo.19758429 |
-| Zenodo v3·0-A3 (forthcoming) | TBD on deposit |
+| Zenodo v3·0-A3 (deposited 2026-05-09) | 10.5281/zenodo.20102987 |
 | GitHub | sv8wmxnbp8-hash/EPP10 v1·4 (CC-BY 4·0); branch `lancet-A3-methodological` |
 | Tag (forthcoming) | `A3-submitted-2026-05-09` |
