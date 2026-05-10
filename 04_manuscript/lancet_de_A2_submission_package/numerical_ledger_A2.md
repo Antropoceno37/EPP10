@@ -102,8 +102,8 @@ Source: `03_outputs/lancet_run_2026-05-08/tables/sensitivity_summary.csv`.
 |---|---|
 | OSF pre-registration | DOI 10.17605/OSF.IO/3CZRE · project tr469 · frozen 2026-04-22 |
 | Zenodo concept DOI | 10.5281/zenodo.19743544 |
-| Zenodo v1·3 | 10.5281/zenodo.19758429 |
-| GitHub | sv8wmxnbp8-hash/EPP10 v1·3 (CC-BY 4·0) |
+| Zenodo v2·0-A2 (deposited 2026-05-09) | 10.5281/zenodo.20102959 |
+| GitHub | sv8wmxnbp8-hash/EPP10 v1·4 (CC-BY 4·0) |
 | Branch (this article) | `lancet-A2-mathematical` |
 
 ---
