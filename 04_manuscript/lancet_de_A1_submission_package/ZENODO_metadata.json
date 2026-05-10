@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "title": "FDEP-TP framework — Article A1: Conceptual and physiological foundations (Lancet Diabetes & Endocrinology submission package)",
+    "version": "v3.0-A1",
+    "upload_type": "publication",
+    "publication_type": "preprint",
+    "description": "<p>Submission package for Article A1 of the FDEP-TP trilogy (Lancet Diabetes & Endocrinology). Contains the Lancet-format manuscript (.docx and .pdf, 14 pp), Quarto source, cover letter, four display items (DI1-DI4) at 300 dpi, refs_A1.bib (30 cited references), the numerical ledger with eigenfunction loadings table, and the F1-F9 verification report. Article A1 reports the conceptual and physiological layer of the FDEP-TP framework: four conceptual moves (the periprandial transition as the unit of analysis; physiologic periprandial responsiveness as the operational construct; weight as a contextual modifier; the non-obese-without-T2D cohort as the reference distribution) and the physiological reading of the four leading multivariate functional principal component eigenfunctions of the joint enteropancreatic operator (Psi_1 distal L-cell dominance with PYY total integrated squared L^2-norm 0.762 and secondary integrated incretin contribution 0.211; Psi_2 proximal-versus-distal entero-endocrine sequencing along the small bowel; Psi_3 biphasic glucose-insulin coupling; Psi_4 ghrelin tone with sleeve-gastrectomy signature). Pre-registered ecological proof-of-concept analysis at the cohort-time-arm level (OSF DOI 10.17605/OSF.IO/3CZRE; v10.0 protocol frozen 2026-04-22): 23 source studies, 71 (Author x Cohort) tuples, 55 productive cohort-time-arms, 2,750 pseudo-subjects across 7 canonical cohorts (non-obese-without-T2D reference, obesity, T2DM, obesity+T2DM, caloric restriction, sleeve gastrectomy, Roux-en-Y gastric bypass) and 11 analyte forms (master_table.csv SHA-256 2829cd78018e411783671ec00f849647858bda552cfa4ec23ad505ba9704a117). The joint Happ-Greven operator on the 9-analyte panel retained K=12 components at the Golovkine 2025 multivariate-FVE >= 0.90 threshold (cumulative 92%; N/K=29.2). Pillai trace on the joint score panel (n=350) yielded omnibus F=18.29 with Post-CR F=52.09; subject-level bootstrap stability >= 80% per cohort. Companion paper A2 (mathematical-statistical layer; Zenodo v2.0-A2) and A3 (procedural-translational layer; forthcoming) complete the trilogy.</p>",
+    "creators": [
+      {
+        "name": "Virgen-Ayala, Hector M.",
+        "affiliation": "Universidad de Guadalajara / Instituto Mexicano del Seguro Social, Guadalajara, Mexico",
+        "orcid": "0009-0006-2081-2286"
+      }
+    ],
+    "keywords": [
+      "multivariate functional principal component analysis",
+      "mFPCA",
+      "eigenfunctions",
+      "Happ-Greven operator",
+      "periprandial transition",
+      "enteropancreatic axis",
+      "incretin",
+      "GLP-1",
+      "GIP",
+      "PYY",
+      "ghrelin",
+      "physiologic periprandial responsiveness",
+      "metabolic surgery",
+      "Roux-en-Y gastric bypass",
+      "sleeve gastrectomy",
+      "type 2 diabetes",
+      "caloric restriction",
+      "FDEP-TP framework"
+    ],
+    "license": "CC-BY-4.0",
+    "communities": [
+      {"identifier": "metabolism"},
+      {"identifier": "biostatistics"}
+    ],
+    "related_identifiers": [
+      {"identifier": "10.17605/OSF.IO/3CZRE",     "relation": "isDerivedFrom",   "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.19743544",   "relation": "isPartOf",         "scheme": "doi"},
+      {"identifier": "10.5281/zenodo.19758429",   "relation": "isNewVersionOf",   "scheme": "doi"}
+    ],
+    "language": "eng",
+    "access_right": "open"
+  }
+}
