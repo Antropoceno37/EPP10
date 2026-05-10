@@ -19,7 +19,7 @@ I am pleased to submit *Multivariate functional principal component eigenfunctio
 
 **Trilogy position.** Companion paper A2 (branch `lancet-A2-mathematical`, tag `A2-submitted-2026-05-09`) supplies the mathematical and statistical layer; A3 supplies the procedural and translational layer. Primary findings do not overlap.
 
-**Reproducibility.** The 16-script pipeline plus `10_A1_conceptual_figs.R`, the harmonised input file (SHA-256 `2829cd78…9704a117`), and all outputs are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544) and on GitHub (`sv8wmxnbp8-hash/EPP10` v1·3) under CC-BY 4·0. Pre-registration: OSF DOI 10.17605/OSF.IO/3CZRE (frozen 2026-04-22).
+**Reproducibility.** The 16-script pipeline plus `10_A1_conceptual_figs.R`, the harmonised input file (SHA-256 `2829cd78…9704a117`), and all outputs are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544) and on GitHub (`sv8wmxnbp8-hash/EPP10` v1·4) under CC-BY 4·0. Pre-registration: OSF DOI 10.17605/OSF.IO/3CZRE (frozen 2026-04-22).
 
 **Suggested reviewers.** Daniel J. Drucker (Toronto) — incretin biology; Jens J. Holst (Copenhagen) — GLP-1 physiology; Robert E. Steinert (Adelaide / Zurich) — Y-receptor and ghrelin physiology; Sten Madsbad (Hvidovre) — bariatric mechanism; Michael A. Nauck (Bochum) — incretin defect in T2DM.
 

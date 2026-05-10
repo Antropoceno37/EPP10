@@ -39,9 +39,9 @@
 ## Repositories
 
 - **Zenodo concept DOI.** 10.5281/zenodo.19743544
-- **Zenodo v1·3 DOI.** 10.5281/zenodo.19758429 (frozen 2026-05-08)
+- **Zenodo v1·4 DOI.** 10.5281/zenodo.19758429 (frozen 2026-04-28)
 - **Zenodo v2·0-A1 DOI.** *to be minted on deposit*
-- **GitHub.** `sv8wmxnbp8-hash/EPP10` v1·3 (CC-BY 4·0); branch `lancet-A1-conceptual`, tag `A1-submitted-2026-05-09`
+- **GitHub.** `sv8wmxnbp8-hash/EPP10` v1·4 (CC-BY 4·0); branch `lancet-A1-conceptual`, tag `A1-submitted-2026-05-09`
 
 ## Verbatim disclosures
 
@@ -51,7 +51,7 @@
 
 **AI/LLM disclosure.** Analytic pipeline design, R code implementation, and manuscript drafting were supported by Claude (Anthropic, Opus 4.7 / Sonnet 4.6, May 2026). All statistical outputs, pre-registration decisions, and scientific claims were validated by the author against the v10·0 master analysis plan (OSF DOI 10.17605/OSF.IO/3CZRE) and the FDEP-TP framework v2·0 reference document.
 
-**Data sharing.** All digitised periprandial trajectories, the harmonised cohort corpus, the 16-script analytic pipeline, the article-specific outputs, and the reproducibility scripts are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544; article-specific version DOIs cited in each manuscript) and on GitHub (`sv8wmxnbp8-hash/EPP10` v1·3 and subsequent branches) under CC-BY 4·0. Pre-registration is at the Open Science Framework (DOI 10.17605/OSF.IO/3CZRE; project at https://osf.io/tr469, frozen 2026-04-22).
+**Data sharing.** All digitised periprandial trajectories, the harmonised cohort corpus, the 16-script analytic pipeline, the article-specific outputs, and the reproducibility scripts are deposited at Zenodo (concept DOI 10.5281/zenodo.19743544; article-specific version DOIs cited in each manuscript) and on GitHub (`sv8wmxnbp8-hash/EPP10` v1·4 and subsequent branches) under CC-BY 4·0. Pre-registration is at the Open Science Framework (DOI 10.17605/OSF.IO/3CZRE; project at https://osf.io/tr469, frozen 2026-04-22).
 
 ## Suggested reviewers
 
