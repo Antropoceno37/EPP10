@@ -73,7 +73,7 @@ Integrated squared L²-norms ‖ψ̂_m^{(j)}‖² normalised so Σ_j ‖ψ̂_m^{
 | OSF | DOI 10.17605/OSF.IO/3CZRE · project tr469 |
 | Zenodo concept | 10.5281/zenodo.19743544 |
 | Zenodo v1·4 | 10.5281/zenodo.19758429 |
-| Zenodo v3·0-A1 (forthcoming) | TBD on deposit |
+| Zenodo v3·0-A1 (deposited 2026-05-09) | 10.5281/zenodo.20102979 |
 | GitHub | sv8wmxnbp8-hash/EPP10 v1·4 (CC-BY 4·0) |
 | Branch | `lancet-A1-conceptual` (HEAD `14f91bd`) |
 | Tag (forthcoming) | `A1-submitted-2026-05-09` |
