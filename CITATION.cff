@@ -4,6 +4,8 @@ message: "If you use this code or pre-registration, please cite the associated m
 authors:
   - family-names: "Virgen Ayala"
     given-names: "Héctor Manuel"
+    orcid: "https://orcid.org/0009-0006-2081-2286"
+    affiliation: "HGZ No. 14 IMSS / Universidad de Guadalajara"
 version: "1.4"
 date-released: "2026-05-13"
 license: "CC-BY-4.0"
@@ -62,4 +64,4 @@ abstract: >
   (OSF DOI 10.17605/OSF.IO/3KVAD) frozen 2026-05-13 before data lock; code
   released under CC-BY 4.0 via Zenodo (concept DOI 10.5281/zenodo.19743544).
   Version v1.4 corresponds to the JCEM manuscript submission package
-  (2026-05-13).
+  (2026-05-13). Author ORCID: 0009-0006-2081-2286.
