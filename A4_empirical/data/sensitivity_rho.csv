@@ -1,0 +1,4 @@
+rho,status,n_subjects,cumFVE_top4_pct,dFVE_pct,abs_corr_Psi1,abs_corr_Psi2,abs_corr_Psi3,abs_corr_Psi4,mean_abs_corr
+0.3,OK,140,98.92,0.55,0.998,0.999,0.997,0.978,0.993
+0.5,OK,140,98.66,0.29,0.996,0.999,0.997,0.985,0.994
+0.7,OK,140,98.45,0.08,0.993,0.999,0.994,0.973,0.99
