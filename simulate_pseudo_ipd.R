@@ -23,41 +23,10 @@ HORMONE_CV <- c(
   glucagon      = 0.30, insulin      = 0.20, glucose = 0.12
 )
 
-# ---- 2. AR(1) kernel -------------------------------------------------------
-ar1_kernel <- function(t, rho, delta_ref = 30) {
-  d <- as.matrix(dist(t, diag = TRUE, upper = TRUE))
-  rho ^ (d / delta_ref)
-}
-
-# ---- 3. Multivariate normal sampler (Cholesky) -----------------------------
-sample_gp <- function(mu, Sigma, M, seed = NULL,
-                      clip_nonneg = TRUE, sigma_floor_frac = 0.01) {
-  if (!is.null(seed)) set.seed(seed)
-  n_t <- length(mu)
-  # Sanitize inputs
-  if (any(!is.finite(mu)))     mu[!is.finite(mu)] <- 0
-  if (any(!is.finite(Sigma)))  Sigma[!is.finite(Sigma)] <- 0
-  # Ridge floor — scaled to matrix content, never below a numerical epsilon
-  content_scale <- max(abs(mu), 1, diag(Sigma), na.rm = TRUE)
-  diag_floor <- max((sigma_floor_frac * content_scale) ^ 2, 1e-8)
-  # Progressive ridge retry (1×, 10×, 100×, 1000×)
-  L <- NULL
-  for (mult in c(1, 10, 100, 1000)) {
-    L <- tryCatch(
-      chol(Sigma + diag(diag_floor * mult, n_t)),
-      error = function(e) NULL
-    )
-    if (!is.null(L)) break
-  }
-  if (is.null(L)) {
-    # Final fallback: diagonal-only sampling (treat as independent)
-    L <- diag(sqrt(diag(Sigma) + diag_floor), n_t)
-  }
-  Z <- matrix(rnorm(M * n_t), nrow = n_t, ncol = M)
-  Y <- mu + t(L) %*% Z
-  if (clip_nonneg) Y[Y < 0] <- 0
-  t(Y)
-}
+# ---- 2-3. AR(1) kernel and GP sampler --------------------------------------
+# ar1_kernel and sample_gp live in R/simulate_helpers.R so they can be
+# unit-tested without sourcing this script's main block.
+source("/Users/hmva/EPP10/R/simulate_helpers.R")
 
 # ---- 4. Main function ------------------------------------------------------
 # summary_long: tibble from ETL with columns

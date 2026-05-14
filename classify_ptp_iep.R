@@ -14,6 +14,12 @@ suppressPackageStartupMessages({
   library(readr); library(dplyr); library(tidyr); library(purrr); library(tibble)
 })
 
+# Classifier pure functions live in R/classifier.R so they can be unit-tested
+# without sourcing the full pipeline. UPPER_TAIL_ALTERED_ANALYTES,
+# ENHANCED_CANDIDATES, INCRETIN_SATIETY, classify_ptp_primary, classify_ptp_all,
+# iep_group and assign_iep_type are all defined there.
+source("/Users/hmva/EPP10/R/classifier.R")
+
 REF_COHORT <- "no_obese_without_T2DM"
 POST_INTERV_COHORTS <- c("SG", "RYGBP")   # also applies to caloric_restriction_post
 
@@ -80,56 +86,8 @@ ref_percentiles <- ref_Z %>%
   )
 
 # -- 4. PTP classifier per (subject × analyte) ------------------------------
-# Pathophysiological-relevance filter per PTP framework §3.6, §3.7:
-#   Altered triggered by upper-tail ONLY for: GIP (any form), insulin, glucose,
-#     and context-specific ghrelin. GLP-1, PYY, glucagon upper-tail → NOT Altered
-#     by default (in post-intervention context they route to Enhanced path).
-UPPER_TAIL_ALTERED_ANALYTES <- c("GIP_total","GIP_active","insulin","glucose",
-                                   "ghrelin_total","ghrelin_acyl")
-
-classify_ptp_primary <- function(z_row, ref, analyte) {
-  B <- z_row$basal; X1 <- z_row$xi1
-  upper_triggers_altered <- analyte %in% UPPER_TAIL_ALTERED_ANALYTES
-
-  # Upper-tail: Altered/Borderline Altered only for pathophysiologically relevant analytes
-  if (upper_triggers_altered) {
-    if (!is.na(B) && B >= ref$basal_p95) return("Altered")
-    if (!is.na(X1) && X1 >= ref$pc1_p95) return("Altered")
-    if (!is.na(B) && B >= ref$basal_p75 && B < ref$basal_p95) return("Borderline Altered")
-    if (!is.na(X1) && X1 >= ref$pc1_p75 && X1 < ref$pc1_p95) return("Borderline Altered")
-  }
-  # Lower-tail: always evaluated
-  if (!is.na(B) && B < ref$basal_p5)  return("Blunted")
-  if (!is.na(X1) && X1 < ref$pc1_p5)  return("Blunted")
-  if (!is.na(B) && B < ref$basal_p10) return("Impaired")
-  if (!is.na(X1) && X1 < ref$pc1_p10) return("Impaired")
-  if (!is.na(B) && B < ref$basal_p25) return("Borderline Impaired")
-  if (!is.na(X1) && X1 < ref$pc1_p25) return("Borderline Impaired")
-  "Preserved"
-}
-
-# Secondary PTPs (post-intervention cohorts): add Enhanced rule when glucose context OK
-# For now we cannot determine pre-intervention state per pseudo-subject (no pairing),
-# so we apply a simplified rule: in POST_INTERV cohorts, PC1/basal ≥ P75 with positive
-# direction on GLP-1/PYY/incretin axes → Enhanced (if glucose preserved) or Altered
-# (if glucose dysregulated). Primary framework falls back otherwise.
-
-classify_ptp_all <- function(Z_long, ref_percentiles, cohort_vec, post_cohorts) {
-  Z_ptp <- Z_long %>% left_join(ref_percentiles, by = "hormone_name")
-  Z_ptp$ptp_primary <- pmap_chr(Z_ptp, function(basal, xi1, hormone_name,
-                                                 basal_p5, basal_p10,
-                                                 basal_p25, basal_p75, basal_p95,
-                                                 pc1_p5, pc1_p10, pc1_p25, pc1_p75,
-                                                 pc1_p95, ...) {
-    ref <- list(basal_p5 = basal_p5, basal_p10 = basal_p10, basal_p25 = basal_p25,
-                basal_p75 = basal_p75, basal_p95 = basal_p95,
-                pc1_p5 = pc1_p5, pc1_p10 = pc1_p10, pc1_p25 = pc1_p25,
-                pc1_p75 = pc1_p75, pc1_p95 = pc1_p95)
-    classify_ptp_primary(list(basal = basal, xi1 = xi1), ref, hormone_name)
-  })
-  Z_ptp
-}
-
+# Pathophysiological-relevance filter per PTP framework §3.6, §3.7 is encoded
+# in classify_ptp_primary / classify_ptp_all (see R/classifier.R).
 cat("\nClassifying per-analyte PTPs…\n")
 cohort_lookup <- distinct(pipd_sub, subject_id, cohort)
 Z_ptp <- classify_ptp_all(Z_long, ref_percentiles, cohort_lookup$cohort,
@@ -151,8 +109,7 @@ glucose_status <- Z_ptp %>%
     TRUE ~ "unclassifiable"
   ))
 
-incretin_satiety <- c("GLP1_total","GLP1_active","PYY_total","PYY_3_36",
-                      "GIP_total","GIP_active")
+incretin_satiety <- INCRETIN_SATIETY
 
 Z_ptp <- Z_ptp %>%
   left_join(glucose_status, by = "subject_id")
@@ -160,7 +117,7 @@ Z_ptp <- Z_ptp %>%
 # Direct-route to Enhanced for GLP-1/PYY/glucagon upper-tail in any cohort
 # (per §3.7: upper-tail GLP-1 is NOT automatically pathological; in disease +
 #  surgery contexts it can be physiologically coherent when glucose is preserved)
-ENHANCED_CANDIDATES <- c("GLP1_total","GLP1_active","PYY_total","PYY_3_36","glucagon")
+# ENHANCED_CANDIDATES sourced from R/classifier.R.
 
 Z_ptp <- Z_ptp %>%
   left_join(Z_ptp %>% select(subject_id, hormone_name, basal, xi1,
@@ -184,60 +141,9 @@ Z_ptp <- Z_ptp %>%
 
 # -- 6. IEP Type assignment per subject (treating each pseudo-subject as a
 #       cohort-time-arm draw; framework speaks of cohort-time-arm but for
-#       pseudo-IPD we apply per pseudo-subject and aggregate to cohort)  -----
-
-iep_group <- function(ptp) {
-  case_when(
-    ptp == "Preserved"            ~ "R",
-    ptp == "Recovered"            ~ "R",
-    ptp == "Borderline Impaired"  ~ "L1",
-    ptp %in% c("Impaired","Blunted") ~ "L2",
-    ptp == "Borderline Enhanced"  ~ "U1",
-    ptp == "Enhanced"             ~ "U2",
-    ptp == "Borderline Altered"   ~ "D1",
-    ptp == "Altered"              ~ "D2",
-    TRUE                          ~ NA_character_
-  )
-}
-
+#       pseudo-IPD we apply per pseudo-subject and aggregate to cohort).
+#       iep_group and assign_iep_type live in R/classifier.R.
 Z_ptp <- Z_ptp %>% mutate(group = iep_group(ptp_final))
-
-# Deterministic precedence per subject
-assign_iep_type <- function(df_subj) {
-  # df_subj: rows = analytes for one pseudo-subject
-  non_glu <- df_subj %>% filter(hormone_name != "glucose")
-  glu <- df_subj %>% filter(hormone_name == "glucose")
-  if (nrow(non_glu) < 2) return(tibble(iep_type = "not_integrable",
-                                        glucose_subtype = glu$glucose_subtype[1] %||% NA))
-  # Classifiability gate: ≥1 pancreatic effector + ≥1 gut hormone
-  has_pancr <- any(non_glu$hormone_name == "insulin")
-  has_gut   <- any(non_glu$hormone_name %in% c("ghrelin_total","ghrelin_acyl",
-                                                "GIP_total","GIP_active",
-                                                "GLP1_total","GLP1_active",
-                                                "PYY_total","PYY_3_36"))
-  if (!has_pancr || !has_gut || nrow(glu) == 0)
-    return(tibble(iep_type = "not_integrable",
-                  glucose_subtype = glu$glucose_subtype[1] %||% NA))
-  glu_subtype <- glu$glucose_subtype[1]
-  groups <- non_glu$group
-  has_L1_L2 <- any(groups %in% c("L1","L2"))
-  has_U12 <- any(groups %in% c("U1","U2"))
-  # Precedence
-  if (any(groups == "D2")) return(tibble(iep_type = "IV.II", glucose_subtype = glu_subtype))
-  if (any(groups == "D1")) return(tibble(iep_type = "IV.I",  glucose_subtype = glu_subtype))
-  if (any(groups == "U2") && glu_subtype == "a" && !has_L1_L2)
-    return(tibble(iep_type = "II.II", glucose_subtype = glu_subtype))
-  if (any(groups == "U2"))
-    return(tibble(iep_type = "V.II", glucose_subtype = glu_subtype))
-  if (any(groups == "U1") && glu_subtype == "a" && !has_L1_L2)
-    return(tibble(iep_type = "II.I", glucose_subtype = glu_subtype))
-  if (any(groups == "U1"))
-    return(tibble(iep_type = "V.I", glucose_subtype = glu_subtype))
-  if (any(groups == "L2")) return(tibble(iep_type = "III.II", glucose_subtype = glu_subtype))
-  if (any(groups == "L1")) return(tibble(iep_type = "III.I",  glucose_subtype = glu_subtype))
-  if (all(groups == "R"))  return(tibble(iep_type = "I.I",    glucose_subtype = glu_subtype))
-  tibble(iep_type = "I.II", glucose_subtype = glu_subtype)
-}
 
 cat("\nAssigning IEP Type I–V per pseudo-subject…\n")
 iep_by_subj <- Z_ptp %>%

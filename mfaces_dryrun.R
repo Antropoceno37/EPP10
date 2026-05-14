@@ -8,7 +8,10 @@ suppressPackageStartupMessages({
 })
 set.seed(20260422)
 
-`%||%` <- function(a, b) if (is.null(a) || (length(a) == 1 && is.na(a))) b else a
+# Lightweight helpers (zscore_vs_reference, retain_by_fve, classify_by_scores,
+# CLASS_LEVELS, %||%) live in R/mfaces_helpers.R so they can be unit-tested
+# without installing the heavy fdapace / face / mgcv / funData / MFPCA stack.
+source("/Users/hmva/EPP10/R/mfaces_helpers.R")
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -318,32 +321,8 @@ print.mfaces_fit <- function(x, ...) {
 }
 
 # ---------------------------------------------------------------------------
-# retain_by_fve + sensitivity
+# retain_by_fve + sensitivity (retain_by_fve is in R/mfaces_helpers.R)
 # ---------------------------------------------------------------------------
-retain_by_fve <- function(mfpca, threshold = 0.90, n_subjects = NULL) {
-  vals <- mfpca$values
-  fve_cum <- cumsum(vals) / sum(vals)
-  K_sel <- min(which(fve_cum >= threshold))
-  eigengap <- c(-diff(vals), NA_real_)
-  N <- n_subjects %||% nrow(mfpca$scores)
-  decision <- tibble(pc = seq_along(vals), eigenvalue = vals,
-                     fve_cum = fve_cum, eigengap = eigengap,
-                     retained = seq_along(vals) <= K_sel)
-  diagnostics <- tibble(
-    threshold = threshold, K_retained = K_sel,
-    N_subjects = N, N_over_K = N / K_sel,
-    passes_7_3 = (N / K_sel) > 10,
-    fve_achieved = fve_cum[K_sel],
-    min_eigengap_within = min(eigengap[seq_len(K_sel)], na.rm = TRUE),
-    lambda_1 = vals[1], lambda_K_retained = vals[K_sel])
-  mfpca_trunc <- mfpca
-  mfpca_trunc$values <- vals[seq_len(K_sel)]
-  mfpca_trunc$scores <- mfpca$scores[, seq_len(K_sel), drop = FALSE]
-  structure(list(mfpca = mfpca_trunc, decision = decision,
-                 diagnostics = diagnostics, full_values = vals),
-            class = c("mfpca_retained", "list"))
-}
-
 retain_by_fve_sensitivity <- function(mfpca, thresholds = c(0.90, 0.95), ...) {
   res <- lapply(thresholds, \(t) retain_by_fve(mfpca, threshold = t, ...))
   names(res) <- sprintf("fve_%.2f", thresholds)
@@ -362,25 +341,10 @@ print.mfpca_retained <- function(x, ...) {
 print.mfpca_fve_sensitivity <- function(x, ...) { print(x$comparison); invisible(x) }
 
 # ---------------------------------------------------------------------------
-# Clasificación
+# Clasificación (zscore_vs_reference and classify_by_scores are in
+# R/mfaces_helpers.R; identify_incretin_axis stays here because it depends on
+# funData::funData structures from the joint mFACEs fit)
 # ---------------------------------------------------------------------------
-zscore_vs_reference <- function(scores, cohort,
-                                reference = "no_obese_without_T2DM",
-                                method = c("robust","mean_sd")) {
-  method <- match.arg(method)
-  ref_idx <- cohort == reference
-  ref_mat <- scores[ref_idx, , drop = FALSE]
-  if (method == "robust") {
-    center <- apply(ref_mat, 2, median, na.rm = TRUE)
-    scale  <- apply(ref_mat, 2, mad, na.rm = TRUE)  # MAD × 1.4826 by default
-  } else {
-    center <- colMeans(ref_mat, na.rm = TRUE)
-    scale  <- apply(ref_mat, 2, sd, na.rm = TRUE)
-  }
-  scale[scale == 0 | is.na(scale)] <- 1
-  sweep(sweep(scores, 2, center, "-"), 2, scale, "/")
-}
-
 identify_incretin_axis <- function(retained,
                                    incretin = c("GIP_total","GLP1_total","PYY_total")) {
   # Pre-registered rule (v10.0, OSF YAML): argmax relative —
@@ -402,23 +366,6 @@ identify_incretin_axis <- function(retained,
             loading      = w[k],
             all_loadings = setNames(w, paste0("PC", seq_len(K))),
             warn_low     = w[k] < 0.50)
-}
-
-CLASS_LEVELS <- c("Preservado","Impairment_limitrofe","Impaired",
-                  "Blunted","Enhanced","Altered")
-
-classify_by_scores <- function(z, incretin_axis = NA_integer_) {
-  apply(z, 1, function(zi) {
-    zi_abs <- abs(zi)
-    if (sum(zi_abs > 2, na.rm = TRUE) >= 2) return("Altered")
-    if (!is.na(incretin_axis) && !is.na(zi[incretin_axis])) {
-      if (zi[incretin_axis] >  2) return("Enhanced")
-      if (zi[incretin_axis] < -2) return("Blunted")
-    }
-    if (any(zi_abs > 1.5 & zi_abs <= 2, na.rm = TRUE)) return("Impaired")
-    if (any(zi_abs > 1.0 & zi_abs <= 1.5, na.rm = TRUE)) return("Impairment_limitrofe")
-    "Preservado"
-  }) |> factor(levels = CLASS_LEVELS)
 }
 
 mfaces_health_check <- function(fit, max_offdiag_zero = 0.30,
