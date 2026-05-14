@@ -1,0 +1,9 @@
+stratum,n_hormones,glucose_PTP,IEP_Type,PTP_summary
+LEAN,11,Preserved,I·I,ACTIVE GIP : Preserved; ACTIVE GLP-1 : Preserved; ACYLATED GHRELIN : Preserved; Glucagon : Preserved; Glucose : Preserved; Insulin : Preserved; PYY3-36 : Preserved; TOTAL GHRELIN : Preserved; TOTAL GIP : Preserved; TOTAL GLP-1 : Preserved; TOTAL PYY : Preserved
+OB,11,Enhanced,V·II·b,ACTIVE GIP : Preserved; ACTIVE GLP-1 : Preserved; ACYLATED GHRELIN : Impaired; Glucagon : Impaired; Glucose : Enhanced; Insulin : Enhanced; PYY3-36 : Impaired; TOTAL GHRELIN : Enhanced; TOTAL GIP : Preserved; TOTAL GLP-1 : Enhanced; TOTAL PYY : Preserved
+T2DM,5,Enhanced,V·II·b,Glucagon : Impaired; Glucose : Enhanced; Insulin : Enhanced; TOTAL GIP : Enhanced; TOTAL GLP-1 : Impaired
+OB+T2DM,9,Enhanced,V·II·b,ACTIVE GIP : Preserved; ACTIVE GLP-1 : Preserved; Glucagon : Borderline Impaired; Glucose : Enhanced; Insulin : Impaired; TOTAL GHRELIN : Impaired; TOTAL GIP : Enhanced; TOTAL GLP-1 : Preserved; TOTAL PYY : Impaired
+POST-SG,10,Enhanced,V·II·b,ACTIVE GLP-1 : Preserved; ACYLATED GHRELIN : Impaired; Glucagon : Impaired; Glucose : Enhanced; Insulin : Enhanced; PYY3-36 : Impaired; TOTAL GHRELIN : Impaired; TOTAL GIP : Preserved; TOTAL GLP-1 : Enhanced; TOTAL PYY : Preserved
+PRE-RYGBP,9,Enhanced,V·II·b,ACTIVE GLP-1 : Impaired; ACYLATED GHRELIN : Impaired; Glucagon : Preserved; Glucose : Enhanced; Insulin : Enhanced; PYY3-36 : Impaired; TOTAL GHRELIN : Enhanced; TOTAL GIP : Borderline Impaired; TOTAL GLP-1 : Impaired
+POST-RYGBP,10,Enhanced,V·II·b,ACTIVE GLP-1 : Enhanced; ACYLATED GHRELIN : Impaired; Glucagon : Enhanced; Glucose : Enhanced; Insulin : Enhanced; PYY3-36 : Impaired; TOTAL GHRELIN : Borderline Enhanced; TOTAL GIP : Impaired; TOTAL GLP-1 : Enhanced; TOTAL PYY : Enhanced
+POST-CR,6,Preserved,II·II,ACTIVE GLP-1 : Impaired; Glucagon : Impaired; Glucose : Preserved; Insulin : Enhanced; TOTAL GIP : Impaired; TOTAL GLP-1 : Borderline Impaired

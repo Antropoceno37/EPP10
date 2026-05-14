@@ -1,0 +1,8 @@
+prediction_id,framework_value,empirical_value
+POST-RYGBP modal Type V (bariatric),43.3 %,V·II·b
+POST-SG modal Type V (bariatric),30.7 %,V·II·b
+OB+T2DM Type III modal,40.0 %,V·II·b
+POST-CR Type III modal,36.8 %,II·II
+LEAN Type I·I modal,32.2 %,I·I
+ξ₁ POST-RYGBP > LEAN (distal L-cell),+,"ξ₁ POST-RYGBP=-32.82, LEAN=1.89"
+ξ₄ POST-SG distinctive (ghrelin removed),strong+,ξ₄ POST-SG=4.27 vs LEAN=-1.60
