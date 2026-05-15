@@ -20,15 +20,21 @@ jobs:
           use-public-rspm: true
 
       - name: Install test dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          packages: |
-            testthat
-            dplyr
-            tidyr
-            purrr
-            tibble
-            stringr
+        shell: Rscript {0}
+        run: |
+          install.packages(c(
+            "testthat", "dplyr", "tidyr", "purrr", "tibble", "stringr"
+          ))
+
+      - name: Show R session info (for diagnostics)
+        shell: Rscript {0}
+        run: |
+          cat("R version:", R.version.string, "\n")
+          cat("Working directory:", getwd(), "\n")
+          cat("Loaded packages:\n")
+          print(installed.packages()[
+            c("testthat", "dplyr", "tidyr", "purrr", "tibble", "stringr"),
+            "Version", drop = FALSE])
 
       - name: Run testthat suite
         run: Rscript tests/testthat.R
