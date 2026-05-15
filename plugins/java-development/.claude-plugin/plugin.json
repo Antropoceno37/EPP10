@@ -1,0 +1,7 @@
+{
+  "name": "java-development",
+  "version": "0.1.0",
+  "description": "Skills for Java development. Currently covers Spring Boot REST controllers, DTOs, services, validation, and centralised error handling.",
+  "keywords": ["java", "spring-boot", "rest", "api"],
+  "license": "MIT"
+}
