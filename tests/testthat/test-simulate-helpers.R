@@ -7,7 +7,7 @@
 test_that("ar1_kernel is symmetric with unit diagonal", {
   t <- c(0, 30, 60, 90, 120)
   K <- ar1_kernel(t, rho = 0.5)
-  expect_equal(diag(K), rep(1, length(t)))
+ expect_equal(unname(diag(K)), rep(1, length(t)))
   expect_true(isSymmetric(K))
 })
 
